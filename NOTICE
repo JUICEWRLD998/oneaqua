@@ -1,0 +1,13 @@
+Firstline is an independent prototype. It is not the OneAquaHealth Decision Support System and is not endorsed
+by the OneAquaHealth consortium.
+
+It encodes content from these CC-BY 4.0 deliverables of the OneAquaHealth project (Horizon Europe, GA 101086521):
+
+- D2.4 Catalogue of measures for urban aquatic ecosystems rehabilitation. Dias, Serra, Feio. 22 Dec 2025.
+  https://doi.org/10.5281/zenodo.20040211
+- OneAquaHealth Key Indicators of Ecosystem and Biological Health (Factsheets). Schmeller et al. 22 May 2026.
+  https://doi.org/10.5281/zenodo.20345207
+- OneAquaHealth Field Sampling Protocols for Urban Stream Ecosystems. Calapez et al. 22 May 2026.
+  https://doi.org/10.5281/zenodo.20344421
+
+Quotations are verbatim, carry the printed D2.4 page number, and are checked by scripts/verify-d24-cites.mjs.
