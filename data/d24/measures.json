@@ -13,8 +13,7 @@
     "citizenMonitorable": [
       "riparian-cover"
     ],
-    "responseLag": "slow",
-    "establishmentYears": 3
+    "responseLag": "slow"
   },
   {
     "id": "4.1.2",
@@ -30,14 +29,14 @@
     "citizenMonitorable": [
       "riparian-cover"
     ],
-    "responseLag": "slow",
-    "establishmentYears": 3
+    "responseLag": "slow"
   },
   {
     "id": "4.1.3",
     "name": "Constrained riparian vegetation corridors (“buffers”)",
     "line": "L1",
     "addresses": [
+      "S01",
       "S07"
     ],
     "objective": "Constrained riparian vegetation buffers should therefore be understood as interim or compromise solutions, implemented only where more ambitious riparian restoration is currently unachievable.",
@@ -47,24 +46,20 @@
     "citizenMonitorable": [
       "riparian-cover"
     ],
-    "responseLag": "slow",
-    "establishmentYears": 3
+    "responseLag": "slow"
   },
   {
     "id": "4.1.4",
     "name": "Vegetated corridors promoting connectedness",
     "line": "L1",
-    "addresses": [
-      "S07"
-    ],
+    "addresses": [],
     "objective": "These corridors integrate urban rivers with parks, wetlands, and other vegetated spaces into continuous networks that support ecological flows, climate regulation, and human well-being across the urban landscape.",
     "limitations": "Social visibility does not guarantee ecological quality and may increase pressure if access is not carefully regulated",
     "page": 39,
     "citizenMonitorable": [
       "riparian-cover"
     ],
-    "responseLag": "slow",
-    "establishmentYears": 3
+    "responseLag": "slow"
   },
   {
     "id": "4.2.1",
@@ -89,7 +84,8 @@
     "name": "Sewer system and point-source improvements",
     "line": "L1",
     "addresses": [
-      "S01"
+      "S01",
+      "S03"
     ],
     "objective": "Upgrading and optimizing sewer systems and point-source management are therefore fundamental to ensure the long-term success of ecological rehabilitation and the effectiveness of other chemical or hydrological measures.",
     "limitations": "Coordination challenges between utilities, municipalities, and environmental agencies.",
@@ -159,6 +155,8 @@
     "name": "Stream re-meandering",
     "line": "L2",
     "addresses": [
+      "S03",
+      "S08",
       "S09"
     ],
     "objective": "Stream re-meandering is the process of restoring a straightened or channelized stream by reintroducing natural curvature and sinuosity",
@@ -239,7 +237,9 @@
     "name": "Elimination of riverbank protection",
     "line": "L2",
     "addresses": [
-      "S05"
+      "S05",
+      "S06",
+      "S08"
     ],
     "objective": "Eliminating it consists in removing some parts of the bank protection, especially the inert one, to enhance lateral connections of the river",
     "limitations": "Increased short-term erosion risk until vegetation establishes.",
@@ -392,7 +392,8 @@
     "name": "Brush mattresses",
     "line": "L2",
     "addresses": [
-      "S04"
+      "S04",
+      "S07"
     ],
     "objective": "The primary goal of a brush mattress is to establish structural streambank protection that transitions into long-term vegetative stabilization.",
     "limitations": "Request for occasional clearing of scrubland.",
@@ -461,8 +462,7 @@
       "bank-stability",
       "riparian-cover"
     ],
-    "responseLag": "slow",
-    "establishmentYears": 3
+    "responseLag": "fast"
   },
   {
     "id": "4.3.21",
@@ -556,7 +556,9 @@
     "name": "Rain gardens",
     "line": "C-hydro",
     "addresses": [
-      "S03"
+      "S01",
+      "S03",
+      "S12"
     ],
     "objective": "Rain gardens are shallow, vegetated depressions designed to collect, filter, and infiltrate stormwater runoff from nearby impervious surfaces such as roofs, sidewalks, and parking lots.",
     "limitations": "Ineffective on sites with impermeable soils unless engineered with underdrains.",
@@ -588,7 +590,9 @@
     "name": "Permeable pavements",
     "line": "C-hydro",
     "addresses": [
-      "S03"
+      "S01",
+      "S03",
+      "S12"
     ],
     "objective": "Permeable pavements are surface materials that allow rainwater to infiltrate through pores, joints, or voids into an underlying gravel sub-base where it is stored temporarily and gradually infiltrated or drained.",
     "limitations": "Clogging risk due to accumulation of fine sediments or oils; requires periodic vacuum cleaning.",
@@ -604,7 +608,9 @@
     "name": "Infiltration trenches",
     "line": "C-hydro",
     "addresses": [
-      "S03"
+      "S01",
+      "S03",
+      "S12"
     ],
     "objective": "Linear gravel-filled excavations designed to collect, temporarily store, and infiltrate runoff from adjacent impervious surfaces such as roads, roofs, or parking areas.",
     "limitations": "Susceptible to clogging if inflow is not pre-treated or regularly maintained.",
@@ -620,7 +626,9 @@
     "name": "Disconnection of impervious areas",
     "line": "C-hydro",
     "addresses": [
-      "S03"
+      "S01",
+      "S03",
+      "S12"
     ],
     "objective": "This measure redirects runoff from impervious surfaces such as roofs, sidewalks, and driveways away from stormwater drains and toward vegetated or permeable zones where infiltration and evapotranspiration can occur.",
     "limitations": "Requires available permeable area and gentle slopes to ensure infiltration and prevent local flooding.",
@@ -637,7 +645,9 @@
     "name": "Vegetated swales",
     "line": "C-hydro",
     "addresses": [
-      "S03"
+      "S01",
+      "S03",
+      "S12"
     ],
     "objective": "Vegetated swales are wide, shallow, open channels with flat or gently sloping bottoms, typically constructed along roadsides, paths, or parking areas",
     "limitations": "Swales are less effective in conveying large storm volumes or flash floods; underdrains or bypasses are often needed for overflow management.",
@@ -654,7 +664,9 @@
     "name": "Retention ponds and floodable parks",
     "line": "C-hydro",
     "addresses": [
-      "S03"
+      "S01",
+      "S03",
+      "S12"
     ],
     "objective": "Retention ponds and floodable parks are multifunctional water management systems designed to store, treat, and attenuate stormwater runoff while delivering ecological and social benefits",
     "limitations": "Needs large surface areas, which can limit feasibility in densely built environments.",
