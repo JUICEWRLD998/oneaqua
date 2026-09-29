@@ -177,18 +177,35 @@
         "reportedAs": "outcome",
         "page": 113,
         "quote": "the decoupling of paved surfaces from the combined sewer system"
+      },
+      {
+        "measureId": "4.2.2",
+        "order": 8,
+        "orderBasis": "mention-order",
+        "page": 113,
+        "quote": "the blocking of drainage ditches to restore groundwater levels"
+      },
+      {
+        "measureId": "4.6.7",
+        "order": 9,
+        "orderBasis": "mention-order",
+        "page": 113,
+        "quote": "retention basin creation"
+      },
+      {
+        "measureId": "4.4.3",
+        "order": 10,
+        "orderBasis": "mention-order",
+        "page": 113,
+        "quote": "broad-based participation process promoted by EGLV"
       }
     ],
     "unmapped": [
       "wetland rewetting",
-      "retention basin creation",
       "the creation of side channels and shallow backwaters",
-      "the blocking of drainage ditches to restore groundwater levels",
       "soil remediation in former industrial areas"
     ],
     "unmappedPages": [
-      113,
-      113,
       113,
       113,
       113
@@ -430,9 +447,10 @@
       120
     ],
     "baselineReported": null,
-    "afterMonitoringReported": true,
+    "afterMonitoringReported": null,
     "notStated": {
-      "baselineReported": "not stated in D2.4: no pre-removal monitoring data are described for either site"
+      "baselineReported": "not stated in D2.4: no pre-removal monitoring data are described for either site",
+      "afterMonitoringReported": "not stated in D2.4: Sourinho monitoring is underway with no results stated; Vaqueiros describes none"
     },
     "evidence": [
       {
@@ -486,9 +504,10 @@
       123
     ],
     "baselineReported": null,
-    "afterMonitoringReported": true,
+    "afterMonitoringReported": null,
     "notStated": {
-      "baselineReported": "not stated in D2.4: no pre-project data are described"
+      "baselineReported": "not stated in D2.4: no pre-project data are described",
+      "afterMonitoringReported": "not stated in D2.4: the only after-figure is stored rainwater volume, which is a usage statistic, not monitoring"
     },
     "evidence": [
       {
