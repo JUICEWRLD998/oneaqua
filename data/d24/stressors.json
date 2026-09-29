@@ -1,0 +1,98 @@
+[
+  {
+    "id": "S01",
+    "name": "Water pollution",
+    "d24Text": "Water pollution. Usually related with excessive concentrations of organic matter, nutrients suspended solids, but also heavy metals, plastics, pharmaceuticals, among other pollutants.",
+    "page": 30,
+    "firstLine": true,
+    "citizenObservable": true
+  },
+  {
+    "id": "S02",
+    "name": "Connectivity barriers",
+    "d24Text": "Connectivity barriers. A total or partial alteration in the longitudinal connectivity of a lotic ecosystem (e.g., by culverts, weirs, grids, bridges, dams).",
+    "page": 30,
+    "firstLine": false,
+    "citizenObservable": true
+  },
+  {
+    "id": "S03",
+    "name": "Altered hydrological properties",
+    "d24Text": "Altered hydrological properties (e.g., increased runoff and flashiness, reduced baseflow, rapid flow variability).",
+    "page": 30,
+    "firstLine": true,
+    "citizenObservable": true
+  },
+  {
+    "id": "S04",
+    "name": "Geomorphological changes of the channel",
+    "d24Text": "Geomorphological changes of the channel. For example, by channel incision or widening, bank erosion and instability, sediment imbalance, loss of natural channel complexity.",
+    "page": 30,
+    "firstLine": false,
+    "citizenObservable": true
+  },
+  {
+    "id": "S05",
+    "name": "Artificialization of the channel and banks",
+    "d24Text": "Artificialization of the channel and banks. Using artificial materials in the riverbed (e.g., concrete, culverts, non-local materials – sand, stones, boulders, and metal grids) and banks (e.g., concrete, gabion and laid stones) leads to poor transversal connectivity, groundwater dysconnectivity and drives the ecosystem to a sterile state.",
+    "page": 30,
+    "firstLine": false,
+    "citizenObservable": true
+  },
+  {
+    "id": "S06",
+    "name": "Occupation of the floodplain",
+    "d24Text": "Occupation of the floodplain. Constricts the natural available space for the riparian area, natural floods and infiltration (e.g., constructed areas such as buildings, roads or sidewalks - impervious areas; private gardens, vegetable garden – non impervious areas).",
+    "page": 30,
+    "firstLine": false,
+    "citizenObservable": true
+  },
+  {
+    "id": "S07",
+    "name": "Removal or degradation of the riparian vegetation",
+    "d24Text": "Removal or degradation of the riparian vegetation (total or partial removal, alteration in the structure and species composition expected at the site; presence or invasion by exotic plant species; fragmentation of habitats and riparian corridors).",
+    "page": 30,
+    "firstLine": true,
+    "citizenObservable": true
+  },
+  {
+    "id": "S08",
+    "name": "Lack of expected aquatic habitats",
+    "d24Text": "Lack of expected aquatic habitats. Loss of pools, riffles, and woody debris; deposits of inorganic and organic matter, macrophytes disappearance).",
+    "page": 30,
+    "firstLine": false,
+    "citizenObservable": true
+  },
+  {
+    "id": "S09",
+    "name": "Linearization of the channel",
+    "d24Text": "Linearization of the channel.",
+    "page": 30,
+    "firstLine": false,
+    "citizenObservable": true
+  },
+  {
+    "id": "S10",
+    "name": "Altered physico-chemical properties",
+    "d24Text": "Altered physico-chemical properties (e.g., low dissolved oxygen, high water temperature, acidification).",
+    "page": 30,
+    "firstLine": false,
+    "citizenObservable": false
+  },
+  {
+    "id": "S11",
+    "name": "Degraded biological communities",
+    "d24Text": "Degraded biological communities (e.g., presence of invasive aquatic animals and plants, and altered food webs; Haubrock et al., 2022).",
+    "page": 30,
+    "firstLine": false,
+    "citizenObservable": true
+  },
+  {
+    "id": "S12",
+    "name": "Catchment pressures",
+    "d24Text": "Catchment pressures. (e.g., high impervious surface cover, intense urban land use, groundwater extraction).",
+    "page": 30,
+    "firstLine": false,
+    "citizenObservable": false
+  }
+]
