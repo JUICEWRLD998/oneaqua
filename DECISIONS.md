@@ -3,6 +3,14 @@
 Build-window decisions and measured evidence, newest first. Prepend every entry. Never edit an old one; correct it
 with a new entry. Every bullet: the measurement, the rejected alternative, the file or test that pins it.
 
+## 2026-09-29 (P1 independent review applied)
+
+- **A fresh reviewer (not the encoder) audited 43 measures, 7 casebook plans, 12 stressors and 14 items against the page text: 36 disagreements (1 blocks-demo, 15 should-fix, 20 nit).** Full table: evidence/review-d24.md. Confirmed OK: 43/43 lines, all Emscher/Bievre/Sourinho ordering quotes, baseline null in 7/7.
+- **Blocks-demo #1 (S03 with no way out) was already fixed by the S03 non-gating decision below**; also added S03 to 4.2.2 (p.42-43 quotes).
+- **Applied (quote-backed):** 4.1.4 addresses nothing (p.39 "social reconnection is not an objective per se") so it can never count as covering S07; S01/S12 added to compensatory 4.6.x; 4.1.3 +S01; 4.3.3 +S03,S08; 4.3.8 +S08,S06; 4.3.17 +S07; 4.3.20 (erosion blanket) is fast with no establishment period (p.85-86 "immediate physical protection"); establishmentYears kept only on 4.3.11-4.3.19 (p.26 speaks of bio-engineered structures, not riparian planting); casebook 5.1.4 and 5.1.5 afterMonitoring set to null with notes; Emscher gains 4.2.2 (drainage-ditch blocking), 4.6.7 (retention basin) and 4.4.3 (participation); ci-dry-areas no longer suggests S03 (intermittent flow is natural in many streams) and its source page is p.12.
+- **Consequence measured:** 4.1.x now fall back to the slow lag class (1095 d), so the R7 date for 4.1.1 is unchanged (2028-12-31) but no longer asserts a p.26 establishment claim for riparian planting. rules.json still cites p.26 for the slow class: that is an approximation, stated here rather than hidden.
+- **Not applied (nits, left in the review file):** S10/S12 first-line, extra stressor tags on 4.3.4-4.3.16, casebook 5.1.1/5.1.3/5.1.6 stressor extras, four item wording nits, items for S08/S09/S11. ci-dry-areas now carries no evidence, so it is an unscored context question.
+
 ## 2026-09-29 (P1/P2 integration: real-catalogue controls)
 
 - **S03 (altered hydrology) is NOT a hard first-line gate; S01 and S07 are.** Measured: the real Emscher plan

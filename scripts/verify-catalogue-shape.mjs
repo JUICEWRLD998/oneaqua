@@ -59,7 +59,7 @@ measures.forEach(m => {
   if (m.establishmentYears !== undefined) ok(m.establishmentYears === 3, `${m.id}: establishmentYears must be 3 when present`)
 })
 const est = measures.filter(m => m.establishmentYears).map(m => m.id)
-ok(est.length === 14, `want 14 measures with establishmentYears (4.1.1-4 and 4.3.11-20), got ${est.length}`)
+ok(est.length === 9, `want 9 measures with establishmentYears (4.3.11-19; bioengineered works per D2.4 p.26), got ${est.length}`)
 
 // rules
 const want = ['R1', 'R1a', 'R2', 'R3', 'R4', 'R5', 'R6', 'R7', 'R8']
