@@ -250,8 +250,8 @@ export interface FollowupItem {
   measureId: MeasureId
   indicator: IndicatorId
   design: BaciDesign
-  /** ISO date from which an outcome verdict is allowed (R7). */
-  knowableFrom: string
+  /** ISO date from which an outcome verdict is allowed (R7). null = the measure is not built yet, so no clock has started. */
+  knowableFrom: string | null
   /** Check-ups still needed per cell to reach `minPerCell` before then. */
   visitsNeeded: { beforeImpact: number; afterImpact: number; beforeControl: number; afterControl: number }
   reasons: [Reason, ...Reason[]]
