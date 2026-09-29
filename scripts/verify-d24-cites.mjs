@@ -72,6 +72,12 @@ export async function verify({ controls = false } = {}) {
     const json = JSON.parse(readFileSync(file, 'utf8'))
     for (const [obj, path] of objects(json, '$')) {
       if (typeof obj.page !== 'number') continue
+      // A measure's `page` must be the page where its numbered heading is printed (not the contents).
+      if (typeof obj.id === 'string' && /^4\.\d\.\d+$/.test(obj.id) && typeof obj.name === 'string') {
+        checked++
+        const head = normalise(obj.id + obj.name).slice(0, normalise(obj.id).length + 12)
+        if (!(pages.get(obj.page) ?? '').includes(head)) misses.push(`${relative(ROOT, file)} ${path}.page (p.${obj.page}): heading "${obj.id} ${obj.name}" not printed on that page`)
+      }
       for (const f of QUOTE_FIELDS) {
         const q = obj[f]
         if (typeof q !== 'string' || q === NOT_STATED) continue
