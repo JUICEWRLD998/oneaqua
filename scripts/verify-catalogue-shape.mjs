@@ -28,7 +28,7 @@ stressors.forEach(s => {
   ok(typeof s.firstLine === 'boolean' && typeof s.citizenObservable === 'boolean', `${s.id}: firstLine/citizenObservable must be boolean`)
   ok(s.page >= 1 && s.page <= 150 && s.d24Text && s.name, `${s.id}: missing page/text/name`)
 })
-ok(JSON.stringify(stressors.filter(s => s.firstLine).map(s => s.id)) === '["S01","S03","S07"]', 'firstLine must be exactly S01, S03, S07')
+ok(JSON.stringify(stressors.filter(s => s.firstLine).map(s => s.id)) === '["S01","S07"]', 'firstLine must be exactly S01, S07 (S03 is "where feasible" on D2.4 p.19, see DECISIONS)')
 
 // indicators
 const iids = new Set(indicators.map(i => i.id))

@@ -20,7 +20,7 @@
     "name": "Altered hydrological properties",
     "d24Text": "Altered hydrological properties (e.g., increased runoff and flashiness, reduced baseflow, rapid flow variability).",
     "page": 30,
-    "firstLine": true,
+    "firstLine": false,
     "citizenObservable": true
   },
   {
