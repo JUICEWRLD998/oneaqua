@@ -1,0 +1,23 @@
+HL7 validator jar: NOT RUN (no Java on this machine).
+
+== STRUCTURAL validation (ajv + official FHIR R4 JSON schema + custom reference assertions) ==
+ajv 8.20.0; schema https://hl7.org/fhir/R4/fhir.schema.json (FHIR 4.0.1); node v24.14.1
+Checks: JSON-schema conformance; every reference resolves in-bundle; no duplicate ids; Condition/CarePlan/Goal subject resolves to Group/Patient.
+NOT checked: terminology, profile conformance (meta.profile), FHIRPath invariants.
+Command: npm run validate:fhir
+
+firstline: 56 resources {"CodeSystem":2,"Location":2,"Group":2,"Condition":2,"Goal":3,"CarePlan":1,"Observation":44} -> PASS, 0 errors
+naive: 51 resources {"CodeSystem":2,"Location":2,"Group":2,"Condition":2,"Goal":1,"CarePlan":1,"DetectedIssue":1,"Observation":40} -> PASS, 0 errors
+planted-bad control (dangling CarePlan.subject): REJECTED as required
+  expected error: Condition/cnd-S01: dangling reference Group/does-not-exist
+  expected error: Condition/cnd-S01: subject Group/does-not-exist does not resolve
+  expected error: Condition/cnd-S07: dangling reference Group/does-not-exist
+  expected error: Condition/cnd-S07: subject Group/does-not-exist does not resolve
+  expected error: Goal/goal-vale-firstline-4.1.1: dangling reference Group/does-not-exist
+  expected error: Goal/goal-vale-firstline-4.1.1: subject Group/does-not-exist does not resolve
+  expected error: Goal/goal-vale-firstline-4.2.2: dangling reference Group/does-not-exist
+  expected error: Goal/goal-vale-firstline-4.2.2: subject Group/does-not-exist does not resolve
+  expected error: Goal/goal-vale-firstline-4.3.3: dangling reference Group/does-not-exist
+  expected error: Goal/goal-vale-firstline-4.3.3: subject Group/does-not-exist does not resolve
+  expected error: CarePlan/cp-vale-firstline: dangling reference Group/does-not-exist
+  expected error: CarePlan/cp-vale-firstline: subject Group/does-not-exist does not resolve
