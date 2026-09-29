@@ -1,0 +1,104 @@
+/* shared base, verdict marks, citation chip, BACI figure classes. Values come from tokens.css only. */
+*, *::before, *::after { box-sizing: border-box; }
+html { overflow-x: clip; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: auto; }
+body {
+  margin: 0; overflow-x: clip; background: var(--paper); color: var(--ink);
+  font-family: var(--font-body); font-size: var(--t-base); line-height: 1.5;
+  font-variant-numeric: tabular-nums lining-nums; text-wrap: pretty;
+  -webkit-font-smoothing: antialiased;
+}
+:where(p, li, dd, blockquote, figcaption) { max-width: 68ch; }
+:where(h1, h2, h3, h4) { text-wrap: balance; overflow-wrap: anywhere; min-width: 0; margin: 0; font-weight: 700; }
+:where(p, ul, ol, dl, figure, blockquote) { margin: 0; }
+:where(ul, ol) { padding: 0; list-style: none; }
+a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
+button, select, input { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.skip { position: absolute; left: var(--space-2); top: -4rem; padding: var(--space-2) var(--space-3); background: var(--sheet); border: 1px solid var(--rule-strong); z-index: 30; min-height: 44px; display: inline-flex; align-items: center; }
+.skip:focus-visible { top: var(--space-2); }
+q { quotes: "\201C" "\201D"; }
+.num { font-variant-numeric: tabular-nums lining-nums; font-family: var(--font-figure); }
+
+/* verdict marks: shape + word, colour is the third channel */
+.verdict { display: inline-flex; align-items: center; gap: 0.4em; font-weight: 600; white-space: nowrap; line-height: 1.2; }
+.vg { flex: none; fill: currentColor; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; }
+.v-confirmed .vg { color: var(--mark-confirmed); }
+.v-suspected .vg { color: var(--mark-suspected); }
+.v-notassessed .vg { color: var(--mark-notassessed); }
+.v-contra .vg { color: var(--mark-contra); }
+.v-improved .vg { color: var(--mark-improved); }
+.v-nyk .vg { color: var(--mark-nyk); }
+.v-confounded .vg { color: var(--mark-confounded); }
+
+/* citation chip: hover (after a beat), focus (instant), tap (toggle) */
+.cite { position: relative; display: inline-block; vertical-align: baseline; }
+.chip {
+  display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; padding: 0 var(--space-2);
+  font-family: var(--font-figure); font-size: 0.8125rem; line-height: 1; white-space: nowrap;
+  background: var(--sheet); color: var(--accent-deep); border: 1px solid var(--accent-deep); border-radius: var(--radius);
+  cursor: pointer;
+}
+.chip:hover { background: var(--accent-wash); }
+.chip:active { background: var(--accent-deep); color: var(--sheet); }
+.chip:disabled { opacity: 0.55; cursor: not-allowed; }
+.chip[aria-expanded="true"] { background: var(--accent-wash); }
+.cite-quote {
+  display: none; position: absolute; left: 0; top: calc(100% + 4px); z-index: 20; width: min(44ch, calc(100vw - 2rem));
+  padding: var(--space-2) var(--space-3); background: var(--sheet); color: var(--ink); border: 1px solid var(--rule-strong);
+  font-family: var(--font-body); font-size: 0.9375rem; line-height: 1.45; text-align: left; white-space: normal;
+}
+.cite-quote q { display: block; }
+.cite-src { display: block; margin-top: var(--space-1); color: var(--ink-2); font-size: 0.8125rem; font-family: var(--font-figure); }
+.cite.flip .cite-quote { left: auto; right: 0; }
+.cite:hover .cite-quote { display: block; animation: q-in 120ms var(--ease-out) 700ms both; }
+.cite[data-focus] .cite-quote, .cite[data-open] .cite-quote { display: block; animation: none; }
+@keyframes q-in { from { opacity: 0; } to { opacity: 1; } }
+@media (max-width: 48rem) {
+  .cite-quote { position: fixed; left: var(--space-2); right: var(--space-2); top: auto; bottom: var(--space-2); width: auto; }
+  .cite.flip .cite-quote { left: var(--space-2); right: var(--space-2); }
+}
+@media (prefers-reduced-motion: reduce) { .cite:hover .cite-quote { animation: none; } }
+
+/* BACI figure classes */
+.baci { display: block; width: 100%; height: auto; overflow: visible; }
+.baci text { font-family: var(--font-body); fill: var(--ink-2); font-size: 12px; }
+.baci .b-tick, .baci .b-n, .baci .b-num, .baci .b-key { font-family: var(--font-figure); font-variant-numeric: tabular-nums; }
+.baci .b-cap { fill: var(--ink); font-weight: 600; font-size: 13px; }
+.baci .b-num { fill: var(--ink); font-weight: 600; font-size: 13px; }
+.baci .b-grid { stroke: var(--rule); stroke-width: 1; }
+.baci .b-axis { stroke: var(--rule-strong); stroke-width: 1.5; }
+.baci .b-zero { stroke: var(--ink); stroke-width: 1.5; stroke-dasharray: 3 3; }
+.baci .b-ctl { stroke: var(--ink-2); stroke-width: 2; stroke-dasharray: 6 4; fill: none; }
+.baci .b-imp { stroke: var(--ink); stroke-width: 3; fill: none; }
+.baci .b-cf { stroke: var(--ink-3); stroke-width: 1.5; stroke-dasharray: 1.5 4; stroke-linecap: round; }
+.baci .b-contrast { stroke: var(--ink); stroke-width: 1.5; fill: none; }
+.baci .b-pt-i { fill: var(--ink); }
+.baci .b-pt-c { fill: var(--sheet); stroke: var(--ink); stroke-width: 2; }
+.baci .b-band { fill: var(--sheet-2); stroke: var(--rule); stroke-width: 1; }
+.baci .b-whisker { stroke: var(--ink); stroke-width: 2; }
+.baci .b-est { fill: var(--mark-improved); stroke: var(--ink); stroke-width: 1.5; }
+.baci[data-v="CONFOUNDED"] .b-est { fill: var(--mark-confounded); }
+.baci .b-lag { stroke: var(--rule-strong); stroke-width: 3; stroke-linecap: round; }
+.baci .b-lag-done { stroke: var(--mark-nyk); stroke-width: 6; stroke-linecap: butt; }
+.baci .b-today { stroke: var(--ink); stroke-width: 2; }
+
+/* the keyboard path to placing a measure (drag is never the only way) */
+.place { display: flex; flex-wrap: wrap; align-items: end; gap: var(--space-2); }
+.place label { display: block; font-size: 0.875rem; color: var(--ink-2); margin-bottom: 0.25rem; }
+.place select {
+  min-height: 44px; min-width: min(100%, 22rem); max-width: 100%; padding: 0 var(--space-2);
+  background: var(--sheet); border: 1px solid var(--rule-strong); border-radius: var(--radius); appearance: auto;
+}
+.place select:hover { border-color: var(--ink); }
+.place select:disabled { opacity: 0.55; cursor: not-allowed; }
+.btn {
+  min-height: 44px; padding: 0 var(--space-3); background: var(--accent); color: var(--accent-ink);
+  border: 1px solid var(--accent-deep); border-radius: var(--radius); font-weight: 600; cursor: pointer; white-space: nowrap;
+}
+.btn:hover { background: var(--accent-wash); }
+.btn:active { background: var(--accent-deep); color: var(--sheet); }
+.btn:disabled, .btn[aria-disabled="true"] { opacity: 0.55; cursor: not-allowed; }
+.place output { flex: 1 1 100%; min-height: 1lh; font-size: 0.9375rem; color: var(--ink-2); max-width: 68ch; }
+
+@media print { body { background: none; } }
