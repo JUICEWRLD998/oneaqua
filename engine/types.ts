@@ -51,6 +51,9 @@ export interface Measure {
   establishmentYears?: number
   variants?: string[]
   note?: string
+  /** Pages of the quoted text when it sits on a later page than the heading (checked by verify-d24-cites). */
+  objectivePage?: number
+  limitationsPage?: number
 }
 
 export interface RuleDef {
