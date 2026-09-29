@@ -9,3 +9,4 @@ next-env.d.ts
 .DS_Store
 research/*.pdf
 data/d24/_review/
+.claude/
