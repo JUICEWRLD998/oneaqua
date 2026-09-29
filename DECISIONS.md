@@ -3,6 +3,23 @@
 Build-window decisions and measured evidence, newest first. Prepend every entry. Never edit an old one; correct it
 with a new entry. Every bullet: the measurement, the rejected alternative, the file or test that pins it.
 
+## 2026-09-29 (P1/P2 integration: real-catalogue controls)
+
+- **S03 (altered hydrology) is NOT a hard first-line gate; S01 and S07 are.** Measured: the real Emscher plan
+  (sewer 4.2.2 then 4.3.x) drew 10+ CONTRAINDICATED verdicts because S03 was flagged first-line and no L1 measure
+  addresses it. That refused the catalogue's own flagship case study. D2.4 p.19 says the physical-pressure group
+  (runoff, sealed surfaces) is first-line only "where feasible", while water quality and riparian function are
+  unconditional. Rejected: keeping S03 gating (contradicts the catalogue's own casebook); flagging S12 instead.
+  Consequence: sealing/hydrology measures (4.6.x, 4.3.21) are never forced ahead of structural works. The UI must say
+  so on the Method page. Pinned by  (Emscher control) and .
+  Earlier entry in this file and implementation.md P1 list S03 as first-line; this entry supersedes them.
+- **Rule verdict text corrected.**  said R1 = DEFERRED and R4 = CONTRAINDICATED; the engine does the
+  opposite (R1 contraindicates, R4 defers). Text now matches behaviour.
+- **Casebook cases repeat a measure id** (Emscher/others mention 4.1.2 more than once). A plan holds each measure
+  once, so the replay keeps the lowest  (pinned in the real-catalogue test).
+- **Real-data controls all fire:** naive 4.3.3 with S01 confirmed -> CONTRAINDICATED R1 p.19 with   containing 4.2.2; the same plan with R1 disabled is not contraindicated (mutation); 4.1.1 built 2026-01-01 is
+  NOT_YET_KNOWABLE until 2028-12-31 (3 years, D2.4 p.26).
+
 ## 2026-09-29 (P2 engine: ambiguities resolved)
 
 - **Reading rules are keyed by rule id.** `Checkup.readings` is `Record<string, number>` and `ReadingRule` has no

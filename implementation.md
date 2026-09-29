@@ -112,8 +112,7 @@ The data files are the product's knowledge. Accuracy here is worth more than any
    banks; floodplain occupation; riparian removal/degradation; lack of aquatic habitats; linearisation;
    altered physico-chemistry; degraded biological communities; catchment pressures.
    Fields: `id, name, d24Text (verbatim), page, firstLine: boolean, citizenObservable: boolean`.
-   `firstLine` = the stressors D2.4 p.19 names as first-line concerns: water quality, riparian function, and
-   hydrological/sealing pressures. **Log the mapping decision in DECISIONS.md.** It is interpretation, and a judge
+   `firstLine` = the stressors D2.4 p.19 names as unconditional first-line concerns: water quality (S01) and riparian function (S07). Hydrological/sealing pressures are first-line only "where feasible", so S03 does not gate (DECISIONS 2026-09-29 integration). **Log the mapping decision in DECISIONS.md.** It is interpretation, and a judge
    may ask.
 3. **measures.json:** the 43 numbered measures (4.1.1–4.7.3). Sub-variants (rock-ramp, J-hook vane…) go in
    `variants[]`. Fields:

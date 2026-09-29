@@ -13,7 +13,8 @@
     "test": "vitest run",
     "test:cov": "vitest run --coverage",
     "verify:cites": "node scripts/verify-d24-cites.mjs",
-    "verify": "npm run typecheck && npm run lint && npm test && npm run verify:cites && npm run build"
+    "verify": "npm run typecheck && npm run lint && npm test && npm run verify:data && npm run build",
+    "verify:data": "node scripts/verify-data.mjs"
   },
   "dependencies": {
     "@eslint/eslintrc": "^3.3.7",
