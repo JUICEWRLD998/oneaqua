@@ -14,7 +14,9 @@
     "test:cov": "vitest run --coverage",
     "verify:cites": "node scripts/verify-d24-cites.mjs",
     "verify": "npm run typecheck && npm run lint && npm test && npm run verify:data && npm run build",
-    "verify:data": "node scripts/verify-data.mjs"
+    "verify:data": "node scripts/verify-data.mjs",
+    "fixture": "tsx scripts/export-fixture.ts",
+    "scenario": "node scripts/gen-scenario.mjs"
   },
   "dependencies": {
     "@eslint/eslintrc": "^3.3.7",
@@ -30,6 +32,7 @@
     "@vitest/coverage-v8": "^3.2.0",
     "eslint": "^9.0.0",
     "eslint-config-next": "^15.5.0",
+    "tsx": "^4.23.15",
     "typescript": "^5.6.0",
     "vitest": "^3.2.0"
   }

@@ -1,0 +1,1310 @@
+{
+  "_label": "SCENARIO · not field records. Invented for the Firstline demo; every check-up carries provenance \"scenario\".",
+  "asOf": "2026-09-29",
+  "site": {
+    "name": "Vale reach (scenario)",
+    "note": "A fictional urban stream reach with a paired control reach upstream of the outfall. Not a real site."
+  },
+  "reaches": [
+    {
+      "id": "vale-impact",
+      "role": "impact",
+      "name": "Vale · impact reach",
+      "lat": 40.2033,
+      "lon": -8.4103
+    },
+    {
+      "id": "vale-control",
+      "role": "control",
+      "name": "Vale · control reach",
+      "lat": 40.2081,
+      "lon": -8.4062
+    }
+  ],
+  "stressors": [
+    {
+      "id": "S01",
+      "name": "Water pollution",
+      "firstLine": true,
+      "page": 30,
+      "status": "CONFIRMED",
+      "evidenceCount": 4,
+      "settleWith": []
+    },
+    {
+      "id": "S02",
+      "name": "Connectivity barriers",
+      "firstLine": false,
+      "page": 30,
+      "status": "NOT_ASSESSED",
+      "evidenceCount": 0,
+      "settleWith": [
+        "ci-barriers"
+      ]
+    },
+    {
+      "id": "S03",
+      "name": "Altered hydrological properties",
+      "firstLine": false,
+      "page": 30,
+      "status": "NOT_ASSESSED",
+      "evidenceCount": 0,
+      "settleWith": [
+        "ci-outflows"
+      ]
+    },
+    {
+      "id": "S04",
+      "name": "Geomorphological changes of the channel",
+      "firstLine": false,
+      "page": 30,
+      "status": "NOT_ASSESSED",
+      "evidenceCount": 0,
+      "settleWith": [
+        "ci-bank-erosion"
+      ]
+    },
+    {
+      "id": "S05",
+      "name": "Artificialization of the channel and banks",
+      "firstLine": false,
+      "page": 30,
+      "status": "NOT_ASSESSED",
+      "evidenceCount": 0,
+      "settleWith": [
+        "ci-bank-concrete",
+        "ci-channel-artificial"
+      ]
+    },
+    {
+      "id": "S06",
+      "name": "Occupation of the floodplain",
+      "firstLine": false,
+      "page": 30,
+      "status": "NOT_ASSESSED",
+      "evidenceCount": 0,
+      "settleWith": [
+        "ci-artificial-structures"
+      ]
+    },
+    {
+      "id": "S07",
+      "name": "Removal or degradation of the riparian vegetation",
+      "firstLine": true,
+      "page": 30,
+      "status": "CONFIRMED",
+      "evidenceCount": 2,
+      "settleWith": []
+    },
+    {
+      "id": "S08",
+      "name": "Lack of expected aquatic habitats",
+      "firstLine": false,
+      "page": 30,
+      "status": "NOT_ASSESSED",
+      "evidenceCount": 0,
+      "settleWith": []
+    },
+    {
+      "id": "S09",
+      "name": "Linearization of the channel",
+      "firstLine": false,
+      "page": 30,
+      "status": "NOT_ASSESSED",
+      "evidenceCount": 0,
+      "settleWith": []
+    },
+    {
+      "id": "S10",
+      "name": "Altered physico-chemical properties",
+      "firstLine": false,
+      "page": 30,
+      "status": "NOT_ASSESSED",
+      "evidenceCount": 0,
+      "settleWith": []
+    },
+    {
+      "id": "S11",
+      "name": "Degraded biological communities",
+      "firstLine": false,
+      "page": 30,
+      "status": "NOT_ASSESSED",
+      "evidenceCount": 0,
+      "settleWith": []
+    },
+    {
+      "id": "S12",
+      "name": "Catchment pressures",
+      "firstLine": false,
+      "page": 30,
+      "status": "NOT_ASSESSED",
+      "evidenceCount": 0,
+      "settleWith": []
+    }
+  ],
+  "measures": [
+    {
+      "id": "4.1.1",
+      "name": "Passive riparian vegetation: allowing natural regeneration",
+      "line": "L1",
+      "page": 32,
+      "addresses": [
+        "S07"
+      ]
+    },
+    {
+      "id": "4.1.2",
+      "name": "Active riparian vegetation restoration: re-establishment riparian forest",
+      "line": "L1",
+      "page": 33,
+      "addresses": [
+        "S07"
+      ]
+    },
+    {
+      "id": "4.1.3",
+      "name": "Constrained riparian vegetation corridors (“buffers”)",
+      "line": "L1",
+      "page": 37,
+      "addresses": [
+        "S01",
+        "S07"
+      ]
+    },
+    {
+      "id": "4.1.4",
+      "name": "Vegetated corridors promoting connectedness",
+      "line": "L1",
+      "page": 39,
+      "addresses": []
+    },
+    {
+      "id": "4.2.1",
+      "name": "In-stream self-purification enhancement",
+      "line": "L1",
+      "page": 41,
+      "addresses": [
+        "S01",
+        "S10"
+      ]
+    },
+    {
+      "id": "4.2.2",
+      "name": "Sewer system and point-source improvements",
+      "line": "L1",
+      "page": 42,
+      "addresses": [
+        "S01",
+        "S03"
+      ]
+    },
+    {
+      "id": "4.2.3",
+      "name": "Litter, plastic, and hydrocarbon control",
+      "line": "L1",
+      "page": 43,
+      "addresses": [
+        "S01"
+      ]
+    },
+    {
+      "id": "4.3.1",
+      "name": "Removing barriers",
+      "line": "L2",
+      "page": 47,
+      "addresses": [
+        "S02"
+      ]
+    },
+    {
+      "id": "4.3.2",
+      "name": "Passing barriers",
+      "line": "L2",
+      "page": 49,
+      "addresses": [
+        "S02"
+      ]
+    },
+    {
+      "id": "4.3.3",
+      "name": "Stream re-meandering",
+      "line": "L2",
+      "page": 52,
+      "addresses": [
+        "S03",
+        "S08",
+        "S09"
+      ]
+    },
+    {
+      "id": "4.3.4",
+      "name": "Stream bed re-naturalization",
+      "line": "L2",
+      "page": 53,
+      "addresses": [
+        "S05"
+      ]
+    },
+    {
+      "id": "4.3.5",
+      "name": "Constructed riffles",
+      "line": "L2",
+      "page": 54,
+      "addresses": [
+        "S08"
+      ]
+    },
+    {
+      "id": "4.3.6",
+      "name": "Boulder clusters",
+      "line": "L2",
+      "page": 55,
+      "addresses": [
+        "S08"
+      ]
+    },
+    {
+      "id": "4.3.7",
+      "name": "Flow deflectors",
+      "line": "L2",
+      "page": 56,
+      "addresses": [
+        "S04",
+        "S08"
+      ]
+    },
+    {
+      "id": "4.3.8",
+      "name": "Elimination of riverbank protection",
+      "line": "L2",
+      "page": 66,
+      "addresses": [
+        "S05",
+        "S06",
+        "S08"
+      ]
+    },
+    {
+      "id": "4.3.9",
+      "name": "Toe protection",
+      "line": "L2",
+      "page": 67,
+      "addresses": [
+        "S04"
+      ]
+    },
+    {
+      "id": "4.3.10",
+      "name": "Riverbank regrading",
+      "line": "L2",
+      "page": 69,
+      "addresses": [
+        "S04"
+      ]
+    },
+    {
+      "id": "4.3.11",
+      "name": "Tree/ bushes direct planting (Live transplanting)",
+      "line": "L2",
+      "page": 70,
+      "addresses": [
+        "S04"
+      ]
+    },
+    {
+      "id": "4.3.12",
+      "name": "Live stakes planting",
+      "line": "L2",
+      "page": 72,
+      "addresses": [
+        "S04"
+      ]
+    },
+    {
+      "id": "4.3.13",
+      "name": "Live fascines",
+      "line": "L2",
+      "page": 73,
+      "addresses": [
+        "S04"
+      ]
+    },
+    {
+      "id": "4.3.14",
+      "name": "Live fences (wood weaving)",
+      "line": "L2",
+      "page": 75,
+      "addresses": [
+        "S04"
+      ]
+    },
+    {
+      "id": "4.3.15",
+      "name": "Brush layering",
+      "line": "L2",
+      "page": 77,
+      "addresses": [
+        "S04"
+      ]
+    },
+    {
+      "id": "4.3.16",
+      "name": "Live smiles",
+      "line": "L2",
+      "page": 79,
+      "addresses": [
+        "S04"
+      ]
+    },
+    {
+      "id": "4.3.17",
+      "name": "Brush mattresses",
+      "line": "L2",
+      "page": 80,
+      "addresses": [
+        "S04",
+        "S07"
+      ]
+    },
+    {
+      "id": "4.3.18",
+      "name": "Live crib walls",
+      "line": "L2",
+      "page": 81,
+      "addresses": [
+        "S04"
+      ]
+    },
+    {
+      "id": "4.3.19",
+      "name": "Fiber rolls, blankets and pallets",
+      "line": "L2",
+      "page": 83,
+      "addresses": [
+        "S04"
+      ]
+    },
+    {
+      "id": "4.3.20",
+      "name": "Erosion control blanket",
+      "line": "L2",
+      "page": 85,
+      "addresses": [
+        "S04"
+      ]
+    },
+    {
+      "id": "4.3.21",
+      "name": "Floodplain reconnection and storage basins",
+      "line": "L2",
+      "page": 86,
+      "addresses": [
+        "S03",
+        "S06"
+      ]
+    },
+    {
+      "id": "4.4.1",
+      "name": "Enabling governance, land stewardship and long-term management",
+      "line": "L3",
+      "page": 89,
+      "addresses": []
+    },
+    {
+      "id": "4.4.2",
+      "name": "Citizen Science and educational partnerships",
+      "line": "L3",
+      "page": 90,
+      "addresses": []
+    },
+    {
+      "id": "4.4.3",
+      "name": "Participatory planning, educational trails and active cultural-recreational use of near-natural urban stream landscape",
+      "line": "L3",
+      "page": 91,
+      "addresses": []
+    },
+    {
+      "id": "4.4.4",
+      "name": "Regulatory and behavioural measures for pollution reduction",
+      "line": "L3",
+      "page": 93,
+      "addresses": [
+        "S01"
+      ]
+    },
+    {
+      "id": "4.5.1",
+      "name": "Control / Removal of invasive species",
+      "line": "L4",
+      "page": 93,
+      "addresses": [
+        "S07",
+        "S11"
+      ]
+    },
+    {
+      "id": "4.6.1",
+      "name": "Rain gardens",
+      "line": "C-hydro",
+      "page": 97,
+      "addresses": [
+        "S01",
+        "S03",
+        "S12"
+      ]
+    },
+    {
+      "id": "4.6.2",
+      "name": "Rainwater harvesting systems",
+      "line": "C-hydro",
+      "page": 98,
+      "addresses": [
+        "S03"
+      ]
+    },
+    {
+      "id": "4.6.3",
+      "name": "Permeable pavements",
+      "line": "C-hydro",
+      "page": 99,
+      "addresses": [
+        "S01",
+        "S03",
+        "S12"
+      ]
+    },
+    {
+      "id": "4.6.4",
+      "name": "Infiltration trenches",
+      "line": "C-hydro",
+      "page": 100,
+      "addresses": [
+        "S01",
+        "S03",
+        "S12"
+      ]
+    },
+    {
+      "id": "4.6.5",
+      "name": "Disconnection of impervious areas",
+      "line": "C-hydro",
+      "page": 101,
+      "addresses": [
+        "S01",
+        "S03",
+        "S12"
+      ]
+    },
+    {
+      "id": "4.6.6",
+      "name": "Vegetated swales",
+      "line": "C-hydro",
+      "page": 102,
+      "addresses": [
+        "S01",
+        "S03",
+        "S12"
+      ]
+    },
+    {
+      "id": "4.6.7",
+      "name": "Retention ponds and floodable parks",
+      "line": "C-hydro",
+      "page": 103,
+      "addresses": [
+        "S01",
+        "S03",
+        "S12"
+      ]
+    },
+    {
+      "id": "4.7.1",
+      "name": "Natural wastewater treatment plants",
+      "line": "C-chem",
+      "page": 105,
+      "addresses": [
+        "S01"
+      ]
+    },
+    {
+      "id": "4.7.2",
+      "name": "Floating treatment wetlands",
+      "line": "C-chem",
+      "page": 107,
+      "addresses": [
+        "S01"
+      ]
+    },
+    {
+      "id": "4.7.3",
+      "name": "Microbial electrochemical biofilter",
+      "line": "C-chem",
+      "page": 109,
+      "addresses": [
+        "S01"
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "id": "R1",
+      "name": "Fix the leaks first",
+      "page": 19,
+      "quote": "It is like fixing the leaks in a bucket before trying to fill it."
+    },
+    {
+      "id": "R1a",
+      "name": "Parallel delivery where urban constraints require",
+      "page": 20,
+      "quote": "implemented once essential conditions are secured or, where urban constraints require, in parallel as part of an integrated delivery strategy"
+    },
+    {
+      "id": "R2",
+      "name": "Barrier exception",
+      "page": 20,
+      "quote": "Barrier removal to restore longitudinal connectivity, or the implementation of fish passages in systems where barriers constitute the dominant limiting factor; in such cases, improving longitudinal connectivity becomes essential and should be prioritised at early stages of rehabilitation"
+    },
+    {
+      "id": "R3",
+      "name": "Symptom only: invasive species control",
+      "page": 21,
+      "quote": "otherwise, invasives simply recolonize the restored sites."
+    },
+    {
+      "id": "R4",
+      "name": "Compensatory measures are a last resort",
+      "page": 21,
+      "quote": "compensatory measures should be regarded as options of last resort, to be implemented only when it is not possible to restore or re-establish self-sustaining ecological resilience and natural processes that support long-term river recovery"
+    },
+    {
+      "id": "R5",
+      "name": "A package, not a single measure",
+      "page": 19,
+      "quote": "They also stress that multiple problems require a package of hierarchical measures, it is not enough to just reshape the channel, nor is it enough to only plant trees."
+    },
+    {
+      "id": "R6",
+      "name": "SMART objectives",
+      "page": 21,
+      "quote": "Once restoration targets are established, they should be translated into clear SMART objectives, Specific, Measurable, Achievable, Realistic, and Time-bound, explicitly linked to project goals and expected outcomes."
+    },
+    {
+      "id": "R7",
+      "name": "Respect the response lag",
+      "page": 22,
+      "quote": "The frequency and duration of monitoring should align with the life histories of the target organisms and the expected timescale of their responses (i.e., the lag period)"
+    },
+    {
+      "id": "R8",
+      "name": "Controls and before-after design",
+      "page": 23,
+      "quote": "Without appropriate controls, it becomes difficult to determine whether observed changes result from restoration activities or from broader environmental variation."
+    }
+  ],
+  "naivePlan": {
+    "plan": {
+      "id": "vale-naive",
+      "name": "Re-meander the channel",
+      "impactReachId": "vale-impact",
+      "controlReachId": "vale-control",
+      "overrides": [],
+      "measures": [
+        {
+          "measureId": "4.3.3",
+          "objective": {
+            "specific": "Restore a meandering planform on the impact reach",
+            "indicator": "bank-stability",
+            "measurable": 1,
+            "timeBound": "2028-06-30"
+          }
+        }
+      ]
+    },
+    "assessment": {
+      "verdict": "BLOCKED",
+      "reasons": [
+        {
+          "rule": "R1",
+          "page": 19,
+          "quote": "It is like fixing the leaks in a bucket before trying to fill it.",
+          "plain": "4.3.3 is a structural measure but first-line stressors S01, S07 are not addressed yet.",
+          "instead": [
+            "4.1.1",
+            "4.1.2",
+            "4.1.3",
+            "4.2.1",
+            "4.2.2",
+            "4.2.3"
+          ]
+        }
+      ],
+      "measures": [
+        {
+          "measureId": "4.3.3",
+          "verdict": "CONTRAINDICATED",
+          "reasons": [
+            {
+              "rule": "R1",
+              "page": 19,
+              "quote": "It is like fixing the leaks in a bucket before trying to fill it.",
+              "plain": "4.3.3 is a structural measure but first-line stressors S01, S07 are not addressed yet.",
+              "instead": [
+                "4.1.1",
+                "4.1.2",
+                "4.1.3",
+                "4.2.1",
+                "4.2.2",
+                "4.2.3"
+              ]
+            }
+          ]
+        }
+      ],
+      "uncovered": [
+        "S01",
+        "S07"
+      ],
+      "overridden": []
+    }
+  },
+  "firstlinePlan": {
+    "plan": {
+      "id": "vale-firstline",
+      "name": "Sewer first, then riparian, then re-meander",
+      "impactReachId": "vale-impact",
+      "controlReachId": "vale-control",
+      "overrides": [],
+      "measures": [
+        {
+          "measureId": "4.2.2",
+          "implementedOn": "2025-09-01",
+          "objective": {
+            "specific": "Remove the sewage odour and discolouration at the outfall",
+            "indicator": "odour",
+            "measurable": 1,
+            "timeBound": "2026-09-30"
+          }
+        },
+        {
+          "measureId": "4.1.1",
+          "implementedOn": "2026-03-15",
+          "objective": {
+            "specific": "Let riparian cover regenerate on both banks",
+            "indicator": "riparian-cover",
+            "measurable": 1,
+            "timeBound": "2029-06-30"
+          }
+        },
+        {
+          "measureId": "4.3.3",
+          "objective": {
+            "specific": "Restore a meandering planform once water quality is secured",
+            "indicator": "bank-stability",
+            "measurable": 1,
+            "timeBound": "2029-12-31"
+          }
+        }
+      ]
+    },
+    "assessment": {
+      "verdict": "SIGNABLE",
+      "reasons": [
+        {
+          "rule": "R1",
+          "page": 19,
+          "quote": "It is like fixing the leaks in a bucket before trying to fill it.",
+          "plain": "No blocking measure, every confirmed first-line stressor is addressed, and each measure has a SMART objective."
+        }
+      ],
+      "measures": [
+        {
+          "measureId": "4.2.2",
+          "verdict": "INDICATED",
+          "reasons": [
+            {
+              "rule": "R1",
+              "page": 19,
+              "quote": "It is like fixing the leaks in a bucket before trying to fill it.",
+              "plain": "4.2.2 respects the measure hierarchy."
+            }
+          ]
+        },
+        {
+          "measureId": "4.1.1",
+          "verdict": "INDICATED",
+          "reasons": [
+            {
+              "rule": "R1",
+              "page": 19,
+              "quote": "It is like fixing the leaks in a bucket before trying to fill it.",
+              "plain": "4.1.1 respects the measure hierarchy."
+            }
+          ]
+        },
+        {
+          "measureId": "4.3.3",
+          "verdict": "INDICATED",
+          "reasons": [
+            {
+              "rule": "R1",
+              "page": 19,
+              "quote": "It is like fixing the leaks in a bucket before trying to fill it.",
+              "plain": "4.3.3 respects the measure hierarchy."
+            }
+          ]
+        }
+      ],
+      "uncovered": [],
+      "overridden": []
+    }
+  },
+  "followup": {
+    "planId": "vale-firstline",
+    "items": [
+      {
+        "measureId": "4.2.2",
+        "indicator": "odour",
+        "design": "BACI",
+        "knowableFrom": "2025-11-30",
+        "visitsNeeded": {
+          "beforeImpact": 0,
+          "afterImpact": 0,
+          "beforeControl": 0,
+          "afterControl": 0
+        },
+        "reasons": [
+          {
+            "rule": "R7",
+            "page": 22,
+            "quote": "The frequency and duration of monitoring should align with the life histories of the target organisms and the expected timescale of their responses (i.e., the lag period)",
+            "plain": "4.2.2 / odour: an outcome verdict is allowed from 2025-11-30, after the response lag."
+          },
+          {
+            "rule": "R8",
+            "page": 23,
+            "quote": "Without appropriate controls, it becomes difficult to determine whether observed changes result from restoration activities or from broader environmental variation.",
+            "plain": "BACI: impact reach vale-impact against control reach vale-control, at least 3 check-ups per cell."
+          }
+        ]
+      },
+      {
+        "measureId": "4.2.2",
+        "indicator": "clarity",
+        "design": "BACI",
+        "knowableFrom": "2025-11-30",
+        "visitsNeeded": {
+          "beforeImpact": 0,
+          "afterImpact": 0,
+          "beforeControl": 0,
+          "afterControl": 0
+        },
+        "reasons": [
+          {
+            "rule": "R7",
+            "page": 22,
+            "quote": "The frequency and duration of monitoring should align with the life histories of the target organisms and the expected timescale of their responses (i.e., the lag period)",
+            "plain": "4.2.2 / clarity: an outcome verdict is allowed from 2025-11-30, after the response lag."
+          },
+          {
+            "rule": "R8",
+            "page": 23,
+            "quote": "Without appropriate controls, it becomes difficult to determine whether observed changes result from restoration activities or from broader environmental variation.",
+            "plain": "BACI: impact reach vale-impact against control reach vale-control, at least 3 check-ups per cell."
+          }
+        ]
+      },
+      {
+        "measureId": "4.2.2",
+        "indicator": "algae",
+        "design": "BACI",
+        "knowableFrom": "2025-11-30",
+        "visitsNeeded": {
+          "beforeImpact": 0,
+          "afterImpact": 0,
+          "beforeControl": 0,
+          "afterControl": 0
+        },
+        "reasons": [
+          {
+            "rule": "R7",
+            "page": 22,
+            "quote": "The frequency and duration of monitoring should align with the life histories of the target organisms and the expected timescale of their responses (i.e., the lag period)",
+            "plain": "4.2.2 / algae: an outcome verdict is allowed from 2025-11-30, after the response lag."
+          },
+          {
+            "rule": "R8",
+            "page": 23,
+            "quote": "Without appropriate controls, it becomes difficult to determine whether observed changes result from restoration activities or from broader environmental variation.",
+            "plain": "BACI: impact reach vale-impact against control reach vale-control, at least 3 check-ups per cell."
+          }
+        ]
+      },
+      {
+        "measureId": "4.1.1",
+        "indicator": "riparian-cover",
+        "design": "BACI",
+        "knowableFrom": "2029-03-14",
+        "visitsNeeded": {
+          "beforeImpact": 0,
+          "afterImpact": 0,
+          "beforeControl": 0,
+          "afterControl": 0
+        },
+        "reasons": [
+          {
+            "rule": "R7",
+            "page": 22,
+            "quote": "The frequency and duration of monitoring should align with the life histories of the target organisms and the expected timescale of their responses (i.e., the lag period)",
+            "plain": "4.1.1 / riparian-cover: an outcome verdict is allowed from 2029-03-14, after the response lag."
+          },
+          {
+            "rule": "R8",
+            "page": 23,
+            "quote": "Without appropriate controls, it becomes difficult to determine whether observed changes result from restoration activities or from broader environmental variation.",
+            "plain": "BACI: impact reach vale-impact against control reach vale-control, at least 3 check-ups per cell."
+          }
+        ]
+      },
+      {
+        "measureId": "4.3.3",
+        "indicator": "bank-stability",
+        "design": "BACI",
+        "knowableFrom": null,
+        "visitsNeeded": {
+          "beforeImpact": 0,
+          "afterImpact": 3,
+          "beforeControl": 0,
+          "afterControl": 3
+        },
+        "reasons": [
+          {
+            "rule": "R7",
+            "page": 22,
+            "quote": "The frequency and duration of monitoring should align with the life histories of the target organisms and the expected timescale of their responses (i.e., the lag period)",
+            "plain": "4.3.3 is not built yet: the response clock starts when the works are finished."
+          },
+          {
+            "rule": "R8",
+            "page": 23,
+            "quote": "Without appropriate controls, it becomes difficult to determine whether observed changes result from restoration activities or from broader environmental variation.",
+            "plain": "BACI: impact reach vale-impact against control reach vale-control, at least 3 check-ups per cell."
+          }
+        ]
+      }
+    ]
+  },
+  "outcomes": [
+    {
+      "measureId": "4.2.2",
+      "indicator": "odour",
+      "design": "BACI",
+      "delta": 1,
+      "cells": {
+        "beforeImpact": {
+          "n": 8,
+          "mean": 2
+        },
+        "afterImpact": {
+          "n": 12,
+          "mean": 3.6666666666666665
+        },
+        "beforeControl": {
+          "n": 8,
+          "mean": 2
+        },
+        "afterControl": {
+          "n": 12,
+          "mean": 2
+        }
+      },
+      "contrast": 1.6666666666666665,
+      "ci": {
+        "low": 1.041666666666667,
+        "high": 2.2916666666666665,
+        "level": 0.9
+      },
+      "verdict": "IMPROVED",
+      "reasons": [
+        {
+          "rule": "R8",
+          "page": 23,
+          "quote": "Without appropriate controls, it becomes difficult to determine whether observed changes result from restoration activities or from broader environmental variation.",
+          "plain": "Contrast 1.67 with the 90% interval above zero and at least delta 1. BACI against control reach vale-control."
+        }
+      ]
+    },
+    {
+      "measureId": "4.2.2",
+      "indicator": "clarity",
+      "design": "BACI",
+      "delta": 1,
+      "cells": {
+        "beforeImpact": {
+          "n": 8,
+          "mean": 1.875
+        },
+        "afterImpact": {
+          "n": 12,
+          "mean": 4
+        },
+        "beforeControl": {
+          "n": 8,
+          "mean": 1.875
+        },
+        "afterControl": {
+          "n": 12,
+          "mean": 2.0833333333333335
+        }
+      },
+      "contrast": 1.9166666666666665,
+      "ci": {
+        "low": 1.375,
+        "high": 2.458333333333333,
+        "level": 0.9
+      },
+      "verdict": "IMPROVED",
+      "reasons": [
+        {
+          "rule": "R8",
+          "page": 23,
+          "quote": "Without appropriate controls, it becomes difficult to determine whether observed changes result from restoration activities or from broader environmental variation.",
+          "plain": "Contrast 1.92 with the 90% interval above zero and at least delta 1. BACI against control reach vale-control."
+        }
+      ]
+    },
+    {
+      "measureId": "4.2.2",
+      "indicator": "algae",
+      "design": "BACI",
+      "delta": 1,
+      "cells": {
+        "beforeImpact": {
+          "n": 8,
+          "mean": 2.125
+        },
+        "afterImpact": {
+          "n": 12,
+          "mean": 3.5833333333333335
+        },
+        "beforeControl": {
+          "n": 8,
+          "mean": 1.625
+        },
+        "afterControl": {
+          "n": 12,
+          "mean": 1.9166666666666667
+        }
+      },
+      "contrast": 1.1666666666666667,
+      "ci": {
+        "low": 0.5416666666666665,
+        "high": 1.8333333333333333,
+        "level": 0.9
+      },
+      "verdict": "IMPROVED",
+      "reasons": [
+        {
+          "rule": "R8",
+          "page": 23,
+          "quote": "Without appropriate controls, it becomes difficult to determine whether observed changes result from restoration activities or from broader environmental variation.",
+          "plain": "Contrast 1.17 with the 90% interval above zero and at least delta 1. BACI against control reach vale-control."
+        }
+      ]
+    },
+    {
+      "measureId": "4.1.1",
+      "indicator": "riparian-cover",
+      "design": "BACI",
+      "delta": 1,
+      "cells": {
+        "beforeImpact": {
+          "n": 13,
+          "mean": 1.9230769230769231
+        },
+        "afterImpact": {
+          "n": 7,
+          "mean": 2.142857142857143
+        },
+        "beforeControl": {
+          "n": 13,
+          "mean": 2.230769230769231
+        },
+        "afterControl": {
+          "n": 7,
+          "mean": 1.5714285714285714
+        }
+      },
+      "verdict": "NOT_YET_KNOWABLE",
+      "reasons": [
+        {
+          "rule": "R7",
+          "page": 22,
+          "quote": "The frequency and duration of monitoring should align with the life histories of the target organisms and the expected timescale of their responses (i.e., the lag period)",
+          "plain": "4.1.1 / riparian-cover cannot be judged before 2029-03-14: the response lag has not passed."
+        }
+      ],
+      "knowableFrom": "2029-03-14",
+      "visitsNeeded": 0
+    }
+  ],
+  "confoundedOutcome": {
+    "measureId": "4.2.2",
+    "indicator": "odour",
+    "design": "BACI",
+    "delta": 1,
+    "cells": {
+      "beforeImpact": {
+        "n": 8,
+        "mean": 2
+      },
+      "afterImpact": {
+        "n": 12,
+        "mean": 3.5833333333333335
+      },
+      "beforeControl": {
+        "n": 8,
+        "mean": 2.5
+      },
+      "afterControl": {
+        "n": 12,
+        "mean": 4.166666666666667
+      }
+    },
+    "contrast": -0.08333333333333348,
+    "ci": {
+      "low": -0.7083333333333335,
+      "high": 0.5416666666666665,
+      "level": 0.9
+    },
+    "verdict": "CONFOUNDED",
+    "reasons": [
+      {
+        "rule": "R8",
+        "page": 23,
+        "quote": "Without appropriate controls, it becomes difficult to determine whether observed changes result from restoration activities or from broader environmental variation.",
+        "plain": "The control reach moved by 1.67 (at least delta 1) and the contrast interval spans zero, so the change is not attributable to the measure. BACI against control reach vale-control."
+      }
+    ]
+  },
+  "checkupCounts": {
+    "impact": 20,
+    "control": 20
+  },
+  "emscher": {
+    "name": "The Emscher river restoration, Dortmund, Germany",
+    "page": 113,
+    "plan": {
+      "id": "emscher",
+      "name": "The Emscher river restoration, Dortmund, Germany",
+      "impactReachId": "vale-impact",
+      "overrides": [],
+      "measures": [
+        {
+          "measureId": "4.2.2",
+          "objective": {
+            "specific": "as reported in D2.4",
+            "indicator": "odour",
+            "measurable": 1,
+            "timeBound": "2030-01-01"
+          }
+        },
+        {
+          "measureId": "4.3.3",
+          "objective": {
+            "specific": "as reported in D2.4",
+            "indicator": "odour",
+            "measurable": 1,
+            "timeBound": "2030-01-01"
+          }
+        },
+        {
+          "measureId": "4.3.21",
+          "objective": {
+            "specific": "as reported in D2.4",
+            "indicator": "odour",
+            "measurable": 1,
+            "timeBound": "2030-01-01"
+          }
+        },
+        {
+          "measureId": "4.3.4",
+          "objective": {
+            "specific": "as reported in D2.4",
+            "indicator": "odour",
+            "measurable": 1,
+            "timeBound": "2030-01-01"
+          }
+        },
+        {
+          "measureId": "4.3.8",
+          "objective": {
+            "specific": "as reported in D2.4",
+            "indicator": "odour",
+            "measurable": 1,
+            "timeBound": "2030-01-01"
+          }
+        },
+        {
+          "measureId": "4.6.2",
+          "objective": {
+            "specific": "as reported in D2.4",
+            "indicator": "odour",
+            "measurable": 1,
+            "timeBound": "2030-01-01"
+          }
+        },
+        {
+          "measureId": "4.6.5",
+          "objective": {
+            "specific": "as reported in D2.4",
+            "indicator": "odour",
+            "measurable": 1,
+            "timeBound": "2030-01-01"
+          }
+        },
+        {
+          "measureId": "4.6.7",
+          "objective": {
+            "specific": "as reported in D2.4",
+            "indicator": "odour",
+            "measurable": 1,
+            "timeBound": "2030-01-01"
+          }
+        },
+        {
+          "measureId": "4.4.3",
+          "objective": {
+            "specific": "as reported in D2.4",
+            "indicator": "odour",
+            "measurable": 1,
+            "timeBound": "2030-01-01"
+          }
+        }
+      ]
+    },
+    "assessment": {
+      "verdict": "SIGNABLE",
+      "reasons": [
+        {
+          "rule": "R1",
+          "page": 19,
+          "quote": "It is like fixing the leaks in a bucket before trying to fill it.",
+          "plain": "No blocking measure, every confirmed first-line stressor is addressed, and each measure has a SMART objective."
+        }
+      ],
+      "measures": [
+        {
+          "measureId": "4.2.2",
+          "verdict": "INDICATED",
+          "reasons": [
+            {
+              "rule": "R1",
+              "page": 19,
+              "quote": "It is like fixing the leaks in a bucket before trying to fill it.",
+              "plain": "4.2.2 respects the measure hierarchy."
+            }
+          ]
+        },
+        {
+          "measureId": "4.3.3",
+          "verdict": "INDICATED",
+          "reasons": [
+            {
+              "rule": "R1",
+              "page": 19,
+              "quote": "It is like fixing the leaks in a bucket before trying to fill it.",
+              "plain": "4.3.3 respects the measure hierarchy."
+            }
+          ]
+        },
+        {
+          "measureId": "4.3.21",
+          "verdict": "INDICATED",
+          "reasons": [
+            {
+              "rule": "R1",
+              "page": 19,
+              "quote": "It is like fixing the leaks in a bucket before trying to fill it.",
+              "plain": "4.3.21 respects the measure hierarchy."
+            }
+          ]
+        },
+        {
+          "measureId": "4.3.4",
+          "verdict": "INDICATED",
+          "reasons": [
+            {
+              "rule": "R1",
+              "page": 19,
+              "quote": "It is like fixing the leaks in a bucket before trying to fill it.",
+              "plain": "4.3.4 respects the measure hierarchy."
+            }
+          ]
+        },
+        {
+          "measureId": "4.3.8",
+          "verdict": "INDICATED",
+          "reasons": [
+            {
+              "rule": "R1",
+              "page": 19,
+              "quote": "It is like fixing the leaks in a bucket before trying to fill it.",
+              "plain": "4.3.8 respects the measure hierarchy."
+            }
+          ]
+        },
+        {
+          "measureId": "4.6.2",
+          "verdict": "DEFERRED",
+          "reasons": [
+            {
+              "rule": "R4",
+              "page": 21,
+              "quote": "compensatory measures should be regarded as options of last resort, to be implemented only when it is not possible to restore or re-establish self-sustaining ecological resilience and natural processes that support long-term river recovery",
+              "plain": "4.6.2 is compensatory: record why lines 1 to 3 are infeasible first."
+            }
+          ]
+        },
+        {
+          "measureId": "4.6.5",
+          "verdict": "DEFERRED",
+          "reasons": [
+            {
+              "rule": "R4",
+              "page": 21,
+              "quote": "compensatory measures should be regarded as options of last resort, to be implemented only when it is not possible to restore or re-establish self-sustaining ecological resilience and natural processes that support long-term river recovery",
+              "plain": "4.6.5 is compensatory: record why lines 1 to 3 are infeasible first."
+            }
+          ]
+        },
+        {
+          "measureId": "4.6.7",
+          "verdict": "DEFERRED",
+          "reasons": [
+            {
+              "rule": "R4",
+              "page": 21,
+              "quote": "compensatory measures should be regarded as options of last resort, to be implemented only when it is not possible to restore or re-establish self-sustaining ecological resilience and natural processes that support long-term river recovery",
+              "plain": "4.6.7 is compensatory: record why lines 1 to 3 are infeasible first."
+            }
+          ]
+        },
+        {
+          "measureId": "4.4.3",
+          "verdict": "INDICATED",
+          "reasons": [
+            {
+              "rule": "R1",
+              "page": 19,
+              "quote": "It is like fixing the leaks in a bucket before trying to fill it.",
+              "plain": "4.4.3 respects the measure hierarchy."
+            }
+          ]
+        }
+      ],
+      "uncovered": [],
+      "overridden": []
+    }
+  }
+}
