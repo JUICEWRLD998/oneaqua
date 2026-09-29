@@ -1,0 +1,1383 @@
+{
+  "_label": "SCENARIO · not field records. Invented for the Firstline demo; every check-up carries provenance \"scenario\".",
+  "asOf": "2026-09-29",
+  "site": {
+    "name": "Vale reach (scenario)",
+    "note": "A fictional urban stream reach with a paired control reach upstream of the outfall. Not a real site."
+  },
+  "reaches": [
+    {
+      "id": "vale-impact",
+      "role": "impact",
+      "name": "Vale · impact reach",
+      "lat": 40.2033,
+      "lon": -8.4103
+    },
+    {
+      "id": "vale-control",
+      "role": "control",
+      "name": "Vale · control reach",
+      "lat": 40.2081,
+      "lon": -8.4062
+    }
+  ],
+  "diagnosisCutoff": "2025-09-01",
+  "checkups": [
+    {
+      "id": "ck-001",
+      "reachId": "vale-impact",
+      "date": "2025-01-15",
+      "observer": "obs-a",
+      "provenance": "scenario",
+      "answers": {
+        "ci-odour": "strongly",
+        "ci-clarity": "very cloudy or discoloured",
+        "ci-riparian-trees": "1 - 0-20%"
+      },
+      "indicators": {
+        "odour": 2,
+        "clarity": 2,
+        "algae": 2,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-002",
+      "reachId": "vale-control",
+      "date": "2025-01-18",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 2,
+        "clarity": 1,
+        "algae": 2,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 3
+      }
+    },
+    {
+      "id": "ck-003",
+      "reachId": "vale-impact",
+      "date": "2025-02-14",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {
+        "ci-odour": "strongly",
+        "ci-litter": "a lot",
+        "ci-riparian-trees": "1 - 0-20%"
+      },
+      "indicators": {
+        "odour": 2,
+        "clarity": 2,
+        "algae": 2,
+        "riparian-cover": 2,
+        "bank-stability": 4,
+        "litter": 3
+      }
+    },
+    {
+      "id": "ck-004",
+      "reachId": "vale-control",
+      "date": "2025-02-17",
+      "observer": "obs-c",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 3,
+        "clarity": 2,
+        "algae": 2,
+        "riparian-cover": 1,
+        "bank-stability": 4,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-005",
+      "reachId": "vale-impact",
+      "date": "2025-03-15",
+      "observer": "obs-c",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 1,
+        "clarity": 2,
+        "algae": 3,
+        "riparian-cover": 1,
+        "bank-stability": 4,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-006",
+      "reachId": "vale-control",
+      "date": "2025-03-18",
+      "observer": "obs-a",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 2,
+        "clarity": 1,
+        "algae": 1,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-007",
+      "reachId": "vale-impact",
+      "date": "2025-04-14",
+      "observer": "obs-a",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 2,
+        "clarity": 1,
+        "algae": 2,
+        "riparian-cover": 2,
+        "bank-stability": 4,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-008",
+      "reachId": "vale-control",
+      "date": "2025-04-17",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 3,
+        "clarity": 2,
+        "algae": 2,
+        "riparian-cover": 3,
+        "bank-stability": 3,
+        "litter": 1
+      }
+    },
+    {
+      "id": "ck-009",
+      "reachId": "vale-impact",
+      "date": "2025-05-15",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 3,
+        "clarity": 2,
+        "algae": 2,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 3
+      }
+    },
+    {
+      "id": "ck-010",
+      "reachId": "vale-control",
+      "date": "2025-05-18",
+      "observer": "obs-c",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 1,
+        "clarity": 3,
+        "algae": 1,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 1
+      }
+    },
+    {
+      "id": "ck-011",
+      "reachId": "vale-impact",
+      "date": "2025-06-14",
+      "observer": "obs-c",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 2,
+        "clarity": 2,
+        "algae": 2,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 1
+      }
+    },
+    {
+      "id": "ck-012",
+      "reachId": "vale-control",
+      "date": "2025-06-17",
+      "observer": "obs-a",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 1,
+        "clarity": 2,
+        "algae": 3,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 1
+      }
+    },
+    {
+      "id": "ck-013",
+      "reachId": "vale-impact",
+      "date": "2025-07-15",
+      "observer": "obs-a",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 2,
+        "clarity": 2,
+        "algae": 2,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-014",
+      "reachId": "vale-control",
+      "date": "2025-07-18",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 2,
+        "clarity": 2,
+        "algae": 1,
+        "riparian-cover": 2,
+        "bank-stability": 4,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-015",
+      "reachId": "vale-impact",
+      "date": "2025-08-14",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 2,
+        "clarity": 2,
+        "algae": 2,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-016",
+      "reachId": "vale-control",
+      "date": "2025-08-17",
+      "observer": "obs-c",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 2,
+        "clarity": 2,
+        "algae": 1,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 3
+      }
+    },
+    {
+      "id": "ck-017",
+      "reachId": "vale-impact",
+      "date": "2025-10-15",
+      "observer": "obs-c",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 3,
+        "clarity": 4,
+        "algae": 3,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 3
+      }
+    },
+    {
+      "id": "ck-018",
+      "reachId": "vale-control",
+      "date": "2025-10-18",
+      "observer": "obs-a",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 2,
+        "clarity": 2,
+        "algae": 1,
+        "riparian-cover": 3,
+        "bank-stability": 2,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-019",
+      "reachId": "vale-impact",
+      "date": "2025-11-14",
+      "observer": "obs-a",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 3,
+        "clarity": 4,
+        "algae": 4,
+        "riparian-cover": 2,
+        "bank-stability": 4,
+        "litter": 3
+      }
+    },
+    {
+      "id": "ck-020",
+      "reachId": "vale-control",
+      "date": "2025-11-17",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 2,
+        "clarity": 2,
+        "algae": 2,
+        "riparian-cover": 3,
+        "bank-stability": 3,
+        "litter": 3
+      }
+    },
+    {
+      "id": "ck-021",
+      "reachId": "vale-impact",
+      "date": "2025-12-15",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 4,
+        "clarity": 4,
+        "algae": 4,
+        "riparian-cover": 2,
+        "bank-stability": 2,
+        "litter": 4
+      }
+    },
+    {
+      "id": "ck-022",
+      "reachId": "vale-control",
+      "date": "2025-12-18",
+      "observer": "obs-c",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 2,
+        "clarity": 1,
+        "algae": 1,
+        "riparian-cover": 3,
+        "bank-stability": 3,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-023",
+      "reachId": "vale-impact",
+      "date": "2026-01-14",
+      "observer": "obs-c",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 5,
+        "clarity": 4,
+        "algae": 4,
+        "riparian-cover": 3,
+        "bank-stability": 3,
+        "litter": 3
+      }
+    },
+    {
+      "id": "ck-024",
+      "reachId": "vale-control",
+      "date": "2026-01-17",
+      "observer": "obs-a",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 2,
+        "clarity": 2,
+        "algae": 2,
+        "riparian-cover": 1,
+        "bank-stability": 3,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-025",
+      "reachId": "vale-impact",
+      "date": "2026-02-14",
+      "observer": "obs-a",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 4,
+        "clarity": 4,
+        "algae": 4,
+        "riparian-cover": 1,
+        "bank-stability": 3,
+        "litter": 4
+      }
+    },
+    {
+      "id": "ck-026",
+      "reachId": "vale-control",
+      "date": "2026-02-17",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 2,
+        "clarity": 2,
+        "algae": 1,
+        "riparian-cover": 3,
+        "bank-stability": 4,
+        "litter": 1
+      }
+    },
+    {
+      "id": "ck-027",
+      "reachId": "vale-impact",
+      "date": "2026-03-16",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 3,
+        "clarity": 4,
+        "algae": 4,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 3
+      }
+    },
+    {
+      "id": "ck-028",
+      "reachId": "vale-control",
+      "date": "2026-03-19",
+      "observer": "obs-c",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 2,
+        "clarity": 2,
+        "algae": 2,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-029",
+      "reachId": "vale-impact",
+      "date": "2026-04-15",
+      "observer": "obs-c",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 3,
+        "clarity": 5,
+        "algae": 3,
+        "riparian-cover": 3,
+        "bank-stability": 2,
+        "litter": 3
+      }
+    },
+    {
+      "id": "ck-030",
+      "reachId": "vale-control",
+      "date": "2026-04-18",
+      "observer": "obs-a",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 2,
+        "clarity": 2,
+        "algae": 3,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 1
+      }
+    },
+    {
+      "id": "ck-031",
+      "reachId": "vale-impact",
+      "date": "2026-05-15",
+      "observer": "obs-a",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 4,
+        "clarity": 4,
+        "algae": 3,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 4
+      }
+    },
+    {
+      "id": "ck-032",
+      "reachId": "vale-control",
+      "date": "2026-05-18",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 2,
+        "clarity": 2,
+        "algae": 2,
+        "riparian-cover": 1,
+        "bank-stability": 3,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-033",
+      "reachId": "vale-impact",
+      "date": "2026-06-14",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 4,
+        "clarity": 3,
+        "algae": 3,
+        "riparian-cover": 2,
+        "bank-stability": 4,
+        "litter": 4
+      }
+    },
+    {
+      "id": "ck-034",
+      "reachId": "vale-control",
+      "date": "2026-06-17",
+      "observer": "obs-c",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 1,
+        "clarity": 3,
+        "algae": 1,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-035",
+      "reachId": "vale-impact",
+      "date": "2026-07-15",
+      "observer": "obs-c",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 4,
+        "clarity": 5,
+        "algae": 3,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 4
+      }
+    },
+    {
+      "id": "ck-036",
+      "reachId": "vale-control",
+      "date": "2026-07-18",
+      "observer": "obs-a",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 2,
+        "clarity": 2,
+        "algae": 2,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-037",
+      "reachId": "vale-impact",
+      "date": "2026-08-14",
+      "observer": "obs-a",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 3,
+        "clarity": 3,
+        "algae": 4,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 4
+      }
+    },
+    {
+      "id": "ck-038",
+      "reachId": "vale-control",
+      "date": "2026-08-17",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 3,
+        "clarity": 3,
+        "algae": 3,
+        "riparian-cover": 1,
+        "bank-stability": 2,
+        "litter": 1
+      }
+    },
+    {
+      "id": "ck-039",
+      "reachId": "vale-impact",
+      "date": "2026-09-15",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 4,
+        "clarity": 4,
+        "algae": 4,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 3
+      }
+    },
+    {
+      "id": "ck-040",
+      "reachId": "vale-control",
+      "date": "2026-09-18",
+      "observer": "obs-c",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 2,
+        "clarity": 2,
+        "algae": 3,
+        "riparian-cover": 1,
+        "bank-stability": 3,
+        "litter": 2
+      }
+    }
+  ],
+  "checkupsControlMoved": [
+    {
+      "id": "ck-001",
+      "reachId": "vale-impact",
+      "date": "2025-01-15",
+      "observer": "obs-a",
+      "provenance": "scenario",
+      "answers": {
+        "ci-odour": "strongly",
+        "ci-clarity": "very cloudy or discoloured",
+        "ci-riparian-trees": "1 - 0-20%"
+      },
+      "indicators": {
+        "odour": 3,
+        "clarity": 1,
+        "algae": 2,
+        "riparian-cover": 2,
+        "bank-stability": 2,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-002",
+      "reachId": "vale-control",
+      "date": "2025-01-18",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 3,
+        "clarity": 1,
+        "algae": 2,
+        "riparian-cover": 3,
+        "bank-stability": 3,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-003",
+      "reachId": "vale-impact",
+      "date": "2025-02-14",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {
+        "ci-odour": "strongly",
+        "ci-litter": "a lot",
+        "ci-riparian-trees": "1 - 0-20%"
+      },
+      "indicators": {
+        "odour": 2,
+        "clarity": 2,
+        "algae": 3,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 1
+      }
+    },
+    {
+      "id": "ck-004",
+      "reachId": "vale-control",
+      "date": "2025-02-17",
+      "observer": "obs-c",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 3,
+        "clarity": 2,
+        "algae": 2,
+        "riparian-cover": 2,
+        "bank-stability": 2,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-005",
+      "reachId": "vale-impact",
+      "date": "2025-03-15",
+      "observer": "obs-c",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 2,
+        "clarity": 3,
+        "algae": 3,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-006",
+      "reachId": "vale-control",
+      "date": "2025-03-18",
+      "observer": "obs-a",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 3,
+        "clarity": 3,
+        "algae": 1,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 1
+      }
+    },
+    {
+      "id": "ck-007",
+      "reachId": "vale-impact",
+      "date": "2025-04-14",
+      "observer": "obs-a",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 2,
+        "clarity": 2,
+        "algae": 3,
+        "riparian-cover": 3,
+        "bank-stability": 3,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-008",
+      "reachId": "vale-control",
+      "date": "2025-04-17",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 2,
+        "clarity": 2,
+        "algae": 1,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 1
+      }
+    },
+    {
+      "id": "ck-009",
+      "reachId": "vale-impact",
+      "date": "2025-05-15",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 2,
+        "clarity": 2,
+        "algae": 2,
+        "riparian-cover": 1,
+        "bank-stability": 3,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-010",
+      "reachId": "vale-control",
+      "date": "2025-05-18",
+      "observer": "obs-c",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 2,
+        "clarity": 2,
+        "algae": 2,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-011",
+      "reachId": "vale-impact",
+      "date": "2025-06-14",
+      "observer": "obs-c",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 2,
+        "clarity": 2,
+        "algae": 1,
+        "riparian-cover": 2,
+        "bank-stability": 4,
+        "litter": 1
+      }
+    },
+    {
+      "id": "ck-012",
+      "reachId": "vale-control",
+      "date": "2025-06-17",
+      "observer": "obs-a",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 2,
+        "clarity": 2,
+        "algae": 2,
+        "riparian-cover": 1,
+        "bank-stability": 3,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-013",
+      "reachId": "vale-impact",
+      "date": "2025-07-15",
+      "observer": "obs-a",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 1,
+        "clarity": 3,
+        "algae": 1,
+        "riparian-cover": 2,
+        "bank-stability": 4,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-014",
+      "reachId": "vale-control",
+      "date": "2025-07-18",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 2,
+        "clarity": 2,
+        "algae": 2,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-015",
+      "reachId": "vale-impact",
+      "date": "2025-08-14",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 2,
+        "clarity": 2,
+        "algae": 2,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-016",
+      "reachId": "vale-control",
+      "date": "2025-08-17",
+      "observer": "obs-c",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 3,
+        "clarity": 2,
+        "algae": 2,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-017",
+      "reachId": "vale-impact",
+      "date": "2025-10-15",
+      "observer": "obs-c",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 3,
+        "clarity": 4,
+        "algae": 3,
+        "riparian-cover": 1,
+        "bank-stability": 3,
+        "litter": 4
+      }
+    },
+    {
+      "id": "ck-018",
+      "reachId": "vale-control",
+      "date": "2025-10-18",
+      "observer": "obs-a",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 4,
+        "clarity": 5,
+        "algae": 4,
+        "riparian-cover": 3,
+        "bank-stability": 4,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-019",
+      "reachId": "vale-impact",
+      "date": "2025-11-14",
+      "observer": "obs-a",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 4,
+        "clarity": 5,
+        "algae": 3,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 3
+      }
+    },
+    {
+      "id": "ck-020",
+      "reachId": "vale-control",
+      "date": "2025-11-17",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 5,
+        "clarity": 4,
+        "algae": 4,
+        "riparian-cover": 1,
+        "bank-stability": 3,
+        "litter": 3
+      }
+    },
+    {
+      "id": "ck-021",
+      "reachId": "vale-impact",
+      "date": "2025-12-15",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 3,
+        "clarity": 3,
+        "algae": 4,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 3
+      }
+    },
+    {
+      "id": "ck-022",
+      "reachId": "vale-control",
+      "date": "2025-12-18",
+      "observer": "obs-c",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 5,
+        "clarity": 4,
+        "algae": 4,
+        "riparian-cover": 1,
+        "bank-stability": 2,
+        "litter": 3
+      }
+    },
+    {
+      "id": "ck-023",
+      "reachId": "vale-impact",
+      "date": "2026-01-14",
+      "observer": "obs-c",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 5,
+        "clarity": 4,
+        "algae": 4,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 4
+      }
+    },
+    {
+      "id": "ck-024",
+      "reachId": "vale-control",
+      "date": "2026-01-17",
+      "observer": "obs-a",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 5,
+        "clarity": 5,
+        "algae": 4,
+        "riparian-cover": 3,
+        "bank-stability": 4,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-025",
+      "reachId": "vale-impact",
+      "date": "2026-02-14",
+      "observer": "obs-a",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 3,
+        "clarity": 4,
+        "algae": 3,
+        "riparian-cover": 1,
+        "bank-stability": 2,
+        "litter": 4
+      }
+    },
+    {
+      "id": "ck-026",
+      "reachId": "vale-control",
+      "date": "2026-02-17",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 4,
+        "clarity": 3,
+        "algae": 4,
+        "riparian-cover": 1,
+        "bank-stability": 3,
+        "litter": 3
+      }
+    },
+    {
+      "id": "ck-027",
+      "reachId": "vale-impact",
+      "date": "2026-03-16",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 3,
+        "clarity": 3,
+        "algae": 4,
+        "riparian-cover": 2,
+        "bank-stability": 4,
+        "litter": 4
+      }
+    },
+    {
+      "id": "ck-028",
+      "reachId": "vale-control",
+      "date": "2026-03-19",
+      "observer": "obs-c",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 4,
+        "clarity": 4,
+        "algae": 3,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-029",
+      "reachId": "vale-impact",
+      "date": "2026-04-15",
+      "observer": "obs-c",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 4,
+        "clarity": 4,
+        "algae": 3,
+        "riparian-cover": 3,
+        "bank-stability": 2,
+        "litter": 3
+      }
+    },
+    {
+      "id": "ck-030",
+      "reachId": "vale-control",
+      "date": "2026-04-18",
+      "observer": "obs-a",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 4,
+        "clarity": 4,
+        "algae": 4,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-031",
+      "reachId": "vale-impact",
+      "date": "2026-05-15",
+      "observer": "obs-a",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 4,
+        "clarity": 3,
+        "algae": 3,
+        "riparian-cover": 3,
+        "bank-stability": 2,
+        "litter": 4
+      }
+    },
+    {
+      "id": "ck-032",
+      "reachId": "vale-control",
+      "date": "2026-05-18",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 4,
+        "clarity": 4,
+        "algae": 3,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 1
+      }
+    },
+    {
+      "id": "ck-033",
+      "reachId": "vale-impact",
+      "date": "2026-06-14",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 4,
+        "clarity": 4,
+        "algae": 3,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 4
+      }
+    },
+    {
+      "id": "ck-034",
+      "reachId": "vale-control",
+      "date": "2026-06-17",
+      "observer": "obs-c",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 3,
+        "clarity": 5,
+        "algae": 4,
+        "riparian-cover": 2,
+        "bank-stability": 2,
+        "litter": 3
+      }
+    },
+    {
+      "id": "ck-035",
+      "reachId": "vale-impact",
+      "date": "2026-07-15",
+      "observer": "obs-c",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 3,
+        "clarity": 4,
+        "algae": 4,
+        "riparian-cover": 2,
+        "bank-stability": 2,
+        "litter": 4
+      }
+    },
+    {
+      "id": "ck-036",
+      "reachId": "vale-control",
+      "date": "2026-07-18",
+      "observer": "obs-a",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 5,
+        "clarity": 4,
+        "algae": 3,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-037",
+      "reachId": "vale-impact",
+      "date": "2026-08-14",
+      "observer": "obs-a",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 4,
+        "clarity": 5,
+        "algae": 3,
+        "riparian-cover": 2,
+        "bank-stability": 3,
+        "litter": 3
+      }
+    },
+    {
+      "id": "ck-038",
+      "reachId": "vale-control",
+      "date": "2026-08-17",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 3,
+        "clarity": 4,
+        "algae": 3,
+        "riparian-cover": 2,
+        "bank-stability": 2,
+        "litter": 2
+      }
+    },
+    {
+      "id": "ck-039",
+      "reachId": "vale-impact",
+      "date": "2026-09-15",
+      "observer": "obs-b",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 3,
+        "clarity": 4,
+        "algae": 3,
+        "riparian-cover": 3,
+        "bank-stability": 2,
+        "litter": 3
+      }
+    },
+    {
+      "id": "ck-040",
+      "reachId": "vale-control",
+      "date": "2026-09-18",
+      "observer": "obs-c",
+      "provenance": "scenario",
+      "answers": {},
+      "indicators": {
+        "odour": 4,
+        "clarity": 4,
+        "algae": 3,
+        "riparian-cover": 2,
+        "bank-stability": 4,
+        "litter": 2
+      }
+    }
+  ],
+  "plans": {
+    "naive": {
+      "id": "vale-naive",
+      "name": "Re-meander the channel",
+      "impactReachId": "vale-impact",
+      "controlReachId": "vale-control",
+      "overrides": [],
+      "measures": [
+        {
+          "measureId": "4.3.3",
+          "objective": {
+            "specific": "Restore a meandering planform on the impact reach",
+            "indicator": "bank-stability",
+            "measurable": 1,
+            "timeBound": "2028-06-30"
+          }
+        }
+      ]
+    },
+    "firstline": {
+      "id": "vale-firstline",
+      "name": "Sewer first, then riparian, then re-meander",
+      "impactReachId": "vale-impact",
+      "controlReachId": "vale-control",
+      "overrides": [],
+      "measures": [
+        {
+          "measureId": "4.2.2",
+          "implementedOn": "2025-09-01",
+          "objective": {
+            "specific": "Remove the sewage odour and discolouration at the outfall",
+            "indicator": "odour",
+            "measurable": 1,
+            "timeBound": "2026-09-30"
+          }
+        },
+        {
+          "measureId": "4.1.1",
+          "implementedOn": "2026-03-15",
+          "objective": {
+            "specific": "Let riparian cover regenerate on both banks",
+            "indicator": "riparian-cover",
+            "measurable": 1,
+            "timeBound": "2029-06-30"
+          }
+        },
+        {
+          "measureId": "4.3.3",
+          "objective": {
+            "specific": "Restore a meandering planform once water quality is secured",
+            "indicator": "bank-stability",
+            "measurable": 1,
+            "timeBound": "2029-12-31"
+          }
+        }
+      ]
+    }
+  }
+}
