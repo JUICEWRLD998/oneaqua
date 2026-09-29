@@ -33,6 +33,11 @@ export function getValidator(): Promise<Validator> {
     const schema = await loadSchema()
     delete schema.id
     delete schema.$schema // draft-06 meta-schema is not bundled with ajv 8; the schema is otherwise draft-07 compatible
+    // The official R4 schema omits "type": "object" on complex types, so a bare string would pass as a CodeableConcept.
+    // Added wherever a definition has properties (found by a planted control, see fhir.test.ts).
+    for (const def of Object.values((schema.definitions ?? {}) as Record<string, Record<string, unknown>>)) {
+      if (def.properties && !def.type) def.type = 'object'
+    }
     const ajv = new Ajv({ strict: false, allErrors: false, validateFormats: false })
     const validate = ajv.compile(schema)
     return (bundle: unknown): string[] => {
