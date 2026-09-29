@@ -32,6 +32,100 @@ with a new entry. Every bullet: the measurement, the rejected alternative, the f
 - **`R1a` must exist in `cat.rules`** because the override reason cites it.
 - **Extra module:** `engine/cells.ts` (shared cell/lag helpers); `compareIso` added to `dates.ts`.
 
+## 2026-09-29 (P1 catalogue encoding)
+
+- **Page rule: cite the PRINTED number in the running head.** `pdftotext` gave 149 form-feed parts. 145 pages have a
+  head `D2.4 Catalogue of measures … <n>` and become `data/d24/_review/pages/<n>.txt`; exactly one non-empty page has
+  no head (PDF page 3, the title page) and is skipped, so it can never be cited. Measured offset: PDF page = printed
+  page + 2 (printed 2 = PDF 4, printed 19 = PDF 21), but the script never uses the offset; it reads the head. Rejected: the
+  PDF index as the page. Pinned by `scripts/extract-d24.mjs`; the verifier also checks each measure's `page` is
+  where its numbered heading is printed, not the contents (`scripts/verify-d24-cites.mjs`).
+- **Zenodo returns 403 to Node's default `fetch`.** `curl` works. The extractor sends a `curl/8.0` User-Agent.
+  Rejected: shelling out to `curl` (keeps the script dependency-free and portable).
+- **Verifier normalisation removes ALL whitespace, hyphens and dashes on both sides.** Rejected: only un-wrapping
+  `-\n`, which cannot tell "socio-\neconomic" (a real hyphen) from a wrap hyphen. Cost: the check is blind to a
+  quote that differs from the page only by a hyphen or a space. Ligatures are folded by NFKC; curly quotes, en/em
+  dashes, bullets and zero-width characters are mapped. Pinned by the `--selftest` normaliser cases.
+- **Planted control** `data/_controls/bad-cite.json` has four wrong cites (right text on the wrong page, invented
+  text, an invented casebook `unmapped` string, a heading on the wrong page). `--controls` exits 1 with 4 misses;
+  `--selftest` requires real data exit 0 AND controls non-zero, and `verify-data.mjs` runs it. A scan that
+  checked nothing exits 3 (an empty scan is not a pass).
+- **A quote may sit on a later page than the measure heading.** 31 of 43 `limitations` and 2 `objective`s are on
+  the next page. Rather than cite the heading page falsely, a measure carries optional `limitationsPage` and
+  `objectivePage`; the verifier checks each field against its own page. `Measure` in `engine/types.ts` has no such
+  fields (extra JSON keys are harmless when the JSON is cast); the orchestrator may add them as optional.
+- **`objective` = D2.4's own "what problem it addresses" sentence** (p.19 defines Objective that way), copied
+  verbatim, at most 40 words (asserted by `verify-catalogue-shape.mjs`). D2.4 has no labelled "Objective" heading in
+  §4, so this is a selection. `limitations` = one verbatim bullet from that measure's "Limitations" list (a
+  judgement: the most decision-relevant one, usually the first). Every measure has a Limitations list, so none
+  needed `"not stated in D2.4"`.
+- **firstLine = S01, S03, S07 (interpretation).** D2.4 p.19 names three first-line groups: riparian vegetation
+  (S07), water quality (S01), and "reduction of dominant physical pressures … altered surface runoff pathways and
+  highly sealed urban surfaces" (read as S03). S12 (catchment pressures, "high impervious surface cover") was NOT
+  marked first-line even though it overlaps the sealing wording: the sentence says pressures that undermine riparian
+  function and water quality, and S03 is the stressor D2.4 §3 names for runoff. Rejected: S12 = first-line (would
+  make every plan with sealed catchment BLOCKED, which D2.4 does not say).
+- **Known tension surfaced, not hidden.** p.19 puts sealing reduction in the first line, but §4.6 files rain
+  gardens, permeable pavements etc. under compensatory (C-hydro). Encoded by section (C-hydro); each 4.6.x carries
+  `note`. `rules.params.r1AddressedBy.S03 = ["L1","C-hydro"]` lets a C-hydro measure count as addressing S03 for R1.
+- **citizenObservable is a boolean, "partly" became true.** S01, S03, S04, S08, S11 are "partly" visible to a lay
+  person and are `true`; only S10 (physico-chemistry needs a probe) and S12 (catchment GIS) are `false`.
+- **`addresses` is read from each measure's own text; fewer when unsure.** Judgement calls a reviewer should check:
+  4.1.4 -> S07 only (text is about corridors and connectedness, sealing only mentioned in passing); 4.2.2 -> S01
+  only (its drainage-ditch paragraph also touches S03); 4.2.1 -> S01+S10 (self-purification, oxygenation);
+  4.3.3 -> S09 only; 4.3.4 -> S05; 4.3.5 and 4.3.6 -> S08; 4.3.7 -> S04+S08 (its own first sentence names both);
+  4.3.11-4.3.20 -> S04 only (their stated goal is erosion control; the riparian cover they produce is left to 4.1.x);
+  4.3.21 -> S03+S06; 4.4.1-4.4.3 -> none (enabling or social; nothing is tackled directly); 4.5.1 -> S07+S11
+  (invasive plants sit in both definitions); 4.6.x -> S03 only (p.97 says they "help preventing the flash floods";
+  not S12 because D2.4 says they are not freshwater recovery); 4.7.x -> S01.
+- **responseLag is our declaration.** D2.4 p.22 gives only an ordering (algae fast, fish moderate, riparian slow).
+  Assigned: riparian and bioengineering (4.1.x, 4.3.11-20, 4.5.1, 4.4.1) slow; fish and geomorphology (4.3.1-10,
+  4.3.21, 4.6.x) medium; water-quality measures (4.2.2, 4.2.3, 4.7.x) fast; 4.2.1 medium. Not D2.4 numbers.
+- **establishmentYears = 3 on 14 measures** (4.1.1-4.1.4, 4.3.11-4.3.20): p.26 says "typically the first 2–3
+  years" and we take the upper bound. 4.3.21 excluded (not vegetated works). R7 slow = 1095 days, cited to p.26.
+- **R7 medium = 365 d and fast = 90 d are Firstline assumptions**, flagged `assumption: true` so the UI can say so.
+  Rejected: presenting them as D2.4 values. minPerCell 3, bootstrapResamples 2000, ciLevel 0.9 are declared
+  engine parameters, not D2.4 numbers.
+- **Rule quotes.** R3 is cited to p.21 ("otherwise, invasives simply recolonize the restored sites.") because the
+  sentence crosses p.20 to p.21 and a quote must sit on one page. R8 is cited to p.23 ("Without appropriate
+  controls …") rather than the BACI sentence on p.22, as it states the consequence the verdict CONFOUNDED needs.
+  R4 uses "options of last resort"; the sharper sentence "applied only when first-, second- and third-line
+  measures are unfeasible" (p.21) is the alternative if the R4 reason should name the infeasibility gate.
+- **Casebook encodes only what the case text says.** Mapping to a catalogue id happens only where the text names the
+  technique (e.g. Kallang "live staking, brush layering, coir rolls, erosion control blankets" -> 4.3.12, 4.3.15,
+  4.3.19, 4.3.20). Left `unmapped` (verbatim): Bièvre retention area and daylighting, Emscher wetland rewetting, retention
+  basins, side channels, ditch blocking, soil remediation, La Marjal wetland basins, Kallang habitat features, Isar
+  side channels. Bièvre riparian planting maps to 4.3.11 (text says "planting of 213 trees and 220 shrubs"); its
+  "Riparian vegetation … restored" is not mapped to a 4.1.x because the text does not say passive or active.
+  Every case has `baselineReported: null` with a `notStated` note: no case text reports pre-restoration data.
+  Where the text reports outcomes without monitoring (Isar), `afterMonitoringReported` is `null`, not `true`.
+- **Ordering is stated only where the text states it.** `orderBasis: "text-sequenced"` (Bièvre 4.2.2 "first and most
+  critical phase", then "subsequently" planting; Emscher sewer "followed by" restoration; Sourinho works "Following
+  the removal") versus `"mention-order"` (a list). Emscher: 4.2.2 order 1 and every 4.3.x after it, asserted in
+  `verify-catalogue-shape.mjs` as the demo's positive control. Bièvre's re-meandering is mentioned before the
+  wastewater sentence but is not text-sequenced, so it sits after.
+- **Check-up items: the OAH citizen questionnaire was not found.** `hl7-eu/oah` (220 tree entries) has no
+  Questionnaire under `input/fsh` or `input/resources`; only observation profiles and examples. Fell back to the
+  Field Sampling Protocols Annex I form (Zenodo 20344421): 10 items use its own labels (barriers, other artificial
+  structures, outflows, bank concrete, channel artificial substrate, dry areas, filamentous algae, riparian trees,
+  bushes, non-native species). 4 items are Firstline-authored and labelled as such in `source` (litter, bank
+  erosion, odour, clarity) because the field form has no lay-observable version of them. Odour is the least
+  grounded. Every evidence row is `suggest`; none confirms. Two labels ("CC: concrete or similar artificial
+  impervious materials", "Non-native species (?, 1, >1; species names)") sit in table cells that `pdftotext`
+  interleaves with column glyphs, so they were checked by reading the raw text, not by machine.
+- **Interpretive mappings in check-up items:** outflow pipes -> S03 (runoff delivery), filamentous algae "extensive"
+  -> S01 (nutrient enrichment, from D2.4 p.42), riparian 0-20% cover -> S07, any non-native riparian species -> S07
+  (D2.4 p.30 puts exotic-species invasion inside S07).
+- **`reading-rules.json` is `[]`.** Read all of the Key Indicators factsheets (Zenodo 20345207) and Field Sampling
+  Protocols for a threshold that confirms a stressor. None exists: the factsheets give methods and rationale, no
+  cut-off; the only numbers are D2.4 design limits (velocity 0.6 m/s, slope 3%, invasive cover 15% / 50%, corridor
+  30 m) and the form's own "extensive = more than 33%", none of which says a stressor is present. Rejected: turning
+  any of those into a confirming rule. So no check-up item can confirm a stressor on its own.
+- **Indicator sources.** Riparian cover, algae, flow/dry channel and barrier passability take their idea and scale
+  from the field form; bank stability from D2.4 p.26; litter from D2.4 §4.2.3; odour and clarity are Firstline
+  lay proxies with no D2.4 or OAH parameter behind them, and their `source` says so. `delta` = 1 class unit on every
+  indicator is our declared parameter (source string says "not a D2.4 number").
+
 ## 2026-09-29 (P0 foundation)
 
 - **LLM provider: OpenRouter, `google/gemini-2.5-flash`, plain `fetch`.** Owner decision. Rejected: the Anthropic

@@ -1,0 +1,666 @@
+[
+  {
+    "id": "5.1.1",
+    "name": "Daylighting and restoration of Bièvre River (Paris, France)",
+    "page": 111,
+    "stressorsReported": [
+      "S01",
+      "S05",
+      "S02"
+    ],
+    "stressorEvidence": [
+      {
+        "stressor": "S01",
+        "page": 111,
+        "quote": "led to severe pollution of the river"
+      },
+      {
+        "stressor": "S05",
+        "page": 111,
+        "quote": "large sections of the Bièvre were progressively culverted, buried, or built over"
+      },
+      {
+        "stressor": "S02",
+        "page": 111,
+        "quote": "By removing impoundments (longitudinal connectivity)"
+      }
+    ],
+    "measures": [
+      {
+        "measureId": "4.2.2",
+        "order": 1,
+        "orderBasis": "text-sequenced",
+        "page": 111,
+        "quote": "The elimination of wastewater connections to the river constituted the first and most critical phase of the restoration."
+      },
+      {
+        "measureId": "4.3.11",
+        "order": 2,
+        "orderBasis": "text-sequenced",
+        "after": [
+          "4.2.2"
+        ],
+        "page": 111,
+        "quote": "The project subsequently included the planting of 213 trees and 220 shrubs"
+      },
+      {
+        "measureId": "4.3.3",
+        "order": 3,
+        "orderBasis": "mention-order",
+        "page": 111,
+        "quote": "resulting in a re-meandered stream and improved river dynamics"
+      },
+      {
+        "measureId": "4.3.1",
+        "order": 4,
+        "orderBasis": "mention-order",
+        "page": 111,
+        "quote": "By removing impoundments (longitudinal connectivity)"
+      },
+      {
+        "measureId": "4.6.6",
+        "order": 5,
+        "orderBasis": "mention-order",
+        "page": 111,
+        "quote": "Riparian vegetation and vegetated swales were restored"
+      }
+    ],
+    "unmapped": [
+      "In 2022, a 600-metre stretch of the Bièvre was successfully daylighted and restored to open air",
+      "the creation of a retention area for flood management",
+      "the construction of approximately 200 m² of pedestrian footbridges"
+    ],
+    "unmappedPages": [
+      111,
+      111,
+      111
+    ],
+    "baselineReported": null,
+    "afterMonitoringReported": true,
+    "notStated": {
+      "baselineReported": "not stated in D2.4: no pre-restoration monitoring data are described"
+    },
+    "evidence": [
+      {
+        "claim": "afterMonitoringReported",
+        "page": 111,
+        "quote": "The benefits of the Bièvre restoration have been clearly demonstrated through post-project monitoring activities."
+      }
+    ],
+    "note": "After-monitoring is qualitative (species returned, habitat heterogeneity); no values are given."
+  },
+  {
+    "id": "5.1.2",
+    "name": "The Emscher river restoration, Dortmund, Germany",
+    "page": 113,
+    "stressorsReported": [
+      "S01",
+      "S05",
+      "S09",
+      "S03"
+    ],
+    "stressorEvidence": [
+      {
+        "stressor": "S01",
+        "page": 113,
+        "quote": "the river network was transformed into an open wastewater channel"
+      },
+      {
+        "stressor": "S09",
+        "page": 113,
+        "quote": "characterised by straightened courses, concrete beds and dikes"
+      },
+      {
+        "stressor": "S05",
+        "page": 113,
+        "quote": "characterised by straightened courses, concrete beds and dikes"
+      },
+      {
+        "stressor": "S03",
+        "page": 113,
+        "quote": "hydrological regimes were altered, groundwater levels declined, riparian wetlands disappeared, flood peaks increased"
+      }
+    ],
+    "measures": [
+      {
+        "measureId": "4.2.2",
+        "order": 1,
+        "orderBasis": "text-sequenced",
+        "page": 113,
+        "quote": "focused on eliminating wastewater discharges through the construction of a new underground sewage infrastructure, followed by large-scale ecological restoration measures"
+      },
+      {
+        "measureId": "4.3.3",
+        "order": 2,
+        "orderBasis": "text-sequenced",
+        "after": [
+          "4.2.2"
+        ],
+        "page": 113,
+        "quote": "followed by large-scale ecological restoration measures. These included river re-meandering, floodplain reconnection, wetland rewetting, retention basin creation"
+      },
+      {
+        "measureId": "4.3.21",
+        "order": 3,
+        "orderBasis": "text-sequenced",
+        "after": [
+          "4.2.2"
+        ],
+        "page": 113,
+        "quote": "followed by large-scale ecological restoration measures. These included river re-meandering, floodplain reconnection, wetland rewetting, retention basin creation"
+      },
+      {
+        "measureId": "4.3.4",
+        "order": 4,
+        "orderBasis": "mention-order",
+        "page": 113,
+        "quote": "the removal of concrete riverbeds and banks and their replacement with near-natural channels"
+      },
+      {
+        "measureId": "4.3.8",
+        "order": 5,
+        "orderBasis": "mention-order",
+        "page": 113,
+        "quote": "the removal of concrete riverbeds and banks and their replacement with near-natural channels"
+      },
+      {
+        "measureId": "4.6.2",
+        "order": 6,
+        "orderBasis": "mention-order",
+        "page": 113,
+        "quote": "green roofs, façade greening and rainwater harvesting"
+      },
+      {
+        "measureId": "4.6.5",
+        "order": 7,
+        "orderBasis": "mention-order",
+        "reportedAs": "outcome",
+        "page": 113,
+        "quote": "the decoupling of paved surfaces from the combined sewer system"
+      }
+    ],
+    "unmapped": [
+      "wetland rewetting",
+      "retention basin creation",
+      "the creation of side channels and shallow backwaters",
+      "the blocking of drainage ditches to restore groundwater levels",
+      "soil remediation in former industrial areas"
+    ],
+    "unmappedPages": [
+      113,
+      113,
+      113,
+      113,
+      113
+    ],
+    "baselineReported": null,
+    "afterMonitoringReported": true,
+    "notStated": {
+      "baselineReported": "not stated in D2.4: an increase is reported but no baseline values are given"
+    },
+    "evidence": [
+      {
+        "claim": "afterMonitoringReported",
+        "page": 113,
+        "quote": "an increase in invertebrate and bird species richness"
+      }
+    ],
+    "note": "Positive control for R1: sewer and point-source works (4.2.2) are recorded by the text as preceding renaturalisation (4.3.x)."
+  },
+  {
+    "id": "5.1.3",
+    "name": "Isar river water management plan and restoration, Munich, Germany",
+    "page": 115,
+    "stressorsReported": [
+      "S05",
+      "S02"
+    ],
+    "stressorEvidence": [
+      {
+        "stressor": "S05",
+        "page": 115,
+        "quote": "hard embankments, fixed banks, and training structures that simplified morphology, reduced lateral connectivity and habitat diversity"
+      },
+      {
+        "stressor": "S02",
+        "page": 115,
+        "quote": "old weirs and barriers were removed or transformed into gently sloping rock ramps"
+      }
+    ],
+    "measures": [
+      {
+        "measureId": "4.3.8",
+        "order": 1,
+        "orderBasis": "mention-order",
+        "page": 115,
+        "quote": "hard concrete banks were removed and replaced by gently sloping natural-looking riverbanks"
+      },
+      {
+        "measureId": "4.3.10",
+        "order": 2,
+        "orderBasis": "mention-order",
+        "page": 115,
+        "quote": "regrading banks into more natural slopes allowing lateral erosion"
+      },
+      {
+        "measureId": "4.1.1",
+        "order": 3,
+        "orderBasis": "mention-order",
+        "page": 115,
+        "quote": "native riparian vegetation (such as willows, shrubs, reeds) was planted or allowed to recolonise naturally"
+      },
+      {
+        "measureId": "4.1.2",
+        "order": 4,
+        "orderBasis": "mention-order",
+        "page": 115,
+        "quote": "native riparian vegetation (such as willows, shrubs, reeds) was planted or allowed to recolonise naturally"
+      },
+      {
+        "measureId": "4.3.4",
+        "order": 5,
+        "orderBasis": "mention-order",
+        "page": 115,
+        "quote": "gravel, cobbles and wood were reintroduced to recreate a more natural riverbed"
+      },
+      {
+        "measureId": "4.3.1",
+        "order": 6,
+        "orderBasis": "mention-order",
+        "page": 115,
+        "quote": "old weirs and barriers were removed or transformed into gently sloping rock ramps"
+      },
+      {
+        "measureId": "4.3.2",
+        "order": 7,
+        "orderBasis": "mention-order",
+        "page": 115,
+        "quote": "old weirs and barriers were removed or transformed into gently sloping rock ramps"
+      },
+      {
+        "measureId": "4.3.21",
+        "order": 8,
+        "orderBasis": "mention-order",
+        "page": 115,
+        "quote": "flood protection was improved by setting defences further back from the river (reconnecting floodplains, restoring upstream lateral connectivity)"
+      }
+    ],
+    "unmapped": [
+      "side channels (bypass) and shallow shoreline areas were created",
+      "new paths, access points and open spaces were created along the river"
+    ],
+    "unmappedPages": [
+      115,
+      115
+    ],
+    "baselineReported": null,
+    "afterMonitoringReported": null,
+    "notStated": {
+      "baselineReported": "not stated in D2.4: no pre-restoration monitoring data are described",
+      "afterMonitoringReported": "not stated in D2.4: outcomes are asserted (improved flood protection, water quality, biodiversity habitat) but no monitoring is described"
+    },
+    "evidence": [],
+    "note": "Bullet order in the text is a list, not a stated construction sequence."
+  },
+  {
+    "id": "5.1.4",
+    "name": "GEOTA and RiosLivres (Vaqueiros weir and Sourinho stream, Alviela River, Portugal)",
+    "page": 116,
+    "stressorsReported": [
+      "S01",
+      "S02",
+      "S07"
+    ],
+    "stressorEvidence": [
+      {
+        "stressor": "S01",
+        "page": 117,
+        "quote": "water quality degradation from agricultural, livestock and industrial activities"
+      },
+      {
+        "stressor": "S02",
+        "page": 118,
+        "quote": "River fragmentation is a major issue in the basin, where 33 artificial barriers have been identified"
+      },
+      {
+        "stressor": "S07",
+        "page": 117,
+        "quote": "alongside reductions in native riparian vegetation such as ash"
+      }
+    ],
+    "measures": [
+      {
+        "measureId": "4.1.2",
+        "order": 1,
+        "orderBasis": "mention-order",
+        "site": "programme",
+        "page": 117,
+        "quote": "Replanting and reinforcement of riparian vegetation using native species"
+      },
+      {
+        "measureId": "4.3.13",
+        "order": 2,
+        "orderBasis": "mention-order",
+        "site": "programme",
+        "page": 117,
+        "quote": "Bioengineering techniques, such as live fascines, live staking and vegetated brushwood structures"
+      },
+      {
+        "measureId": "4.3.12",
+        "order": 3,
+        "orderBasis": "mention-order",
+        "site": "programme",
+        "page": 117,
+        "quote": "Bioengineering techniques, such as live fascines, live staking and vegetated brushwood structures"
+      },
+      {
+        "measureId": "4.3.1",
+        "order": 4,
+        "orderBasis": "mention-order",
+        "site": "Vaqueiros",
+        "page": 118,
+        "quote": "The removal of the Vaqueiros Weir aimed to restore longitudinal connectivity in the River Alviela"
+      },
+      {
+        "measureId": "4.5.1",
+        "order": 5,
+        "orderBasis": "mention-order",
+        "site": "Vaqueiros",
+        "page": 119,
+        "quote": "the intervention included the replacement of invasive riparian species with native vegetation"
+      },
+      {
+        "measureId": "4.1.2",
+        "order": 6,
+        "orderBasis": "mention-order",
+        "site": "Vaqueiros",
+        "page": 119,
+        "quote": "the intervention included the replacement of invasive riparian species with native vegetation"
+      },
+      {
+        "measureId": "4.3.14",
+        "order": 7,
+        "orderBasis": "mention-order",
+        "site": "Vaqueiros",
+        "page": 120,
+        "quote": "Bank stabilization using live willow (native) fences with woven branches (wood weaving technique)"
+      },
+      {
+        "measureId": "4.3.1",
+        "order": 8,
+        "orderBasis": "mention-order",
+        "site": "Sourinho",
+        "page": 120,
+        "quote": "eliminating an obsolete barrier with negative ecological impacts"
+      },
+      {
+        "measureId": "4.5.1",
+        "order": 9,
+        "orderBasis": "mention-order",
+        "site": "Sourinho",
+        "page": 120,
+        "quote": "control of invasive species"
+      },
+      {
+        "measureId": "4.1.2",
+        "order": 10,
+        "orderBasis": "text-sequenced",
+        "site": "Sourinho",
+        "after": [
+          "4.3.1"
+        ],
+        "afterCite": {
+          "page": 120,
+          "quote": "Following the removal of the structure, restoration works are being carried out along approximately 300 m on both"
+        },
+        "page": 121,
+        "quote": "the planting of native species (such as ash, alder and quince)"
+      }
+    ],
+    "unmapped": [
+      "Community involvement and awareness-raising",
+      "bank stabilisation and requalification",
+      "promotion of native riparian vegetation",
+      "monitoring of fish communities and sediment dynamics"
+    ],
+    "unmappedPages": [
+      117,
+      120,
+      120,
+      120
+    ],
+    "baselineReported": null,
+    "afterMonitoringReported": true,
+    "notStated": {
+      "baselineReported": "not stated in D2.4: no pre-removal monitoring data are described for either site"
+    },
+    "evidence": [
+      {
+        "claim": "afterMonitoringReported (Sourinho: underway, no results stated)",
+        "page": 121,
+        "quote": "The rehabilitation process is being scientifically monitored by researchers from the Instituto Superior"
+      }
+    ],
+    "note": "Two sites in one case. Vaqueiros: no monitoring is described. Sourinho: monitoring is underway and no results are stated."
+  },
+  {
+    "id": "5.1.5",
+    "name": "La Marjal floodable park, Alicante, Spain",
+    "page": 122,
+    "stressorsReported": [
+      "S03"
+    ],
+    "stressorEvidence": [
+      {
+        "stressor": "S03",
+        "page": 122,
+        "quote": "Designed to reduce pluvial flash-flood risk in surrounding residential areas"
+      }
+    ],
+    "measures": [
+      {
+        "measureId": "4.6.7",
+        "order": 1,
+        "orderBasis": "mention-order",
+        "page": 122,
+        "quote": "Floodable park (multi-functional land use)"
+      },
+      {
+        "measureId": "4.4.3",
+        "order": 2,
+        "orderBasis": "mention-order",
+        "page": 122,
+        "quote": "an environmental trail, guided tours and educational initiatives"
+      }
+    ],
+    "unmapped": [
+      "Constructed wetland basins and shallow-water habitats",
+      "Native vegetation mosaics (wetland + Mediterranean landscapes)",
+      "Stormwater diversion, inlet/outlet control and regulated detention",
+      "Pumping/conveyance to treatment and reuse (circular water management)"
+    ],
+    "unmappedPages": [
+      122,
+      122,
+      122,
+      123
+    ],
+    "baselineReported": null,
+    "afterMonitoringReported": true,
+    "notStated": {
+      "baselineReported": "not stated in D2.4: no pre-project data are described"
+    },
+    "evidence": [
+      {
+        "claim": "afterMonitoringReported (hydraulic volume only)",
+        "page": 122,
+        "quote": "by November 2020, it had collected approximately 52,200 m³ of rainwater"
+      }
+    ],
+    "note": "The only after-data is stored rainwater volume; no ecological monitoring is stated."
+  },
+  {
+    "id": "5.1.6",
+    "name": "Kallang river rehabilitation, Singapore",
+    "page": 123,
+    "stressorsReported": [
+      "S05",
+      "S09",
+      "S03",
+      "S08"
+    ],
+    "stressorEvidence": [
+      {
+        "stressor": "S05",
+        "page": 123,
+        "quote": "straight, trapezoidal concrete drainage canal designed to rapidly convey stormwater and reduce flood risk"
+      },
+      {
+        "stressor": "S09",
+        "page": 123,
+        "quote": "straight, trapezoidal concrete drainage canal designed to rapidly convey stormwater and reduce flood risk"
+      },
+      {
+        "stressor": "S03",
+        "page": 123,
+        "quote": "generated high flow velocities, poor ecological quality, limited habitat diversity"
+      },
+      {
+        "stressor": "S08",
+        "page": 123,
+        "quote": "generated high flow velocities, poor ecological quality, limited habitat diversity"
+      }
+    ],
+    "measures": [
+      {
+        "measureId": "4.3.4",
+        "order": 1,
+        "orderBasis": "mention-order",
+        "page": 124,
+        "quote": "the concrete-lined channel was dismantled and replaced by a reconstructed riverbed composed of gravel, cobbles, sand and boulders"
+      },
+      {
+        "measureId": "4.3.5",
+        "order": 2,
+        "orderBasis": "mention-order",
+        "page": 124,
+        "quote": "constructing riffles, enabling more natural hydraulic behaviour and habitat diversity"
+      },
+      {
+        "measureId": "4.3.3",
+        "order": 3,
+        "orderBasis": "mention-order",
+        "page": 124,
+        "quote": "the previously straight canal was reshaped into a sinuous, meandering planform"
+      },
+      {
+        "measureId": "4.3.12",
+        "order": 4,
+        "orderBasis": "mention-order",
+        "page": 124,
+        "quote": "including vegetated geogrids, live staking, brush layering, coir rolls, erosion control blankets, river terraces and wet meadow zones"
+      },
+      {
+        "measureId": "4.3.15",
+        "order": 5,
+        "orderBasis": "mention-order",
+        "page": 124,
+        "quote": "including vegetated geogrids, live staking, brush layering, coir rolls, erosion control blankets, river terraces and wet meadow zones"
+      },
+      {
+        "measureId": "4.3.19",
+        "order": 6,
+        "orderBasis": "mention-order",
+        "page": 124,
+        "quote": "including vegetated geogrids, live staking, brush layering, coir rolls, erosion control blankets, river terraces and wet meadow zones"
+      },
+      {
+        "measureId": "4.3.20",
+        "order": 7,
+        "orderBasis": "mention-order",
+        "page": 124,
+        "quote": "including vegetated geogrids, live staking, brush layering, coir rolls, erosion control blankets, river terraces and wet meadow zones"
+      },
+      {
+        "measureId": "4.3.21",
+        "order": 8,
+        "orderBasis": "mention-order",
+        "page": 124,
+        "quote": "Floodplain reconnection within a multifunctional park"
+      }
+    ],
+    "unmapped": [
+      "Natural habitat elements such as woody debris, shallow wetlands and vegetated margins were incorporated",
+      "Flood-risk design and hydraulic modelling",
+      "Integrated Park infrastructure"
+    ],
+    "unmappedPages": [
+      124,
+      124,
+      124
+    ],
+    "baselineReported": null,
+    "afterMonitoringReported": true,
+    "notStated": {
+      "baselineReported": "not stated in D2.4: a 30% increase within two years is reported but no baseline values are given"
+    },
+    "evidence": [
+      {
+        "claim": "afterMonitoringReported",
+        "page": 124,
+        "quote": "Monitoring showed a rapid increase in biodiversity (approximately 30% within two years)"
+      }
+    ],
+    "note": "Bullet order in the text is a list, not a stated construction sequence."
+  },
+  {
+    "id": "5.1.7",
+    "name": "CresceRio project",
+    "page": 125,
+    "stressorsReported": [
+      "S01",
+      "S02"
+    ],
+    "stressorEvidence": [
+      {
+        "stressor": "S01",
+        "page": 127,
+        "quote": "recognize both key stressors (e.g., litter, invasive species, artificial barriers)"
+      },
+      {
+        "stressor": "S02",
+        "page": 127,
+        "quote": "recognize both key stressors (e.g., litter, invasive species, artificial barriers)"
+      }
+    ],
+    "measures": [
+      {
+        "measureId": "4.4.2",
+        "order": 1,
+        "orderBasis": "mention-order",
+        "page": 126,
+        "quote": "combining scientific research, experiential learning and artistic expression to foster long-term ecological awareness and stewardship"
+      }
+    ],
+    "unmapped": [
+      "invasive species"
+    ],
+    "unmappedPages": [
+      127
+    ],
+    "baselineReported": null,
+    "afterMonitoringReported": null,
+    "notStated": {
+      "baselineReported": "not stated in D2.4: an environmental-education project; no restoration works or stream data are described",
+      "afterMonitoringReported": "not stated in D2.4: an environmental-education project; no restoration works or stream data are described"
+    },
+    "evidence": [
+      {
+        "claim": "kind of project",
+        "page": 125,
+        "quote": "CresceRio (meaning GrowRiver) project (CresceRio) is an environmental education project"
+      }
+    ],
+    "note": "Stressors are those the children learn to recognise; invasive species is not mapped to S07 or S11 because the text does not say which."
+  }
+]

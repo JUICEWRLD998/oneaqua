@@ -1,0 +1,88 @@
+{
+  "rules": [
+    {
+      "id": "R1",
+      "name": "Fix the leaks first",
+      "verdict": "DEFERRED: a measure is deferred while a confirmed first-line stressor is not addressed by a first-line measure (plan-level: BLOCKED/INCOMPLETE)",
+      "page": 19,
+      "quote": "It is like fixing the leaks in a bucket before trying to fill it."
+    },
+    {
+      "id": "R1a",
+      "name": "Parallel delivery where urban constraints require",
+      "verdict": "ALLOWED_BY_OVERRIDE: second-line measures may run in parallel with essential ones when a named approver records an urban constraint",
+      "page": 20,
+      "quote": "implemented once essential conditions are secured or, where urban constraints require, in parallel as part of an integrated delivery strategy"
+    },
+    {
+      "id": "R2",
+      "name": "Barrier exception",
+      "verdict": "INDICATED: where barriers are the dominant limiting factor, removal or fish passage is not deferred behind first-line measures",
+      "page": 20,
+      "quote": "Barrier removal to restore longitudinal connectivity, or the implementation of fish passages in systems where barriers constitute the dominant limiting factor; in such cases, improving longitudinal connectivity becomes essential and should be prioritised at early stages of rehabilitation"
+    },
+    {
+      "id": "R3",
+      "name": "Symptom only: invasive species control",
+      "verdict": "SYMPTOM_ONLY: invasive control alone does not succeed unless system-level stressors are managed first",
+      "page": 21,
+      "quote": "otherwise, invasives simply recolonize the restored sites."
+    },
+    {
+      "id": "R4",
+      "name": "Compensatory measures are a last resort",
+      "verdict": "CONTRAINDICATED unless the officer records why lines 1-3 are infeasible here",
+      "page": 21,
+      "quote": "compensatory measures should be regarded as options of last resort, to be implemented only when it is not possible to restore or re-establish self-sustaining ecological resilience and natural processes that support long-term river recovery"
+    },
+    {
+      "id": "R5",
+      "name": "A package, not a single measure",
+      "verdict": "INCOMPLETE: multiple problems need a package of hierarchical measures, not one measure alone",
+      "page": 19,
+      "quote": "They also stress that multiple problems require a package of hierarchical measures, it is not enough to just reshape the channel, nor is it enough to only plant trees."
+    },
+    {
+      "id": "R6",
+      "name": "SMART objectives",
+      "verdict": "INCOMPLETE: each placed measure needs a specific, measurable, time-bound objective",
+      "page": 21,
+      "quote": "Once restoration targets are established, they should be translated into clear SMART objectives, Specific, Measurable, Achievable, Realistic, and Time-bound, explicitly linked to project goals and expected outcomes."
+    },
+    {
+      "id": "R7",
+      "name": "Respect the response lag",
+      "verdict": "NOT_YET_KNOWABLE: no outcome verdict before the expected response time of the indicator has elapsed",
+      "page": 22,
+      "quote": "The frequency and duration of monitoring should align with the life histories of the target organisms and the expected timescale of their responses (i.e., the lag period)"
+    },
+    {
+      "id": "R8",
+      "name": "Controls and before-after design",
+      "verdict": "CONFOUNDED: without an appropriate control, a change cannot be attributed to the restoration",
+      "page": 23,
+      "quote": "Without appropriate controls, it becomes difficult to determine whether observed changes result from restoration activities or from broader environmental variation."
+    }
+  ],
+  "params": {
+    "r1AddressedBy": { "default": ["L1"], "S03": ["L1", "C-hydro"] },
+    "r2": { "stressor": "S02", "measures": ["4.3.1", "4.3.2"] },
+    "r3SymptomMeasures": ["4.5.1"],
+    "r4CompensatoryLines": ["C-hydro", "C-chem"],
+    "r7LagDays": {
+      "slow": {
+        "days": 1095,
+        "assumption": false,
+        "cite": {
+          "page": 26,
+          "quote": "During the early establishment phase (typically the first 2–3 years), bio-engineered structures and newly restored banks are still integrating into this dynamic system."
+        }
+      },
+      "medium": { "days": 365, "assumption": true },
+      "fast": { "days": 90, "assumption": true }
+    },
+    "minPerCell": 3,
+    "bootstrapResamples": 2000,
+    "ciLevel": 0.9
+  }
+}

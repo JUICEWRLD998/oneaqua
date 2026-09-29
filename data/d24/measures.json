@@ -1,0 +1,723 @@
+[
+  {
+    "id": "4.1.1",
+    "name": "Passive riparian vegetation: allowing natural regeneration",
+    "line": "L1",
+    "addresses": [
+      "S07"
+    ],
+    "objective": "Where hydrological and morphological conditions remain favourable and pressures have been reduced or removed, passive riparian restoration should be the preferred approach.",
+    "limitations": "Regeneration may be slow, especially in highly compacted or polluted soils",
+    "limitationsPage": 33,
+    "page": 32,
+    "citizenMonitorable": [
+      "riparian-cover"
+    ],
+    "responseLag": "slow",
+    "establishmentYears": 3
+  },
+  {
+    "id": "4.1.2",
+    "name": "Active riparian vegetation restoration: re-establishment riparian forest",
+    "line": "L1",
+    "addresses": [
+      "S07"
+    ],
+    "objective": "Active riparian restoration is required when degradation has exceeded the system’s capacity for natural regeneration",
+    "limitations": "Maladaptation and ecological mismatch: planting the wrong species (or wrong provenance) can lead to failure, poor functional performance, or long-term ecological shifts away from reference conditions.",
+    "limitationsPage": 36,
+    "page": 33,
+    "citizenMonitorable": [
+      "riparian-cover"
+    ],
+    "responseLag": "slow",
+    "establishmentYears": 3
+  },
+  {
+    "id": "4.1.3",
+    "name": "Constrained riparian vegetation corridors (“buffers”)",
+    "line": "L1",
+    "addresses": [
+      "S07"
+    ],
+    "objective": "Constrained riparian vegetation buffers should therefore be understood as interim or compromise solutions, implemented only where more ambitious riparian restoration is currently unachievable.",
+    "limitations": "Reduced ecological function compared to continuous riparian forests, particularly regarding habitat diversity, floodplain processes, and long-term resilience",
+    "limitationsPage": 38,
+    "page": 37,
+    "citizenMonitorable": [
+      "riparian-cover"
+    ],
+    "responseLag": "slow",
+    "establishmentYears": 3
+  },
+  {
+    "id": "4.1.4",
+    "name": "Vegetated corridors promoting connectedness",
+    "line": "L1",
+    "addresses": [
+      "S07"
+    ],
+    "objective": "These corridors integrate urban rivers with parks, wetlands, and other vegetated spaces into continuous networks that support ecological flows, climate regulation, and human well-being across the urban landscape.",
+    "limitations": "Social visibility does not guarantee ecological quality and may increase pressure if access is not carefully regulated",
+    "page": 39,
+    "citizenMonitorable": [
+      "riparian-cover"
+    ],
+    "responseLag": "slow",
+    "establishmentYears": 3
+  },
+  {
+    "id": "4.2.1",
+    "name": "In-stream self-purification enhancement",
+    "line": "L1",
+    "addresses": [
+      "S01",
+      "S10"
+    ],
+    "objective": "Enhancing self-purification focuses on restoring physical complexity and ecological processes within the stream channel, enabling it to recover its natural cleaning and regulating functions.",
+    "limitations": "Requires minimum baseflow to ensure processes are active.",
+    "limitationsPage": 42,
+    "page": 41,
+    "citizenMonitorable": [
+      "algae",
+      "clarity"
+    ],
+    "responseLag": "medium"
+  },
+  {
+    "id": "4.2.2",
+    "name": "Sewer system and point-source improvements",
+    "line": "L1",
+    "addresses": [
+      "S01"
+    ],
+    "objective": "Upgrading and optimizing sewer systems and point-source management are therefore fundamental to ensure the long-term success of ecological rehabilitation and the effectiveness of other chemical or hydrological measures.",
+    "limitations": "Coordination challenges between utilities, municipalities, and environmental agencies.",
+    "limitationsPage": 43,
+    "page": 42,
+    "citizenMonitorable": [
+      "odour",
+      "clarity",
+      "algae"
+    ],
+    "responseLag": "fast"
+  },
+  {
+    "id": "4.2.3",
+    "name": "Litter, plastic, and hydrocarbon control",
+    "line": "L1",
+    "addresses": [
+      "S01"
+    ],
+    "objective": "Urban streams are frequently contaminated by solid waste, plastics, and hydrocarbons originating from roads, public areas, storm drains, and mismanaged waste disposal.",
+    "limitations": "Requires regular maintenance of traps, separators, and drainage infrastructure to remain effective.",
+    "limitationsPage": 45,
+    "page": 43,
+    "citizenMonitorable": [
+      "litter"
+    ],
+    "responseLag": "fast"
+  },
+  {
+    "id": "4.3.1",
+    "name": "Removing barriers",
+    "line": "L2",
+    "addresses": [
+      "S02"
+    ],
+    "objective": "Barriers in streams fragment and degrade habitats, hamper the movement of fish and other aquatic species, alter sediment and nutrient flows and degrade water quality, leading to negative impacts on riverine ecosystems and biodiversity",
+    "limitations": "The heritage, social and economic value of barriers, as well as public perception, can difficult the removal of barriers.",
+    "limitationsPage": 48,
+    "page": 47,
+    "citizenMonitorable": [
+      "barrier-passability"
+    ],
+    "responseLag": "medium"
+  },
+  {
+    "id": "4.3.2",
+    "name": "Passing barriers",
+    "line": "L2",
+    "addresses": [
+      "S02"
+    ],
+    "objective": "When complete weir removal is not feasible due to societal or infrastructural constraints, several alternative measures can help mitigate its impacts.",
+    "limitations": "However, these measures provide limited broader ecosystem benefits because, unlike full barrier removal, they do not fully restore the natural transport of water, sediment, organic matter, and biota or re-establish characteristic river habitat dynamics",
+    "page": 49,
+    "citizenMonitorable": [
+      "barrier-passability"
+    ],
+    "responseLag": "medium",
+    "variants": [
+      "Rock-ramp",
+      "Nature-like bypass",
+      "Step-pool fishway"
+    ]
+  },
+  {
+    "id": "4.3.3",
+    "name": "Stream re-meandering",
+    "line": "L2",
+    "addresses": [
+      "S09"
+    ],
+    "objective": "Stream re-meandering is the process of restoring a straightened or channelized stream by reintroducing natural curvature and sinuosity",
+    "limitations": "It is not suitable for rivers in braids, in alternating patches or anastomoses.",
+    "page": 52,
+    "citizenMonitorable": [
+      "bank-stability"
+    ],
+    "responseLag": "medium"
+  },
+  {
+    "id": "4.3.4",
+    "name": "Stream bed re-naturalization",
+    "line": "L2",
+    "addresses": [
+      "S05"
+    ],
+    "objective": "The goal is to convert degraded, uniform, or channelized streambeds into ecologically functional habitats that support diverse aquatic communities and improve hydrological and geomorphic resilience.",
+    "limitations": "Effective re-naturalisation often requires channel widening or lateral space, which may be limited in dense urban areas.",
+    "limitationsPage": 54,
+    "page": 53,
+    "citizenMonitorable": [],
+    "responseLag": "medium"
+  },
+  {
+    "id": "4.3.5",
+    "name": "Constructed riffles",
+    "line": "L2",
+    "addresses": [
+      "S08"
+    ],
+    "objective": "These structures are designed to dissipate flow energy by increasing channel bed undulation and roughness, while also promoting the spread of high flows into the floodplain",
+    "limitations": "Not suitable everywhere, since riffles need the right channel slope, discharge regime, substrate, and sediment supply.",
+    "page": 54,
+    "citizenMonitorable": [],
+    "responseLag": "medium"
+  },
+  {
+    "id": "4.3.6",
+    "name": "Boulder clusters",
+    "line": "L2",
+    "addresses": [
+      "S08"
+    ],
+    "objective": "Placing boulders in stream channels promotes riffles and pools formation and provide habitat and spawning areas for aquatic life",
+    "limitations": "Sand-bed streams, as boulders tend to become buried.",
+    "limitationsPage": 56,
+    "page": 55,
+    "citizenMonitorable": [],
+    "responseLag": "medium"
+  },
+  {
+    "id": "4.3.7",
+    "name": "Flow deflectors",
+    "line": "L2",
+    "addresses": [
+      "S04",
+      "S08"
+    ],
+    "objective": "Flow deflectors are used to protect eroding banks and support habitat development, and can be constructed in various designs and from a range of materials.",
+    "limitations": "Regardless of material choice, deflectors must be conservatively sized and carefully aligned to avoid unintended effects such as excessive local scour, downstream bank attack, or back-cutting",
+    "limitationsPage": 57,
+    "page": 56,
+    "citizenMonitorable": [
+      "bank-stability"
+    ],
+    "responseLag": "medium",
+    "variants": [
+      "Submerged vane",
+      "Log, rock and J-hook vane",
+      "Log-frame deflector",
+      "Bendway weir",
+      "Cross vane (rock or log)"
+    ]
+  },
+  {
+    "id": "4.3.8",
+    "name": "Elimination of riverbank protection",
+    "line": "L2",
+    "addresses": [
+      "S05"
+    ],
+    "objective": "Eliminating it consists in removing some parts of the bank protection, especially the inert one, to enhance lateral connections of the river",
+    "limitations": "Increased short-term erosion risk until vegetation establishes.",
+    "limitationsPage": 67,
+    "page": 66,
+    "citizenMonitorable": [
+      "bank-stability"
+    ],
+    "responseLag": "medium"
+  },
+  {
+    "id": "4.3.9",
+    "name": "Toe protection",
+    "line": "L2",
+    "addresses": [
+      "S04"
+    ],
+    "objective": "The toe revetment protects the lower portion of the bank, where shear stress is maximum, providing structural support and promoting long-term bank stabilization.",
+    "limitations": "Erosion may be transferred upstream or downstream of the stabilised reach, as hydraulic energy is redistributed rather than eliminated.",
+    "limitationsPage": 68,
+    "page": 67,
+    "citizenMonitorable": [
+      "bank-stability"
+    ],
+    "responseLag": "medium"
+  },
+  {
+    "id": "4.3.10",
+    "name": "Riverbank regrading",
+    "line": "L2",
+    "addresses": [
+      "S04"
+    ],
+    "objective": "Regrading involves reshaping steep, unstable, or eroding riverbanks into gentler, more stable slopes",
+    "limitations": "Requires space – not feasible where banks are constrained by infrastructure.",
+    "limitationsPage": 70,
+    "page": 69,
+    "citizenMonitorable": [
+      "bank-stability"
+    ],
+    "responseLag": "medium"
+  },
+  {
+    "id": "4.3.11",
+    "name": "Tree/ bushes direct planting (Live transplanting)",
+    "line": "L2",
+    "addresses": [
+      "S04"
+    ],
+    "objective": "The primary objectives are to reduce soil erosion and reinforce the soil structure through root development.",
+    "limitations": "Trees can become heavy and cause instabilities along the slope.",
+    "limitationsPage": 71,
+    "page": 70,
+    "citizenMonitorable": [
+      "bank-stability",
+      "riparian-cover"
+    ],
+    "responseLag": "slow",
+    "establishmentYears": 3
+  },
+  {
+    "id": "4.3.12",
+    "name": "Live stakes planting",
+    "line": "L2",
+    "addresses": [
+      "S04"
+    ],
+    "objective": "The cuttings establish quickly, forming a protective, living layer that helps prevent soil erosion and provides multiple ecological benefits.",
+    "limitations": "Need for large quantities of live branches from the same watershed.",
+    "page": 72,
+    "citizenMonitorable": [
+      "bank-stability",
+      "riparian-cover"
+    ],
+    "responseLag": "slow",
+    "establishmentYears": 3
+  },
+  {
+    "id": "4.3.13",
+    "name": "Live fascines",
+    "line": "L2",
+    "addresses": [
+      "S04"
+    ],
+    "objective": "Live fascines serve as a natural measure to protect streambanks from washout and seepage, particularly in areas with moderate fluctuations in water levels",
+    "limitations": "Scarce reinforcement of deeper soil layer.",
+    "limitationsPage": 74,
+    "page": 73,
+    "citizenMonitorable": [
+      "bank-stability",
+      "riparian-cover"
+    ],
+    "responseLag": "slow",
+    "establishmentYears": 3
+  },
+  {
+    "id": "4.3.14",
+    "name": "Live fences (wood weaving)",
+    "line": "L2",
+    "addresses": [
+      "S04"
+    ],
+    "objective": "Live fences can provide protection and support to eroding riverbanks within a wide range of soil types and flows.",
+    "limitations": "Requirement for large quantities of live branches from the same river basin.",
+    "page": 75,
+    "citizenMonitorable": [
+      "bank-stability",
+      "riparian-cover"
+    ],
+    "responseLag": "slow",
+    "establishmentYears": 3
+  },
+  {
+    "id": "4.3.15",
+    "name": "Brush layering",
+    "line": "L2",
+    "addresses": [
+      "S04"
+    ],
+    "objective": "Brush layering is a bioengineering technique used for deeper soil stabilization, often as an alternative or complement to live fascines.",
+    "limitations": "Not applicable for slopes with limited equipment access.",
+    "limitationsPage": 78,
+    "page": 77,
+    "citizenMonitorable": [
+      "bank-stability",
+      "riparian-cover"
+    ],
+    "responseLag": "slow",
+    "establishmentYears": 3
+  },
+  {
+    "id": "4.3.16",
+    "name": "Live smiles",
+    "line": "L2",
+    "addresses": [
+      "S04"
+    ],
+    "objective": "Live smiles are willow fences shaped into a gentle catenary curve (or “smile”) designed to hold slumping soil on slopes",
+    "limitations": "More technically demanding to install than other techniques, as it requires precise shaping, tying and anchoring of the catenary structure.",
+    "page": 79,
+    "citizenMonitorable": [
+      "bank-stability",
+      "riparian-cover"
+    ],
+    "responseLag": "slow",
+    "establishmentYears": 3
+  },
+  {
+    "id": "4.3.17",
+    "name": "Brush mattresses",
+    "line": "L2",
+    "addresses": [
+      "S04"
+    ],
+    "objective": "The primary goal of a brush mattress is to establish structural streambank protection that transitions into long-term vegetative stabilization.",
+    "limitations": "Request for occasional clearing of scrubland.",
+    "limitationsPage": 81,
+    "page": 80,
+    "citizenMonitorable": [
+      "bank-stability",
+      "riparian-cover"
+    ],
+    "responseLag": "slow",
+    "establishmentYears": 3
+  },
+  {
+    "id": "4.3.18",
+    "name": "Live crib walls",
+    "line": "L2",
+    "addresses": [
+      "S04"
+    ],
+    "objective": "Their primary purpose is to provide linear or spatial slope stabilization, particularly on steep banks or areas susceptible to undercutting.",
+    "limitations": "Not designed for or intended to resist large, lateral earth stresses.",
+    "limitationsPage": 82,
+    "page": 81,
+    "citizenMonitorable": [
+      "bank-stability",
+      "riparian-cover"
+    ],
+    "responseLag": "slow",
+    "establishmentYears": 3
+  },
+  {
+    "id": "4.3.19",
+    "name": "Fiber rolls, blankets and pallets",
+    "line": "L2",
+    "addresses": [
+      "S04"
+    ],
+    "objective": "Designed to provide both temporary stabilization and long-term ecological restoration, fibber rolls are commonly installed along the toe of slopes, streambanks, or shorelines to protect against erosion, promote vegetation growth, and improve habitat quality.",
+    "limitations": "Fiber rolls are ineffective unless they are properly trenched into the soil.",
+    "limitationsPage": 85,
+    "page": 83,
+    "citizenMonitorable": [
+      "bank-stability",
+      "riparian-cover"
+    ],
+    "responseLag": "slow",
+    "establishmentYears": 3,
+    "variants": [
+      "Fibre rolls",
+      "Fibre blankets (mats)",
+      "Fibre pallets"
+    ]
+  },
+  {
+    "id": "4.3.20",
+    "name": "Erosion control blanket",
+    "line": "L2",
+    "addresses": [
+      "S04"
+    ],
+    "objective": "An Erosion Control Blanket (or EBC) is a biodegradable organic mat made of plant fibber (e.g., coconut fibber, jute, straw, biodegradable mesh, or geotextile) placed on soil to protect against surface erosion from rainfall or overland flow",
+    "limitations": "It is a short-term solution, since the ECB degrades with time.",
+    "limitationsPage": 86,
+    "page": 85,
+    "citizenMonitorable": [
+      "bank-stability",
+      "riparian-cover"
+    ],
+    "responseLag": "slow",
+    "establishmentYears": 3
+  },
+  {
+    "id": "4.3.21",
+    "name": "Floodplain reconnection and storage basins",
+    "line": "L2",
+    "addresses": [
+      "S03",
+      "S06"
+    ],
+    "objective": "Re-establishes the link between the river channel and its adjacent floodplain or former side channels, to enhance temporary water storage and attenuate flood peaks.",
+    "objectivePage": 87,
+    "limitations": "Requires available land and careful hydraulic design.",
+    "limitationsPage": 87,
+    "page": 86,
+    "citizenMonitorable": [
+      "flow-permanence"
+    ],
+    "responseLag": "medium"
+  },
+  {
+    "id": "4.4.1",
+    "name": "Enabling governance, land stewardship and long-term management",
+    "line": "L3",
+    "addresses": [],
+    "objective": "This measure refers to the enabling social and institutional conditions that make urban stream restoration feasible and durable at scale (space and time).",
+    "limitations": "High transaction effort: negotiating access, compensation, or acquisition can be time-consuming and politically sensitive, particularly in dense urban settings.",
+    "limitationsPage": 90,
+    "page": 89,
+    "citizenMonitorable": [],
+    "responseLag": "slow"
+  },
+  {
+    "id": "4.4.2",
+    "name": "Citizen Science and educational partnerships",
+    "line": "L3",
+    "addresses": [],
+    "objective": "Citizen science and educational partnerships invite people of all ages to become part of the living system they observe and protect.",
+    "limitations": "Data quality may vary and often needs expert validation.",
+    "limitationsPage": 91,
+    "page": 90,
+    "citizenMonitorable": [],
+    "responseLag": "medium"
+  },
+  {
+    "id": "4.4.3",
+    "name": "Participatory planning, educational trails and active cultural-recreational use of near-natural urban stream landscape",
+    "line": "L3",
+    "addresses": [],
+    "objective": "This measure combines participatory planning processes with eco-literacy initiatives to strengthen long-term community engagement and shared responsibility for restored urban stream corridors.",
+    "limitations": "Requires continuous engagement, institutional support, and well-trained facilitators.",
+    "limitationsPage": 92,
+    "page": 91,
+    "citizenMonitorable": [],
+    "responseLag": "medium"
+  },
+  {
+    "id": "4.4.4",
+    "name": "Regulatory and behavioural measures for pollution reduction",
+    "line": "L3",
+    "addresses": [
+      "S01"
+    ],
+    "objective": "This measure addresses the social roots of pollution by fostering cooperation between institutions and citizens to reduce both chemical and diffuse stressors in urban streams.",
+    "limitations": "Behavioural change tends to be gradual and uneven across social groups.",
+    "page": 93,
+    "citizenMonitorable": [
+      "litter"
+    ],
+    "responseLag": "medium"
+  },
+  {
+    "id": "4.5.1",
+    "name": "Control / Removal of invasive species",
+    "line": "L4",
+    "addresses": [
+      "S07",
+      "S11"
+    ],
+    "objective": "The removal of invasive species involves eliminating non-native organisms that outcompete or disrupt native communities.",
+    "objectivePage": 94,
+    "limitations": "Risk of reinvasion if follow-up monitoring and maintenance are not maintained.",
+    "limitationsPage": 95,
+    "page": 93,
+    "citizenMonitorable": [
+      "riparian-cover"
+    ],
+    "responseLag": "slow"
+  },
+  {
+    "id": "4.6.1",
+    "name": "Rain gardens",
+    "line": "C-hydro",
+    "addresses": [
+      "S03"
+    ],
+    "objective": "Rain gardens are shallow, vegetated depressions designed to collect, filter, and infiltrate stormwater runoff from nearby impervious surfaces such as roofs, sidewalks, and parking lots.",
+    "limitations": "Ineffective on sites with impermeable soils unless engineered with underdrains.",
+    "page": 97,
+    "citizenMonitorable": [
+      "flow-permanence"
+    ],
+    "responseLag": "medium",
+    "note": "D2.4 p.19 also names reduction of sealed surfaces as first-line; catalogued here under 4.6 (compensatory)"
+  },
+  {
+    "id": "4.6.2",
+    "name": "Rainwater harvesting systems",
+    "line": "C-hydro",
+    "addresses": [
+      "S03"
+    ],
+    "objective": "Rainwater harvesting systems collect and store precipitation from rooftops using gutters and storage tanks (cisterns) for later non-potable use.",
+    "limitations": "Limited storage capacity relative to storm size; less effective for large events.",
+    "page": 98,
+    "citizenMonitorable": [
+      "flow-permanence"
+    ],
+    "responseLag": "medium",
+    "note": "D2.4 p.19 also names reduction of sealed surfaces as first-line; catalogued here under 4.6 (compensatory)"
+  },
+  {
+    "id": "4.6.3",
+    "name": "Permeable pavements",
+    "line": "C-hydro",
+    "addresses": [
+      "S03"
+    ],
+    "objective": "Permeable pavements are surface materials that allow rainwater to infiltrate through pores, joints, or voids into an underlying gravel sub-base where it is stored temporarily and gradually infiltrated or drained.",
+    "limitations": "Clogging risk due to accumulation of fine sediments or oils; requires periodic vacuum cleaning.",
+    "page": 99,
+    "citizenMonitorable": [
+      "flow-permanence"
+    ],
+    "responseLag": "medium",
+    "note": "D2.4 p.19 also names reduction of sealed surfaces as first-line; catalogued here under 4.6 (compensatory)"
+  },
+  {
+    "id": "4.6.4",
+    "name": "Infiltration trenches",
+    "line": "C-hydro",
+    "addresses": [
+      "S03"
+    ],
+    "objective": "Linear gravel-filled excavations designed to collect, temporarily store, and infiltrate runoff from adjacent impervious surfaces such as roads, roofs, or parking areas.",
+    "limitations": "Susceptible to clogging if inflow is not pre-treated or regularly maintained.",
+    "page": 100,
+    "citizenMonitorable": [
+      "flow-permanence"
+    ],
+    "responseLag": "medium",
+    "note": "D2.4 p.19 also names reduction of sealed surfaces as first-line; catalogued here under 4.6 (compensatory)"
+  },
+  {
+    "id": "4.6.5",
+    "name": "Disconnection of impervious areas",
+    "line": "C-hydro",
+    "addresses": [
+      "S03"
+    ],
+    "objective": "This measure redirects runoff from impervious surfaces such as roofs, sidewalks, and driveways away from stormwater drains and toward vegetated or permeable zones where infiltration and evapotranspiration can occur.",
+    "limitations": "Requires available permeable area and gentle slopes to ensure infiltration and prevent local flooding.",
+    "limitationsPage": 102,
+    "page": 101,
+    "citizenMonitorable": [
+      "flow-permanence"
+    ],
+    "responseLag": "medium",
+    "note": "D2.4 p.19 also names reduction of sealed surfaces as first-line; catalogued here under 4.6 (compensatory)"
+  },
+  {
+    "id": "4.6.6",
+    "name": "Vegetated swales",
+    "line": "C-hydro",
+    "addresses": [
+      "S03"
+    ],
+    "objective": "Vegetated swales are wide, shallow, open channels with flat or gently sloping bottoms, typically constructed along roadsides, paths, or parking areas",
+    "limitations": "Swales are less effective in conveying large storm volumes or flash floods; underdrains or bypasses are often needed for overflow management.",
+    "limitationsPage": 103,
+    "page": 102,
+    "citizenMonitorable": [
+      "flow-permanence"
+    ],
+    "responseLag": "medium",
+    "note": "D2.4 p.19 also names reduction of sealed surfaces as first-line; catalogued here under 4.6 (compensatory)"
+  },
+  {
+    "id": "4.6.7",
+    "name": "Retention ponds and floodable parks",
+    "line": "C-hydro",
+    "addresses": [
+      "S03"
+    ],
+    "objective": "Retention ponds and floodable parks are multifunctional water management systems designed to store, treat, and attenuate stormwater runoff while delivering ecological and social benefits",
+    "limitations": "Needs large surface areas, which can limit feasibility in densely built environments.",
+    "limitationsPage": 104,
+    "page": 103,
+    "citizenMonitorable": [
+      "flow-permanence"
+    ],
+    "responseLag": "medium",
+    "note": "D2.4 p.19 also names reduction of sealed surfaces as first-line; catalogued here under 4.6 (compensatory)"
+  },
+  {
+    "id": "4.7.1",
+    "name": "Natural wastewater treatment plants",
+    "line": "C-chem",
+    "addresses": [
+      "S01"
+    ],
+    "objective": "They are not part of the rehabilitation of the river and stream ecosystems but additional (optional) measures to be installed in wetlands or retention basins, that will contribute to prevent the contamination of urban freshwater ecosystems.",
+    "limitations": "Natural wastewater treatment technologies are unsuitable without prior pretreatment for wastewater with extreme or toxic characteristics.",
+    "limitationsPage": 106,
+    "page": 105,
+    "citizenMonitorable": [
+      "clarity",
+      "odour",
+      "algae"
+    ],
+    "responseLag": "fast"
+  },
+  {
+    "id": "4.7.2",
+    "name": "Floating treatment wetlands",
+    "line": "C-chem",
+    "addresses": [
+      "S01"
+    ],
+    "objective": "Active Island Reactors are floating, modular treatment systems designed for in situ bioremediation of contaminated surface waters and sediments",
+    "limitations": "Treatment efficiency may vary with pollutant type, temperature, and flow conditions.",
+    "limitationsPage": 108,
+    "page": 107,
+    "citizenMonitorable": [
+      "clarity",
+      "odour",
+      "algae"
+    ],
+    "responseLag": "fast"
+  },
+  {
+    "id": "4.7.3",
+    "name": "Microbial electrochemical biofilter",
+    "line": "C-chem",
+    "addresses": [
+      "S01"
+    ],
+    "objective": "Microbial electrochemical biofilters are an emerging NbS that combines biofilm-based treatment with microbial electrochemical processes to remove pollutants from wastewater using the natural metabolic activity of electroactive microorganisms.",
+    "limitations": "Still emerging and not fully standardised.",
+    "limitationsPage": 110,
+    "page": 109,
+    "citizenMonitorable": [
+      "clarity",
+      "odour",
+      "algae"
+    ],
+    "responseLag": "fast"
+  }
+]

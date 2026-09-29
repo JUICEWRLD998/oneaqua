@@ -1,0 +1,74 @@
+[
+  {
+    "id": "riparian-cover",
+    "name": "Riparian vegetation cover (trees, bushes, herbaceous)",
+    "scale": { "min": 1, "max": 5 },
+    "delta": 1,
+    "responseLag": "slow",
+    "citizenObservable": true,
+    "source": "Idea and 1-5 scale: OneAquaHealth Field Sampling Protocols (Zenodo 20344421), section 3.5 and Annex I riparian cover categories (1 = 0-20% ... 5 = 81-100%); D2.4 p.22 places riparian vegetation as the slowest responder. delta: Firstline declared parameter (1 class unit); not a D2.4 number."
+  },
+  {
+    "id": "bank-stability",
+    "name": "Bank stability (visible bank erosion)",
+    "scale": { "min": 1, "max": 5 },
+    "delta": 1,
+    "responseLag": "medium",
+    "citizenObservable": true,
+    "source": "Idea: D2.4 p.26 lists bank stability among the routine ecological and hydraulic checks (vegetation cover, channel morphology, bank stability); D2.4 p.30 names bank erosion under geomorphological changes. The 1-5 lay scoring is Firstline's. delta: Firstline declared parameter (1 class unit); not a D2.4 number."
+  },
+  {
+    "id": "litter",
+    "name": "Litter and floating debris",
+    "scale": { "min": 1, "max": 5 },
+    "delta": 1,
+    "responseLag": "fast",
+    "citizenObservable": true,
+    "source": "Idea: D2.4 section 4.2.3 (p.43) on litter, plastic and hydrocarbon pollution; D2.4 p.27 lists removal of urban solid waste. Not a parameter of the OAH field form (Zenodo 20344421) or the Key Indicators factsheets (Zenodo 20345207); the 1-5 lay scoring is Firstline's. delta: Firstline declared parameter (1 class unit); not a D2.4 number."
+  },
+  {
+    "id": "odour",
+    "name": "Odour at the water",
+    "scale": { "min": 1, "max": 5 },
+    "delta": 1,
+    "responseLag": "fast",
+    "citizenObservable": true,
+    "source": "Firstline lay proxy for D2.4 p.30 water pollution (organic matter, nutrients). Odour is not a parameter of D2.4, the OAH field form (Zenodo 20344421) or the Key Indicators factsheets (Zenodo 20345207); it is the least-grounded indicator here. delta: Firstline declared parameter (1 class unit); not a D2.4 number."
+  },
+  {
+    "id": "clarity",
+    "name": "Water clarity and colour",
+    "scale": { "min": 1, "max": 5 },
+    "delta": 1,
+    "responseLag": "fast",
+    "citizenObservable": true,
+    "source": "Firstline lay proxy for D2.4 p.30 water pollution (suspended solids). Clarity is not a parameter of the OAH field form (Zenodo 20344421); the field form records dissolved solids by probe, which a citizen cannot do. delta: Firstline declared parameter (1 class unit); not a D2.4 number."
+  },
+  {
+    "id": "algae",
+    "name": "Visible algae in the channel",
+    "scale": { "min": 1, "max": 5 },
+    "delta": 1,
+    "responseLag": "fast",
+    "citizenObservable": true,
+    "source": "Idea: OAH Field Sampling Protocols (Zenodo 20344421) Annex I lists filamentous algae as a channel vegetation type recorded as absent, present or extensive; D2.4 p.22 says algae often respond rapidly. The 1-5 scoring is Firstline's. delta: Firstline declared parameter (1 class unit); not a D2.4 number."
+  },
+  {
+    "id": "flow-permanence",
+    "name": "Flow and dry channel",
+    "scale": { "min": 1, "max": 5 },
+    "delta": 1,
+    "responseLag": "medium",
+    "citizenObservable": true,
+    "source": "Idea: OAH Field Sampling Protocols (Zenodo 20344421) Annex I flow types, including 'D: Dry areas/Intermittent flow'; D2.4 p.30 names flashiness and reduced baseflow under altered hydrology. The 1-5 scoring is Firstline's. delta: Firstline declared parameter (1 class unit); not a D2.4 number."
+  },
+  {
+    "id": "barrier-passability",
+    "name": "Barrier passability (visible weirs, culverts, drops)",
+    "scale": { "min": 1, "max": 5 },
+    "delta": 1,
+    "responseLag": "fast",
+    "citizenObservable": true,
+    "source": "Idea: OAH Field Sampling Protocols (Zenodo 20344421) Annex I 'Barriers to longitudinal connectivity (number of weirs/dams)'; D2.4 p.30 lists culverts, weirs, grids, bridges and dams as barriers. The form counts barriers; the 1-5 passability score is Firstline's. delta: Firstline declared parameter (1 class unit); not a D2.4 number."
+  }
+]

@@ -1,0 +1,118 @@
+[
+  {
+    "id": "ci-barriers",
+    "text": "Barriers to longitudinal connectivity (number of weirs/dams)",
+    "source": "OAH Field Sampling Protocols (Zenodo 20344421), Annex I field form, section 3 hydromorphological characterization, p.13. The answer options are Firstline's.",
+    "answers": ["0", "1", "2 or more", "not sure"],
+    "evidence": [
+      { "answer": "1", "stressor": "S02", "strength": "suggest" },
+      { "answer": "2 or more", "stressor": "S02", "strength": "suggest" }
+    ]
+  },
+  {
+    "id": "ci-artificial-structures",
+    "text": "Presence of other artificial structures occupying the stream banks, or margins",
+    "source": "OAH Field Sampling Protocols (Zenodo 20344421), Annex I field form, section 3 hydromorphological characterization, p.13. The form continues 'up to 10m after the stream bank (specify, e.g. banks, street lights, sidewalks, bike paths, roads, houses, industrial facilities)'. The answer options are Firstline's.",
+    "answers": ["absent", "present", "not sure"],
+    "evidence": [{ "answer": "present", "stressor": "S06", "strength": "suggest" }]
+  },
+  {
+    "id": "ci-outflows",
+    "text": "Outflows (number of pipes or similar discharging pluvial waters to the stream)",
+    "source": "OAH Field Sampling Protocols (Zenodo 20344421), Annex I field form, section 3 hydromorphological characterization, p.13. Mapping pipes to altered runoff (S03) is Firstline's reading, logged in DECISIONS.md. The answer options are Firstline's.",
+    "answers": ["0", "1", "2 or more", "not sure"],
+    "evidence": [{ "answer": "2 or more", "stressor": "S03", "strength": "suggest" }]
+  },
+  {
+    "id": "ci-bank-concrete",
+    "text": "CC: concrete or similar artificial impervious materials",
+    "source": "OAH Field Sampling Protocols (Zenodo 20344421), Annex I field form, section 3 'Substrate in the banks' (code CC), p.13. The form's own scale is A absent, P present, E extensive (more than 33% of the banks).",
+    "answers": ["absent", "present", "extensive"],
+    "evidence": [
+      { "answer": "present", "stressor": "S05", "strength": "suggest" },
+      { "answer": "extensive", "stressor": "S05", "strength": "suggest" }
+    ]
+  },
+  {
+    "id": "ci-channel-artificial",
+    "text": "AR: Artificial",
+    "source": "OAH Field Sampling Protocols (Zenodo 20344421), Annex I field form, section 3 'Substrate types present in the channel' (code AR), p.13. The form's own scale is A absent, P present, E extensive (more than 33% of the channel).",
+    "answers": ["absent", "present", "extensive"],
+    "evidence": [
+      { "answer": "present", "stressor": "S05", "strength": "suggest" },
+      { "answer": "extensive", "stressor": "S05", "strength": "suggest" }
+    ]
+  },
+  {
+    "id": "ci-dry-areas",
+    "text": "D: Dry areas/Intermittent flow",
+    "source": "OAH Field Sampling Protocols (Zenodo 20344421), Annex I field form, section 3 'Flow types' (code D), p.13. The form's own scale is A absent, P present, E extensive (more than 33% of the channel).",
+    "answers": ["absent", "present", "extensive"],
+    "evidence": [
+      { "answer": "present", "stressor": "S03", "strength": "suggest" },
+      { "answer": "extensive", "stressor": "S03", "strength": "suggest" }
+    ]
+  },
+  {
+    "id": "ci-filamentous-algae",
+    "text": "Filamentous algae",
+    "source": "OAH Field Sampling Protocols (Zenodo 20344421), Annex I field form, section 4a channel vegetation types, p.14 (abundance A/P/E; extensive is more than 33% of the channel). Algae as a sign of nutrient enrichment (S01) is Firstline's reading, informed by D2.4 p.42 ('excessive algal growth ... if nutrient inputs remain high'), logged in DECISIONS.md.",
+    "answers": ["absent", "present", "extensive"],
+    "evidence": [{ "answer": "extensive", "stressor": "S01", "strength": "suggest" }]
+  },
+  {
+    "id": "ci-riparian-trees",
+    "text": "Trees (height >3m)",
+    "source": "OAH Field Sampling Protocols (Zenodo 20344421), Annex I field form, section 4b riparian vegetation cover category, p.14 (1 = 0-20% ... 5 = 81-100%).",
+    "answers": ["1 - 0-20%", "2 - 21-40%", "3 - 41-60%", "4 - 61-80%", "5 - 81-100%"],
+    "evidence": [{ "answer": "1 - 0-20%", "stressor": "S07", "strength": "suggest" }]
+  },
+  {
+    "id": "ci-riparian-bushes",
+    "text": "Bushes (height 1.5-3m)",
+    "source": "OAH Field Sampling Protocols (Zenodo 20344421), Annex I field form, section 4b riparian vegetation cover category, p.14 (1 = 0-20% ... 5 = 81-100%).",
+    "answers": ["1 - 0-20%", "2 - 21-40%", "3 - 41-60%", "4 - 61-80%", "5 - 81-100%"],
+    "evidence": [{ "answer": "1 - 0-20%", "stressor": "S07", "strength": "suggest" }]
+  },
+  {
+    "id": "ci-riparian-nonnative",
+    "text": "Non-native species (?, 1, >1; species names)",
+    "source": "OAH Field Sampling Protocols (Zenodo 20344421), Annex I field form, section 4b riparian vegetation, p.14. D2.4 p.30 includes 'presence or invasion by exotic plant species' in stressor S07.",
+    "answers": ["?", "0", "1", ">1"],
+    "evidence": [
+      { "answer": "1", "stressor": "S07", "strength": "suggest" },
+      { "answer": ">1", "stressor": "S07", "strength": "suggest" }
+    ]
+  },
+  {
+    "id": "ci-litter",
+    "text": "Is there litter or floating rubbish in or beside the stream?",
+    "source": "Firstline-authored prompt; NOT in the OAH field form or the Key Indicators factsheets. Grounded in D2.4 p.30 (plastics under water pollution) and D2.4 p.127 (children learn to recognise litter as a key stressor).",
+    "answers": ["no", "a little", "a lot"],
+    "evidence": [{ "answer": "a lot", "stressor": "S01", "strength": "suggest" }]
+  },
+  {
+    "id": "ci-bank-erosion",
+    "text": "Are the banks visibly eroded, slumping or undercut?",
+    "source": "Firstline-authored prompt; NOT in the OAH field form or the Key Indicators factsheets. Grounded in D2.4 p.30 ('bank erosion and instability' under geomorphological changes).",
+    "answers": ["no", "in places", "widespread"],
+    "evidence": [
+      { "answer": "in places", "stressor": "S04", "strength": "suggest" },
+      { "answer": "widespread", "stressor": "S04", "strength": "suggest" }
+    ]
+  },
+  {
+    "id": "ci-odour",
+    "text": "Does the water smell of sewage, chemicals or oil?",
+    "source": "Firstline-authored prompt; NOT in D2.4, the OAH field form or the Key Indicators factsheets. The least-grounded item: a lay proxy for D2.4 p.30 water pollution (organic matter, hydrocarbons).",
+    "answers": ["no", "faintly", "strongly"],
+    "evidence": [{ "answer": "strongly", "stressor": "S01", "strength": "suggest" }]
+  },
+  {
+    "id": "ci-clarity",
+    "text": "Is the water cloudy, discoloured or foamy?",
+    "source": "Firstline-authored prompt; NOT in the OAH field form or the Key Indicators factsheets. A lay proxy for D2.4 p.30 water pollution (suspended solids).",
+    "answers": ["clear", "slightly cloudy", "very cloudy or discoloured"],
+    "evidence": [{ "answer": "very cloudy or discoloured", "stressor": "S01", "strength": "suggest" }]
+  }
+]
