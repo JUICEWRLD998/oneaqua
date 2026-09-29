@@ -187,7 +187,7 @@ export function baciCheckups(spec: BaciSpec): Checkup[] {
           reachId: reach,
           date: `${month}-${day}`,
           observer: `obs-${i % 3}`,
-          indicators: { [ind]: value + noise(i + cell.length) },
+          indicators: { [ind]: value + noise(i + cell.charCodeAt(0) + 3 * cell.charCodeAt(1)) },
         }),
       )
     }
