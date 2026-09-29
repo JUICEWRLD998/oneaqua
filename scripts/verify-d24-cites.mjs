@@ -71,6 +71,14 @@ export async function verify({ controls = false } = {}) {
   for (const file of files) {
     const json = JSON.parse(readFileSync(file, 'utf8'))
     for (const [obj, path] of objects(json, '$')) {
+      // casebook: verbatim `unmapped` strings with parallel `unmappedPages`
+      if (Array.isArray(obj.unmapped)) {
+        if (!Array.isArray(obj.unmappedPages) || obj.unmappedPages.length !== obj.unmapped.length) misses.push(`${relative(ROOT, file)} ${path}.unmapped: needs a parallel unmappedPages array`)
+        else obj.unmapped.forEach((q, i) => {
+          checked++
+          if (!(pages.get(obj.unmappedPages[i]) ?? '').includes(normalise(q))) misses.push(`${relative(ROOT, file)} ${path}.unmapped[${i}] (p.${obj.unmappedPages[i]}): quote not found on that page: "${q.slice(0, 90)}"`)
+        })
+      }
       if (typeof obj.page !== 'number') continue
       // A measure's `page` must be the page where its numbered heading is printed (not the contents).
       if (typeof obj.id === 'string' && /^4\.\d\.\d+$/.test(obj.id) && typeof obj.name === 'string') {

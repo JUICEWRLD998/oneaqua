@@ -8,5 +8,16 @@
     "control": "fabricated sentence that appears nowhere in D2.4",
     "page": 19,
     "quote": "Rain gardens must always be built before any sewer work begins."
+  },
+  {
+    "control": "casebook-style unmapped list with a fabricated entry",
+    "unmapped": ["the demolition of the Vaqueiros weir was funded entirely by the city of Lisbon"],
+    "unmappedPages": [118]
+  },
+  {
+    "control": "measure whose heading is not on the cited page",
+    "id": "4.3.1",
+    "name": "Removing barriers",
+    "page": 52
   }
 ]
