@@ -1,0 +1,12 @@
+[
+  {
+    "control": "real D2.4 sentence (it is on printed p.19) cited to the wrong page",
+    "page": 20,
+    "quote": "It is like fixing the leaks in a bucket before trying to fill it."
+  },
+  {
+    "control": "fabricated sentence that appears nowhere in D2.4",
+    "page": 19,
+    "quote": "Rain gardens must always be built before any sewer work begins."
+  }
+]
