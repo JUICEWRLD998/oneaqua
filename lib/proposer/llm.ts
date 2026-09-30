@@ -66,7 +66,7 @@ export async function chat(deps: ProposerDeps, messages: ChatMessage[], response
         signal: ctl.signal,
       })
       const text = await res.text()
-      let json: any
+      let json: { error?: { code?: unknown }; choices?: { message?: { content?: unknown }; finish_reason?: string }[]; model?: unknown; usage?: unknown } | undefined
       try {
         json = JSON.parse(text)
       } catch {
@@ -81,9 +81,9 @@ export async function chat(deps: ProposerDeps, messages: ChatMessage[], response
           return {
             ok: true,
             content,
-            model: typeof json.model === 'string' ? json.model : modelFrom(deps),
-            finishReason: choice.finish_reason,
-            usage: json.usage,
+            model: typeof json?.model === 'string' ? json.model : modelFrom(deps),
+            finishReason: choice?.finish_reason,
+            usage: json?.usage,
             noJsonSchema,
             attempts,
             request: body,

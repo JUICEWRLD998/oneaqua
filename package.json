@@ -17,7 +17,8 @@
     "verify:data": "node scripts/verify-data.mjs",
     "fixture": "tsx scripts/export-fixture.ts",
     "scenario": "node scripts/gen-scenario.mjs",
-    "validate:fhir": "tsx scripts/validate-fhir.ts"
+    "validate:fhir": "tsx scripts/validate-fhir.ts",
+    "smoke:proposer": "tsx scripts/proposer-smoke.mts"
   },
   "dependencies": {
     "@eslint/eslintrc": "^3.3.7",

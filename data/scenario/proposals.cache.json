@@ -1,0 +1,27 @@
+{
+  "entries": {
+    "demo-vale-1": {
+      "note": "Walked the Vale stream below the outfall. Strong sewage smell, water cloudy grey, and the willows on the left bank were cleared to the waterline. There is a concrete weir about 200 m down that the trout cannot pass.",
+      "label": "scenario",
+      "raw": "{\n  \"proposals\": [\n    {\n      \"stressor\": \"S01\",\n      \"quote\": \"Strong sewage smell, water cloudy grey\",\n      \"confidence\": 1.0\n    },\n    {\n      \"stressor\": \"S07\",\n      \"quote\": \"the willows on the left bank were cleared to the waterline\",\n      \"confidence\": 1.0\n    },\n    {\n      \"stressor\": \"S02\",\n      \"quote\": \"There is a concrete weir about 200 m down that the trout cannot pass\",\n      \"confidence\": 1.0\n    },\n    {\n      \"stressor\": \"S05\",\n      \"quote\": \"There is a concrete weir\",\n      \"confidence\": 0.8\n    }\n  ]\n}",
+      "model": "google/gemini-2.5-flash",
+      "cachedAt": "2026-09-30T07:26:15.623Z"
+    },
+    "demo-vale-planted": {
+      "note": "Second walk at Vale. Sewage smell again near the outfall and the water was cloudy. The bank willows are still gone.",
+      "label": "scenario",
+      "raw": "{\"proposals\":[{\"stressor\":\"S01\",\"quote\":\"Sewage smell again near the outfall and the water was cloudy.\",\"confidence\":1},{\"stressor\":\"S07\",\"quote\":\"The bank willows are still gone.\",\"confidence\":1},{\"stressor\":\"S11\",\"quote\":\"a fish kill was visible along the bank\",\"confidence\":0.81}]}",
+      "model": "google/gemini-2.5-flash",
+      "cachedAt": "2026-09-30T07:26:16.682Z",
+      "planted": true,
+      "plantedNote": "Raw output edited by hand to add a fabricated proposal; the quote check must drop it."
+    },
+    "demo-vale-2": {
+      "note": "Quiet morning at Vale. Water looked clear and there was no smell. Some litter caught in the reeds.",
+      "label": "scenario",
+      "raw": "{\n  \"proposals\": [\n    {\n      \"stressor\": \"S01\",\n      \"quote\": \"Some litter caught in the reeds.\",\n      \"confidence\": 0.8\n    }\n  ]\n}",
+      "model": "google/gemini-2.5-flash",
+      "cachedAt": "2026-09-30T07:26:17.660Z"
+    }
+  }
+}

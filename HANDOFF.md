@@ -1,4 +1,4 @@
-# HANDOFF (written 2026-09-29, work stopped by the owner to save tokens)
+# HANDOFF (updated 2026-09-30: P3 + P4 merged and verified on main; next is P5)
 
 Deadline: **Oct 4 2026 21:00 PDT**. Freeze Oct 4 09:00 PDT. Plan: `ideation.md`, `implementation.md`.
 
@@ -19,3 +19,8 @@ Deadline: **Oct 4 2026 21:00 PDT**. Freeze Oct 4 09:00 PDT. Plan: `ideation.md`,
 3. P6 (UI loop 2) in the winning direction on top of `state/model.ts`.
 Also: no Java on this machine, so FHIR validation is structural (ajv) unless a portable JRE works in `.tools/`.
 `.env` (OpenRouter key, validated live 2026-09-29) is git-ignored; copy it into any new worktree.
+
+## Update 2026-09-30
+- `feat/fhir-proposer` merged; `npm run verify` green (typecheck, lint, tests, data, build); `npm run validate:fhir` PASS.
+- P4 done: `lib/proposer/index.ts` (propose, summarize), `app/api/{propose,summarize}`, `data/scenario/proposals.cache.json`, live smoke in `evidence/proposer-smoke.txt` (`npm run smoke:proposer` regenerates the cache).
+- Remaining: P5 (UI loop 1, branch `feat/ui-loop1`), then P6.

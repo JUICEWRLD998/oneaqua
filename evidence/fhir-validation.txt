@@ -1,7 +1,7 @@
 HL7 validator jar: NOT RUN (no Java on this machine).
 
 == STRUCTURAL validation (ajv + official FHIR R4 JSON schema + custom reference assertions) ==
-ajv 6.15.0; schema https://hl7.org/fhir/R4/fhir.schema.json (FHIR 4.0.1); node v24.14.1
+ajv 8.20.0; schema https://hl7.org/fhir/R4/fhir.schema.json (FHIR 4.0.1); node v24.14.1
 Checks: JSON-schema conformance; every reference resolves in-bundle; no duplicate ids; Condition/CarePlan/Goal subject resolves to Group/Patient.
 NOT checked: terminology, profile conformance (meta.profile), FHIRPath invariants.
 Command: npm run validate:fhir

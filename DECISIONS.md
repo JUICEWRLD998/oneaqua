@@ -164,3 +164,16 @@ with a new entry. Every bullet: the measurement, the rejected alternative, the f
 - **`engine/types.ts` is the contract.** `Verdicted<V>` makes a verdict without a reason a compile error
   (`reasons: [Reason, ...Reason[]]`).
 - **Remote:** `origin` = `github.com/JUICEWRLD998/oneaqua`, empty at start (`git ls-remote` returned no refs).
+
+## P3/P4 (2026-09-30)
+- **ajv 8 was declared but ajv 6 was installed** (hoisted from eslint), so `tsc` failed on `validate-fhir.ts` while the script
+  ran by luck. `npm install` fixed it; FHIR validation is structural (ajv 8 against the R4 schema), no Java, terminology and
+  profiles are not checked.
+- **Proposer order:** `PROPOSER_MODE=cached` or no key → cache (re-running the quote check on the stored raw text) else the
+  offline message; key set → live, falling back to cache on provider failure. The cache can never launder a bad quote.
+- **Cache holds raw model output verbatim**, plus one planted entry (`demo-vale-planted`) with a hand-added fabricated
+  proposal, flagged `planted`, so the UI can show "1 proposal dropped: quote not found in note".
+- **Known weakness, shown not hidden:** live Gemini proposed S01 for "Some litter caught in the reeds" (weak, arguably
+  wrong). It is labelled "Proposed · not evidence", a human must accept it, and the engine treats an accepted proposal as
+  `suggest`, never `confirm`. Evidence: `evidence/proposer-smoke.txt`.
+- **Summaries see engine JSON only**; `note`/`notes` keys are stripped at any depth (tested).
