@@ -1,0 +1,21 @@
+.baci { display: block; width: 100%; height: auto; overflow: visible; }
+.baci text { font-family: var(--font-body); fill: var(--text-secondary); font-size: 12px; }
+.tick, .n, .num, .key { font-family: var(--font-figure); font-variant-numeric: tabular-nums; }
+.baci .cap { fill: var(--text-primary); font-weight: 600; font-size: 13px; }
+.baci .num { fill: var(--text-primary); font-weight: 600; font-size: 13px; }
+.grid { stroke: var(--line-hairline); stroke-width: 1; }
+.axis { stroke: var(--line-strong); stroke-width: 1.5; }
+.zero { stroke: var(--text-primary); stroke-width: 1.5; stroke-dasharray: 3 3; }
+.ctl { stroke: var(--text-secondary); stroke-width: 2; stroke-dasharray: 6 4; fill: none; }
+.imp { stroke: var(--text-primary); stroke-width: 3; fill: none; }
+.cf { stroke: var(--text-tertiary); stroke-width: 1.5; stroke-dasharray: 1.5 4; stroke-linecap: round; }
+.contrast { stroke: var(--text-primary); stroke-width: 1.5; fill: none; }
+.pti { fill: var(--text-primary); }
+.ptc { fill: var(--surface-raised); stroke: var(--text-primary); stroke-width: 2; }
+.band { fill: var(--surface-sunk); stroke: var(--line-hairline); stroke-width: 1; }
+.whisker { stroke: var(--text-primary); stroke-width: 2; }
+.est { fill: var(--mark-improved); stroke: var(--text-primary); stroke-width: 1.5; }
+.baci[data-v="CONFOUNDED"] .est { fill: var(--mark-confounded); }
+.lag { stroke: var(--line-strong); stroke-width: 3; stroke-linecap: round; }
+.lagDone { stroke: var(--mark-nyk); stroke-width: 6; stroke-linecap: butt; }
+.today { stroke: var(--text-primary); stroke-width: 2; }

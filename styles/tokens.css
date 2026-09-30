@@ -1,2 +1,91 @@
-/* Placeholder token file. Replaced by the winning direction after UI loop 1. */
-:root { --ground: #0d1218; --ink: #e8edf2; }
+/* Firstline tokens. Direction: D2 Long Section (ui-loops/l1/SCORE-LOOP.md). Four tiers, each only reads the tier above:
+   1 primitive (raw values, the only place colour and family literals live) -> 2 semantic (what a value means) ->
+   3 component (what a part uses) -> 4 state (how a part looks when it is hovered, pressed, disabled ...).
+   Primitive hexes are generated from OKLCH (see the trailing comments). Dark only: one theme ships. */
+@font-face { font-family: "Barlow Condensed"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/barlow-condensed-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Barlow Condensed"; font-style: normal; font-weight: 600; font-display: swap; src: url("/fonts/barlow-condensed-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/barlow-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/barlow-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: normal; font-weight: 600; font-display: swap; src: url("/fonts/barlow-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Fragment Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/fragment-mono-latin-400-normal.woff2") format("woff2"); }
+
+/* 1 · primitive */
+:root {
+  color-scheme: dark;
+  --paper: #0f1215; /* oklch(0.18 0.007 250) */
+  --sheet: #191c1f; /* oklch(0.225 0.007 250) */
+  --sheet-2: #25282c; /* oklch(0.275 0.008 250) */
+  --rule: #3f4952; /* oklch(0.4 0.02 248) */
+  --rule-strong: #7b92a6; /* oklch(0.65 0.04 245) */
+  --ink: #dfeaf0; /* oklch(0.93 0.014 235) */
+  --ink-2: #b3c0ca; /* oklch(0.8 0.02 240) */
+  --ink-3: #97a7b4; /* oklch(0.72 0.026 240) */
+  --accent: #57d1a8; /* oklch(0.78 0.125 168) */
+  --accent-ink: #001910; /* oklch(0.19 0.04 168) */
+  --accent-deep: #74dfb9; /* oklch(0.83 0.115 168) */
+  --focus: #74dfb9; /* oklch(0.83 0.115 168) */
+  --accent-wash: #133529; /* oklch(0.3 0.045 168) */
+  --mark-confirmed: #e99541; /* oklch(0.74 0.14 62) */
+  --mark-suspected: #edd963; /* oklch(0.88 0.14 100) */
+  --mark-notassessed: #7b9eb3; /* oklch(0.68 0.05 235) */
+  --mark-contra: #ff726b; /* oklch(0.72 0.19 25) */
+  --mark-improved: #57d1a8; /* oklch(0.78 0.125 168) */
+  --mark-nyk: #5d6165; /* oklch(0.49 0.008 250) */
+  --mark-confounded: #61a3e6; /* oklch(0.7 0.12 250) */
+  --wash-contra: #3e1513; /* oklch(0.26 0.065 25) */
+  --font-display: "Barlow Condensed", sans-serif;
+  --font-body: "Barlow", sans-serif;
+  --font-figure: "Fragment Mono", monospace;
+  --radius: 0;
+  --space-1: 0.5rem; --space-2: 1rem; --space-3: 1.5rem; --space-4: 2.5rem; --space-5: 4rem; --space-6: 6rem;
+  --t-sm: 0.875rem; --t-base: 1rem; --t-md: 1.125rem; --t-lg: 1.375rem; --t-xl: 1.75rem; --t-2xl: 2.5rem; --t-3xl: 3.5rem;
+}
+
+/* motion primitives */
+:root { --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1); --dur-place: 180ms; --dur-stamp: 120ms; --dur-fade: 120ms; }
+
+/* 2 · semantic */
+:root {
+  --surface-page: var(--paper);
+  --surface-raised: var(--sheet);
+  --surface-sunk: var(--sheet-2);
+  --text-primary: var(--ink);
+  --text-secondary: var(--ink-2);
+  --text-tertiary: var(--ink-3);
+  --line-hairline: var(--rule);
+  --line-strong: var(--rule-strong);
+  --signal: var(--accent);
+  --signal-ink: var(--accent-ink);
+  --signal-text: var(--accent-deep);
+  --signal-wash: var(--accent-wash);
+  --verdict-refused: var(--mark-contra);
+  --verdict-refused-wash: var(--wash-contra);
+  --verdict-ok: var(--mark-improved);
+  --verdict-quiet: var(--mark-nyk);
+  --target-min: 44px;
+}
+
+/* 3 · component */
+:root {
+  --btn-bg: var(--signal);
+  --btn-fg: var(--signal-ink);
+  --btn-border: var(--signal-text);
+  --btn-ghost-fg: var(--text-primary);
+  --btn-ghost-border: var(--line-strong);
+  --field-bg: var(--surface-raised);
+  --field-border: var(--line-strong);
+  --chip-fg: var(--signal-text);
+  --chip-border: var(--signal-text);
+  --stamp-fg: var(--verdict-refused);
+  --stamp-wash: var(--verdict-refused-wash);
+}
+
+/* 4 · state */
+:root {
+  --state-hover-bg: var(--surface-sunk);
+  --state-active-bg: var(--signal-wash);
+  --state-focus-ring: var(--focus);
+  --state-disabled-opacity: 0.6;
+  --state-error: var(--verdict-refused);
+  --state-success: var(--verdict-ok);
+}

@@ -35,8 +35,9 @@ with a new entry. Every bullet: the measurement, the rejected alternative, the f
 - **A compensatory (C-*) measure covers a stressor only if its line is listed in `r1AddressedBy` for that stressor
   AND it has a valid infeasibility.** The list gates first; infeasibility is an additional condition, not a bypass.
   With the default `['L1']` a C-* measure never covers. Rejected: infeasibility alone covering.
-- **R5 still applies to an ALLOWED_BY_OVERRIDE measure.** An overridden L2 measure does not cover the uncovered
-  stressor, so the plan is INCOMPLETE (not BLOCKED, not SIGNABLE). `overridden` records the override.
+- ~~**R5 still applies to an ALLOWED_BY_OVERRIDE measure.** An overridden L2 measure does not cover the uncovered
+  stressor, so the plan is INCOMPLETE (not BLOCKED, not SIGNABLE).~~ **Superseded 2026-09-30, see P6 below.** `overridden`
+  still records the override.
 - **Override matches the first valid entry for the measure; only `rule: 'R1'` overrides are read.** Invalid ones
   (reason under 20 chars after trim, blank approver, other rule/measure) are ignored, not errors.
 - **R2 is evaluated before R1 and is exempt from it,** so a barrier measure is INDICATED even with S01 uncovered; the
@@ -177,3 +178,17 @@ with a new entry. Every bullet: the measurement, the rejected alternative, the f
   wrong). It is labelled "Proposed · not evidence", a human must accept it, and the engine treats an accepted proposal as
   `suggest`, never `confirm`. Evidence: `evidence/proposer-smoke.txt`.
 - **Summaries see engine JSON only**; `note`/`notes` keys are stripped at any depth (tested).
+
+## P6 (2026-09-30)
+- **R1a override now makes a plan SIGNABLE (supersedes the 2026-09-29 R5 decision).** Found by e2e journey 3: with R5
+  unwaived, an override could never reach SIGNABLE, because SIGNABLE needs every confirmed first-line stressor covered, and
+  coverage is placement-based, so an L2 measure is only ever refused while coverage is incomplete. The override was vacuous and
+  the plan spec (override then SIGNABLE, `DetectedIssue.mitigation` in the export) unreachable. Now a valid R1a override
+  (>=20 chars, named approver) waives the two package-completeness hits (uncovered first-line stressors; single measure with
+  2+ confirmed stressors). It never waives an empty plan or a missing SMART objective (R6). The plan's R1a reason names the
+  stressors left open, and the FHIR export carries them as a DetectedIssue with the override as mitigation. Accountability, not
+  approval of the science: the refusal itself is unchanged. Pinned by prescribe.test.ts (with controls).
+- **`/` starts with an EMPTY ladder on the scenario diagnosis** (plan journey 1: place 4.3.3, be refused). The built plan is one
+  click away via the presets (shows the follow-up).
+- **`/new` has two observer sheets**, because one observer only SUSPECTS and two distinct observers CONFIRM (engine rule).
+- **Single dark theme ships** (D2). Nothing to assert in a second theme.

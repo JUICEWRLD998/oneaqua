@@ -17,6 +17,11 @@ export interface AppState {
   variant: Variant
   asOf: string
   acceptedProposals: AcceptedProposal[]
+  /**
+   * Present only on the unscripted `/new` path: the user's own check-up sheets replace the scenario's check-ups, and
+   * the diagnosis cutoff does not apply (there are no works yet). Absent = the scenario reach.
+   */
+  customCheckups?: Checkup[]
 }
 
 const measureById = new Map(catalogue.measures.map((m) => [m.id, m]))
@@ -35,7 +40,12 @@ export function defaultObjective(m: Measure, asOf: string): SmartObjective {
   }
 }
 
-export function initialState(which: 'firstline' | 'naive' | 'empty' = 'firstline'): AppState {
+/** 'mine' = the unscripted `/new` path: no scenario check-ups, your own sheets (see customCheckups). */
+export function initialState(which: 'firstline' | 'naive' | 'empty' | 'mine' = 'firstline'): AppState {
+  if (which === 'mine') {
+    const plan: Plan = { ...structuredClone(scenario.plans.firstline), id: 'my-plan', name: 'My plan', measures: [], overrides: [] }
+    return { plan, variant: 'base', asOf: scenario.asOf, acceptedProposals: [], customCheckups: [] }
+  }
   const base: Plan =
     which === 'empty'
       ? { ...structuredClone(scenario.plans.firstline), id: 'my-plan', name: 'My plan', measures: [], overrides: [] }
@@ -80,6 +90,7 @@ export function setVariant(s: AppState, variant: Variant): AppState {
 }
 
 export function checkupsFor(s: AppState): Checkup[] {
+  if (s.customCheckups) return s.customCheckups
   return s.variant === 'controlMoved' ? scenario.checkupsControlMoved : scenario.checkups
 }
 
@@ -95,7 +106,7 @@ export function derive(s: AppState): Derived {
   const all = checkupsFor(s)
   const diagnosis = diagnose(
     catalogue,
-    all.filter((c) => c.date < scenario.diagnosisCutoff),
+    s.customCheckups ? all : all.filter((c) => c.date < scenario.diagnosisCutoff),
     checkupItems,
     readingRuleSet,
     s.acceptedProposals,
@@ -108,6 +119,29 @@ export function derive(s: AppState): Derived {
     outcomes.push(outcome(catalogue, s.plan, it.measureId, it.indicator, all, s.asOf))
   }
   return { diagnosis, assessment, followup: fu, outcomes }
+}
+
+export type Observer = 'A' | 'B'
+
+/** Set (or clear, with null) one answer on observer A's or B's sheet. Two distinct observers are what CONFIRM a stressor. */
+export function setAnswer(s: AppState, observer: Observer, itemId: string, answer: string | null): AppState {
+  if (!s.customCheckups) return s
+  const item = checkupItems.find((i) => i.id === itemId)
+  if (!item || (answer !== null && !item.answers.includes(answer))) return s
+  const id = `mine-${observer}`
+  const existing = s.customCheckups.find((c) => c.id === id)
+  const answers = { ...(existing?.answers ?? {}) }
+  if (answer === null) delete answers[itemId]
+  else answers[itemId] = answer
+  const rest = s.customCheckups.filter((c) => c.id !== id)
+  const next: Checkup[] = Object.keys(answers).length
+    ? [...rest, { id, reachId: s.plan.impactReachId, date: s.asOf, observer: `observer-${observer}`, provenance: 'field', answers }]
+    : rest
+  return { ...s, customCheckups: next.sort((a, b) => (a.id < b.id ? -1 : 1)) }
+}
+
+export function answerOf(s: AppState, observer: Observer, itemId: string): string | undefined {
+  return s.customCheckups?.find((c) => c.id === `mine-${observer}`)?.answers[itemId]
 }
 
 // ── shareable URL hash ─────────────────────────────────────────────────────────────────

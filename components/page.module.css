@@ -1,0 +1,13 @@
+.page { display: block; }
+.top h1 { font-family: var(--font-display); font-weight: 600; font-size: var(--t-3xl); line-height: 1; letter-spacing: 0.005em; margin-top: var(--space-2); }
+.lede { margin-top: var(--space-1); color: var(--text-secondary); font-size: var(--t-md); }
+.scenario { display: inline-block; padding: 0.25rem var(--space-2); border: 1px dashed var(--line-strong); color: var(--text-secondary); font-size: 0.875rem; max-width: 72ch; }
+.actions { display: flex; flex-wrap: wrap; gap: var(--space-1); align-items: center; margin-top: var(--space-2); max-width: none; }
+.blk { margin-top: var(--space-5); padding-top: var(--space-2); border-top: 1px solid var(--line-strong); }
+.blk h2 { font-size: var(--t-2xl); display: flex; align-items: baseline; gap: var(--space-2); }
+.blk h2 :global(.num) { color: var(--text-tertiary); font-size: var(--t-lg); }
+.intro { margin-top: var(--space-1); color: var(--text-secondary); }
+.prose { display: grid; gap: var(--space-2); margin-top: var(--space-2); max-width: 70ch; }
+@media (max-width: 52rem) { .top h1 { font-size: var(--t-2xl); } }
+.presets { display: flex; flex-wrap: wrap; gap: var(--space-1); align-items: center; margin-top: var(--space-2); max-width: none; }
+.presetsL { font-size: 0.8125rem; color: var(--text-secondary); margin-right: var(--space-1); }

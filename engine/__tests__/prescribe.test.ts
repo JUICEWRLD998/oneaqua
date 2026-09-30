@@ -103,7 +103,21 @@ describe('prescribe: overrides', () => {
     expect(m.reasons[0].plain).toContain('Head of Water')
     expect(m.reasons[0].plain).toContain(ov.reason)
     expect(a.overridden).toEqual([ov])
-    expect(a.verdict).toBe('INCOMPLETE') // S01 still uncovered
+    expect(a.verdict).toBe('SIGNABLE') // 2026-09-30: a written R1a override waives package completeness; see DECISIONS.md
+    expect(a.reasons[0].rule).toBe('R1a')
+    expect(a.reasons[0].plain).toContain('S01')
+    expect(a.reasons[0].plain).toContain('Head of Water')
+  })
+
+  it('controls: the waiver is only as wide as a VALID override (none BLOCKED, short reason BLOCKED, no SMART objective INCOMPLETE, empty plan INCOMPLETE)', () => {
+    const ov = { measureId: '4.3.3', rule: 'R1' as const, reason: 'Sewer works are funded for 2028 already.', approver: 'Head of Water' }
+    expect(prescribe(cat, confirmed('S01'), planOf(['4.3.3'])).verdict).toBe('BLOCKED')
+    expect(prescribe(cat, confirmed('S01'), { ...planOf(['4.3.3']), overrides: [{ ...ov, reason: 'too short' }] }).verdict).toBe('BLOCKED')
+    const noSmart = { ...planOf(['4.3.3']), overrides: [ov], measures: [{ measureId: '4.3.3' }] }
+    const a = prescribe(cat, confirmed('S01'), noSmart)
+    expect(a.verdict).toBe('INCOMPLETE')
+    expect(a.reasons[0].rule).toBe('R6')
+    expect(prescribe(cat, confirmed('S01'), { ...planOf([]), overrides: [ov] }).verdict).toBe('INCOMPLETE')
   })
 
   it('a 19-character reason is ignored', () => {

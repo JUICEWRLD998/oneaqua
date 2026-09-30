@@ -1,0 +1,40 @@
+/* Inputs, the proposer panel and the evidence sheet. Every interactive element carries default, hover, focus-visible,
+   active, disabled, loading (button label), error and success states. */
+.panel { margin-top: var(--space-3); padding: var(--space-3); border: 1px solid var(--line-hairline); background: var(--surface-raised); display: grid; gap: var(--space-1); min-width: 0; }
+.panel h3 { font-size: var(--t-lg); display: flex; flex-wrap: wrap; gap: var(--space-1); align-items: baseline; }
+.help { color: var(--text-secondary); font-size: 0.9375rem; }
+.fine { color: var(--text-secondary); font-size: 0.8125rem; }
+.lbl { font-size: 0.8125rem; color: var(--text-secondary); }
+.row { display: flex; flex-wrap: wrap; gap: var(--space-1); align-items: center; max-width: none; }
+.tagPill { font-family: var(--font-body); font-weight: 500; font-size: 0.75rem; padding: 0.1rem 0.5rem; border: 1px dashed var(--line-strong); color: var(--text-secondary); }
+.field, .area { width: 100%; max-width: 100%; min-height: var(--target-min); padding: 0 var(--space-1); background: var(--field-bg); border: 1px solid var(--field-border); border-radius: var(--radius); }
+.area { padding: var(--space-1); resize: vertical; line-height: 1.45; }
+.field:hover, .area:hover { border-color: var(--text-primary); }
+.field:disabled, .area:disabled { opacity: var(--state-disabled-opacity); cursor: not-allowed; border-style: dashed; }
+.area[aria-invalid="true"] { border-color: var(--state-error); }
+.btn, .btnGhost {
+  min-height: var(--target-min); padding: 0 var(--space-2); border-radius: var(--radius); cursor: pointer; font-weight: 600;
+  background: var(--btn-bg); color: var(--btn-fg); border: 1px solid var(--btn-border);
+}
+.btn:hover { background: var(--state-hover-bg); color: var(--text-primary); }
+.btn:active { background: var(--state-active-bg); color: var(--text-primary); }
+.btnGhost { background: transparent; color: var(--btn-ghost-fg); border-color: var(--btn-ghost-border); }
+.btnGhost:hover { background: var(--state-hover-bg); }
+.btnGhost:active, .btnGhost[aria-pressed="true"] { background: var(--state-active-bg); }
+.btn:disabled, .btnGhost:disabled { opacity: var(--state-disabled-opacity); cursor: not-allowed; background: var(--surface-sunk); color: var(--text-tertiary); border-style: dashed; text-decoration: line-through; }
+.err { color: var(--state-error); font-weight: 600; }
+.ok { color: var(--state-success); font-weight: 600; }
+.status { min-height: 1.5rem; color: var(--text-secondary); }
+.out { margin-top: var(--space-1); display: grid; gap: var(--space-1); }
+.offline { padding: var(--space-2); border: 1px dashed var(--line-strong); color: var(--text-primary); }
+.badgeCached, .badgeLive { display: inline-block; padding: 0.2rem 0.6rem; border: 1px solid var(--line-strong); font-size: 0.875rem; }
+.badgeCached { border-style: dashed; }
+.props { display: grid; gap: var(--space-2); margin-top: var(--space-1); }
+.prop { padding: var(--space-2); border: 1px solid var(--line-hairline); background: var(--surface-page); display: grid; gap: 0.35rem; }
+.qt { font-style: italic; }
+.dropped { margin-top: var(--space-1); padding: var(--space-1) var(--space-2); border: 1px solid var(--line-strong); }
+.dropped summary { min-height: var(--target-min); display: flex; align-items: center; cursor: pointer; font-weight: 600; }
+.dropped ul { display: grid; gap: 0.25rem; padding-bottom: var(--space-1); }
+.items { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: var(--space-2) var(--space-3); margin-top: var(--space-1); }
+.item { display: grid; gap: 0.25rem; align-content: start; font-size: 0.9375rem; }
+.item label { color: var(--text-secondary); font-size: 0.875rem; }

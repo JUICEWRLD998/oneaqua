@@ -123,14 +123,18 @@ export function prescribe(cat: Catalogue, diagnosis: Diagnosis, plan: Plan, opts
   // ── plan verdict ────────────────────────────────────────────────────────────────────
   const blocked: Reason[] = measures.filter((m) => m.verdict === 'CONTRAINDICATED').map((m) => m.reasons[0])
   const incomplete: Reason[] = []
+  // R1a: a valid written override is the approver's accepted, accountable departure from the hierarchy. It waives the
+  // package-completeness hits below (the open first-line stressors are named in the R1a reason and exported as a
+  // DetectedIssue with its mitigation). It never waives an empty plan or a missing SMART objective.
+  const waived = overridden.length > 0
   if (!ruleDisabled(opts, 'R5')) {
     if (plan.measures.length === 0) {
       incomplete.push(reasonFor(cat, 'R5', 'The plan has no measures.'))
     }
-    if (uncovered.length > 0) {
+    if (uncovered.length > 0 && !waived) {
       incomplete.push(reasonFor(cat, 'R5', `Confirmed first-line stressors not addressed: ${uncovered.join(', ')}.`, instead))
     }
-    if (confirmedIds.length >= 2 && plan.measures.length === 1) {
+    if (confirmedIds.length >= 2 && plan.measures.length === 1 && !waived) {
       incomplete.push(reasonFor(cat, 'R5', `${confirmedIds.length} stressors are confirmed but the plan has a single measure.`))
     }
   }
@@ -156,7 +160,9 @@ export function prescribe(cat: Catalogue, diagnosis: Diagnosis, plan: Plan, opts
     reasons = [i0, ...iRest]
   } else {
     verdict = 'SIGNABLE'
-    reasons = [reasonFor(cat, 'R1', 'No blocking measure, every confirmed first-line stressor is addressed, and each measure has a SMART objective.')]
+    reasons = waived
+      ? [reasonFor(cat, 'R1a', `Signable on a written override by ${overridden[0]!.approver.trim()}. Confirmed first-line stressors left open by that decision: ${uncovered.join(', ') || 'none'}.`)]
+      : [reasonFor(cat, 'R1', 'No blocking measure, every confirmed first-line stressor is addressed, and each measure has a SMART objective.')]
   }
 
   return { verdict, reasons, measures, uncovered, overridden }
