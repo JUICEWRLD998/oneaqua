@@ -1,0 +1,25 @@
+Proposer live smoke · 2026-09-30T07:26:13.314Z
+model: google/gemini-2.5-flash
+
+## demo-vale-1
+note: Walked the Vale stream below the outfall. Strong sewage smell, water cloudy grey, and the willows on the left bank were cleared to the waterline. There is a concrete weir about 200 m down that the trout cannot pass.
+status: live · 2308 ms · google/gemini-2.5-flash
+  KEEP S01 (1) "Strong sewage smell, water cloudy grey"
+  KEEP S07 (1) "the willows on the left bank were cleared to the waterline"
+  KEEP S02 (1) "There is a concrete weir about 200 m down that the trout cannot pass"
+  KEEP S05 (0.8) "There is a concrete weir"
+
+## demo-vale-planted
+note: Second walk at Vale. Sewage smell again near the outfall and the water was cloudy. The bank willows are still gone.
+status: live · 1059 ms · google/gemini-2.5-flash
+  KEEP S01 (1) "Sewage smell again near the outfall and the water was cloudy."
+  KEEP S07 (1) "The bank willows are still gone."
+
+## demo-vale-2
+note: Quiet morning at Vale. Water looked clear and there was no smell. Some litter caught in the reeds.
+status: live · 978 ms · google/gemini-2.5-flash
+  KEEP S01 (0.8) "Some litter caught in the reeds."
+
+## summarize (engine JSON only)
+status: live
+summary: We've confirmed a problem with S01. We're not yet sure what the final outcome will be. We looked into measure 4.3.3 but decided against it because of rule R1.
