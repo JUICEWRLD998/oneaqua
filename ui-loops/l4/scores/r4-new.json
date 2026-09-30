@@ -1,0 +1,392 @@
+{
+  "round": 4,
+  "label": "new",
+  "url": "http://localhost:3233/new",
+  "title": "Build your own stream · Firstline",
+  "scoredAt": "2026-09-30T10:20:49.300Z",
+  "controlFailed": false,
+  "controls": [
+    {
+      "name": "contrast sampler reads a planted near-identical pair below 1.5:1",
+      "ok": true,
+      "saw": "1.02:1"
+    },
+    {
+      "name": "geometry+clustering finds the planted 64×64 accent block",
+      "ok": true,
+      "saw": "4096px found of 4096px planted across 2 cluster(s)"
+    },
+    {
+      "name": "font resolver answers with a family",
+      "ok": true,
+      "saw": "Probe Sans"
+    }
+  ],
+  "score": {
+    "total": 81,
+    "got": 86.74,
+    "cap": 107,
+    "parts": [
+      {
+        "key": "textContrast",
+        "cap": 20,
+        "got": 17.68,
+        "prov": "measured",
+        "detail": "worst 5.84:1 · 388/388 pairs at AA"
+      },
+      {
+        "key": "focusRing",
+        "cap": 8,
+        "got": 8,
+        "prov": "measured",
+        "detail": "39 control(s) draw a ring ≥2px · 100% of those clear 3:1 · 2 focus rule(s) mirrored to make :focus-visible measurable"
+      },
+      {
+        "key": "disabledStates",
+        "cap": 5,
+        "got": 0.06,
+        "prov": "measured",
+        "detail": "1/79 disableable control(s) express disabled in 3+ channels"
+      },
+      {
+        "key": "accentBudget",
+        "cap": 10,
+        "got": 10,
+        "prov": "measured",
+        "detail": "0.7% of the viewport carries the accent (target <5%)"
+      },
+      {
+        "key": "accentCount",
+        "cap": 4,
+        "got": 4,
+        "prov": "measured",
+        "detail": "1 chromatic accent surface(s) above the 0.05% area floor"
+      },
+      {
+        "key": "typeFamilies",
+        "cap": 5,
+        "got": 5,
+        "prov": "measured",
+        "detail": "2 families: Public Sans, Archivo"
+      },
+      {
+        "key": "displayFace",
+        "cap": 8,
+        "got": 8,
+        "prov": "measured",
+        "detail": "display face \"Archivo\""
+      },
+      {
+        "key": "eyebrowGeometry",
+        "cap": 4,
+        "got": 0,
+        "prov": "measured",
+        "detail": "5 eyebrow(s) sit beside their heading instead of stacked above it"
+      },
+      {
+        "key": "honestMetrics",
+        "cap": 6,
+        "got": 5,
+        "prov": "measured",
+        "detail": "no oversized stat block either way"
+      },
+      {
+        "key": "lcpNotLazy",
+        "cap": 4,
+        "got": 4,
+        "prov": "measured",
+        "detail": "no above-fold image is lazy-loaded"
+      },
+      {
+        "key": "noEmojiIcons",
+        "cap": 3,
+        "got": 3,
+        "prov": "measured",
+        "detail": "no emoji used as an icon"
+      },
+      {
+        "key": "contentVisible",
+        "cap": 5,
+        "got": 5,
+        "prov": "measured",
+        "detail": "nothing sits at opacity<0.05 in the first viewport"
+      },
+      {
+        "key": "horizontalOverflow",
+        "cap": 6,
+        "got": 6,
+        "prov": "measured",
+        "detail": "clean at every viewport"
+      },
+      {
+        "key": "sectionRhythm",
+        "cap": 4,
+        "got": 2,
+        "prov": "measured",
+        "detail": "too few sections to judge rhythm"
+      },
+      {
+        "key": "macrostructureStamp",
+        "cap": 3,
+        "got": 3,
+        "prov": "measured",
+        "detail": "\"Narrative Workflow/Split Studio/Long Document; --nav: N1b reduced; --footer: Ft5 Statement; --design-system: design.md; }\n.num { font-variant-numeric: tabular-nums lining-nums; }\n.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }\n@media (prefers-reduced-motion: reduce) {\""
+      },
+      {
+        "key": "tokenDiscipline",
+        "cap": 8,
+        "got": 4,
+        "prov": "unknown",
+        "detail": "no source tree measured"
+      },
+      {
+        "key": "stateCoverage",
+        "cap": 4,
+        "got": 2,
+        "prov": "unknown",
+        "detail": "no source tree measured"
+      }
+    ]
+  },
+  "autoFail": 0,
+  "autoFailTells": [],
+  "verdict": "close — fix the majors",
+  "tells": [],
+  "good": [],
+  "accent": {
+    "color": {
+      "r": 0,
+      "g": 90,
+      "b": 161,
+      "a": 1,
+      "oklchH": 248
+    },
+    "hue": 206.46,
+    "chroma": 1,
+    "area": 7435
+  },
+  "accentBudget": 0.01,
+  "accents": [
+    {
+      "color": {
+        "r": 0,
+        "g": 90,
+        "b": 161,
+        "a": 1,
+        "oklchH": 248
+      },
+      "hue": 206.45962732919259,
+      "chroma": 1,
+      "area": 7435,
+      "ev": [
+        "a.forms_btn__ezuzV"
+      ]
+    }
+  ],
+  "directionPair": false,
+  "ground": {
+    "r": 243,
+    "g": 248,
+    "b": 250,
+    "a": 1,
+    "oklchH": 225
+  },
+  "groundChroma": 0.03,
+  "fonts": {
+    "families": [
+      "Public Sans",
+      "Archivo"
+    ],
+    "display": "Archivo",
+    "body": "Public Sans",
+    "weights": [
+      "400",
+      "700",
+      "600",
+      "650",
+      "500"
+    ]
+  },
+  "contrasts": {
+    "worst": {
+      "r": 5.841412310449982,
+      "tag": "th",
+      "cls": "",
+      "txt": "No.",
+      "size": 13,
+      "weight": "600",
+      "dis": false
+    },
+    "failing": [],
+    "failAA": 0,
+    "failAAA": 0,
+    "textPairs": 388,
+    "passAA": 388,
+    "unmeasurableTransparent": [],
+    "exemptInactive": [
+      {
+        "r": 5.84,
+        "txt": "Propose stressors"
+      }
+    ]
+  },
+  "interactive": 87,
+  "focusable": 39,
+  "disableable": 79,
+  "focusRulesMirrored": 2,
+  "focusRings": [
+    {
+      "tag": "a",
+      "w": 2,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 6.589726131395083,
+      "shadow": null
+    },
+    {
+      "tag": "a",
+      "w": 2,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 6.589726131395083,
+      "shadow": null
+    },
+    {
+      "tag": "a",
+      "w": 2,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 6.589726131395083,
+      "shadow": null
+    },
+    {
+      "tag": "a",
+      "w": 2,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 6.589726131395083,
+      "shadow": null
+    },
+    {
+      "tag": "a",
+      "w": 2,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 6.589726131395083,
+      "shadow": null
+    },
+    {
+      "tag": "a",
+      "w": 2,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 6.589726131395083,
+      "shadow": null
+    },
+    {
+      "tag": "a",
+      "w": 2,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 6.589726131395083,
+      "shadow": null
+    },
+    {
+      "tag": "button",
+      "w": 2,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 6.589726131395083,
+      "shadow": null
+    },
+    {
+      "tag": "a",
+      "w": 2,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 6.589726131395083,
+      "shadow": null
+    },
+    {
+      "tag": "button",
+      "w": 2,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 6.589726131395083,
+      "shadow": null
+    },
+    {
+      "tag": "button",
+      "w": 2,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 6.589726131395083,
+      "shadow": null
+    },
+    {
+      "tag": "select",
+      "w": 2,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 6.589726131395083,
+      "shadow": null
+    }
+  ],
+  "overflow": {
+    "desktop": {
+      "scrollW": 1280,
+      "clientW": 1280,
+      "wide": []
+    },
+    "tablet": {
+      "scrollW": 768,
+      "clientW": 768,
+      "wide": []
+    },
+    "mobile": {
+      "scrollW": 375,
+      "clientW": 375,
+      "wide": []
+    }
+  },
+  "overflowOffenders": [],
+  "sections": 1,
+  "elements": 693,
+  "source": null,
+  "fixture": null,
+  "rubric": {
+    "version": 1,
+    "caps": {
+      "textContrast": 20,
+      "focusRing": 8,
+      "disabledStates": 5,
+      "accentBudget": 10,
+      "accentCount": 4,
+      "typeFamilies": 5,
+      "displayFace": 8,
+      "eyebrowGeometry": 4,
+      "honestMetrics": 6,
+      "lcpNotLazy": 4,
+      "noEmojiIcons": 3,
+      "contentVisible": 5,
+      "horizontalOverflow": 6,
+      "sectionRhythm": 4,
+      "macrostructureStamp": 3,
+      "tokenDiscipline": 8,
+      "stateCoverage": 4
+    }
+  },
+  "snapshot": null
+}

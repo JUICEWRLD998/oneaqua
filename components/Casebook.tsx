@@ -26,7 +26,8 @@ export default function Casebook() {
         </p>
       </header>
 
-      <section className={p.blk} aria-labelledby="pick">
+      <div className={p.split}>
+      <section className={`${p.blk} ${p.splitAside}`} aria-labelledby="pick">
         <h2 id="pick">Pick a case</h2>
         <ul className={c.cases}>
           {cases.map((x) => (
@@ -73,6 +74,7 @@ export default function Casebook() {
           ))}
         </ol>
       </section>
+      </div>
     </article>
   )
 }

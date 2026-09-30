@@ -37,7 +37,7 @@ journey(1, 'Cold judge: place 4.3.3, see the refusal stamp with D2.4 p.19, on sc
   log(`stamp contrast ${ratio}:1`)
   ok(ratio >= 4.5, `stamp contrast ${ratio}:1 is below 4.5`)
   ok((await attr(page, '[data-placed="4.3.3"]', 'data-verdict')) === 'CONTRAINDICATED', 'placed item verdict')
-  ok((await text(page, '[data-callout="4.3.3"]')).includes('D2.4 · p.19'), 'callout should carry the cite chip')
+  ok((await text(page, '[data-callout="4.3.3"]')).includes('D2.4 p.19'), 'callout should carry the cite chip')
   ok(errors().length === 0, 'uncaught errors: ' + errors().join(' | '))
 })
 

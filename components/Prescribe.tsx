@@ -157,7 +157,7 @@ function Callout({ m, placed, onPlace, reduce }: { m: MeasureAssessment; placed:
       <h4 id={`co-${m.measureId}`} className={s.coH}>
         {refused && (
           <span className={s.stamp} role="img" aria-label={`Contraindicated by ${r.rule}, D2.4 page ${r.page}`} data-stamp="CONTRAINDICATED">
-            Contraindicated · {r.rule} · D2.4 p.{r.page}
+            Refused by {r.rule}, D2.4 p.{r.page}
           </span>
         )}
         {!refused && <Verdict v={m.verdict} />}

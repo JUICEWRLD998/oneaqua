@@ -37,10 +37,16 @@ export default function Profile({ impactLabel, controlLabel, distanceM, confirme
   const ix = x1 - (narrow ? 30 : 50)
   const ox = Math.round(cx + (ix - cx) * 0.42)
   const yC = 128, yO = 138, yI = 152
-  const bed = `M${x0} ${yC - 2} L${cx} ${yC} L${ox - 26} ${yO - 6} L${ox} ${yO} L${ox + 34} ${yI - 10} L${ix} ${yI} L${x1} ${yI + 3}`
+  const pts: [number, number][] = [[x0, yC - 2], [cx, yC], [ox - 26, yO - 6], [ox, yO], [ox + 34, yI - 10], [ix, yI], [x1, yI + 3]]
+  const bed = 'M' + pts.map(([x, y]) => `${x} ${y}`).join(' L')
+  const depth = 16
+  const surface = 'M' + pts.map(([x, y]) => `${x} ${y - depth}`).join(' L')
+  const water = `${surface} L${[...pts].reverse().map(([x, y]) => `${x} ${y}`).join(' L')} Z`
+  const ground = `${bed} L${x1} ${yI + 15} L${x0} ${yI + 15} Z`
   const ticks: number[] = []
   for (let m = 0; m <= distanceM; m += 100) ticks.push(m)
   const tx = (m: number) => cx + (m / distanceM) * (ix - cx)
+  const fx = narrow ? ox + 12 : Math.round((cx + ox) / 2) - 40
   const dimY = 206
   const fs = narrow ? 15 : 14
   return (
@@ -48,16 +54,23 @@ export default function Profile({ impactLabel, controlLabel, distanceM, confirme
       <svg viewBox={`0 ${top} ${W} ${H - top}`} role="img" aria-labelledby="pf-t pf-d" focusable="false">
         <title id="pf-t">Longitudinal profile of the reach</title>
         <desc id="pf-d">{`Flow runs left to right. The control reach is upstream${outfall ? ', then the outfall' : ''}, then the impact reach, ${distanceM} metres between the two reach points. Confirmed on the impact reach: ${confirmed.join(', ') || 'none yet'}.`}</desc>
-        <path className={s.pWater} d={`${bed} L${x1} 96 L${x0} 96 Z`} />
+        <defs>
+          <pattern id="pf-hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            <line className={s.pHatch} x1="0" y1="0" x2="0" y2="8" />
+          </pattern>
+        </defs>
+        <path className={s.pGround} d={ground} />
+        <path className={s.pWater} d={water} />
+        <path className={s.pSurface} d={surface} />
         <path className={s.pBed} d={bed} />
-        <path className={s.pFlow} d={`M${x0} 60 H${x0 + 64} M${x0 + 56} 55 L${x0 + 66} 60 L${x0 + 56} 65`} />
-        <text className={s.pS} x={x0 + 74} y="65" fontSize={fs}>flow</text>
+        <path className={s.pFlow} d={`M${fx} 60 H${fx + 64} M${fx + 56} 55 L${fx + 66} 60 L${fx + 56} 65`} />
+        <text className={s.pS} x={fx + 74} y="65" fontSize={fs}>flow</text>
         {[{ x: cx, y: yC, t: 'Control reach', sub: controlLabel }, ...(outfall ? [{ x: ox, y: yO, t: 'Outfall', sub: 'scenario' }] : []), { x: ix, y: yI, t: 'Impact reach', sub: impactLabel }].map((p, i, a) => (
           <g key={p.t}>
             <line className={s.pLead} x1={p.x} y1={p.y} x2={p.x} y2={dimY - 8} />
             <circle className={s.pPt} cx={p.x} cy={p.y} r="6" />
-            <text className={s.pT} x={p.x} y={narrow && a.length === 3 && i === 1 ? p.y + 34 : p.y - 30} textAnchor={narrow && i === a.length - 1 ? 'end' : narrow && i === 0 ? 'start' : 'middle'} fontSize={fs + 2}>{p.t}</text>
-            <text className={s.pS} x={p.x} y={narrow && a.length === 3 && i === 1 ? p.y + 52 : p.y - 12} textAnchor={narrow && i === a.length - 1 ? 'end' : narrow && i === 0 ? 'start' : 'middle'} fontSize={fs - 1}>{p.sub}</text>
+            <text className={s.pT} x={p.x} y={narrow && a.length === 3 && i === 1 ? p.y + 44 : p.y - 48} textAnchor={narrow && i === a.length - 1 ? 'end' : narrow && i === 0 ? 'start' : 'middle'} fontSize={fs + 2}>{p.t}</text>
+            <text className={s.pS} x={p.x} y={narrow && a.length === 3 && i === 1 ? p.y + 60 : p.y - 28} textAnchor={narrow && i === a.length - 1 ? 'end' : narrow && i === 0 ? 'start' : 'middle'} fontSize={fs - 1}>{p.sub}</text>
           </g>
         ))}
         <g>

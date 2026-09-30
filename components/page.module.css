@@ -1,17 +1,41 @@
+/* Page frame shared by every route: header, section heads, action rows. Tokens only. */
 .page { display: block; }
-.top h1 { font-family: var(--font-display); font-weight: 600; font-size: var(--t-3xl); line-height: 1; letter-spacing: 0.005em; margin-top: var(--space-2); }
-.lede { margin-top: var(--space-1); color: var(--text-secondary); font-size: var(--t-md); }
-.scenario { display: inline-block; padding: 0.25rem var(--space-2); border: 1px dashed var(--line-strong); color: var(--text-secondary); font-size: 0.875rem; max-width: 72ch; }
-.actions { display: flex; flex-wrap: wrap; gap: var(--space-1); align-items: center; margin-top: var(--space-2); max-width: none; }
-.blk { margin-top: var(--space-5); padding-top: var(--space-2); border-top: 1px solid var(--line-strong); }
-.blk h2 { font-size: var(--t-2xl); display: flex; align-items: baseline; gap: var(--space-2); }
-.blk h2 :global(.num) { color: var(--text-tertiary); font-size: var(--t-lg); }
-.intro { margin-top: var(--space-1); color: var(--text-secondary); }
-.prose { display: grid; gap: var(--space-2); margin-top: var(--space-2); max-width: 70ch; }
-@media (max-width: 52rem) { .top h1 { font-size: var(--t-2xl); } }
-.presets { display: flex; flex-wrap: wrap; gap: var(--space-1); align-items: center; margin-top: var(--space-2); max-width: none; }
-.presetsL { font-size: 0.8125rem; color: var(--text-secondary); margin-right: var(--space-1); }
-.hero { margin-top: var(--space-3); padding: var(--space-2); border: 1px solid var(--line-strong); background: var(--surface-raised); display: grid; gap: var(--space-1); }
-.heroLine { display: grid; grid-template-columns: max-content minmax(0, 1fr) max-content; gap: var(--space-1) var(--space-2); align-items: center; max-width: none; }
+
+.top { display: grid; gap: var(--space-sm); }
+.top h1 { font-size: var(--text-display); line-height: 1; letter-spacing: -0.02em; font-weight: 700; }
+.lede { color: var(--color-ink-2); font-size: var(--text-md); max-width: 60ch; }
+.scenario { order: -1; display: block; padding-left: var(--space-xs); border-left: var(--rule-heavy) solid var(--color-mark-confirmed); color: var(--color-ink-2); font-size: var(--text-sm); max-width: 72ch; }
+.actions { display: flex; flex-wrap: wrap; gap: var(--space-2xs); align-items: center; max-width: none; }
+
+/* sections: numeral + heading on one baseline, only where the content is a sequence */
+.blk { margin-top: var(--space-2xl); padding-top: var(--space-md); border-top: var(--rule-hair) solid var(--color-ink); }
+.blk h2 { font-size: var(--text-2xl); display: grid; justify-items: start; gap: var(--space-3xs); }
+.blk h2 :global(.num) { font-family: var(--font-body); font-weight: 600; font-size: var(--text-sm); color: var(--color-ink-3); letter-spacing: 0; }
+.blk h2 :global(.num)::before { content: "Step "; }
+.intro { margin-top: var(--space-2xs); color: var(--color-ink-2); }
+.prose { display: grid; gap: var(--space-sm); margin-top: var(--space-sm); max-width: var(--measure); }
+
+/* the plan picker on the chart, and the which-plan picker on export */
+.presets { display: flex; flex-wrap: wrap; gap: var(--space-2xs); align-items: center; max-width: none; }
+.presetsL { font-size: var(--text-sm); color: var(--color-ink-2); margin-right: var(--space-2xs); }
+
+/* what the engine says right now, directly under the drawing */
+.hero { display: grid; gap: 0; border-top: var(--rule-hair) solid var(--color-rule); border-bottom: var(--rule-hair) solid var(--color-rule); }
+.heroLine { display: grid; grid-template-columns: 11rem minmax(0, 1fr) max-content; gap: var(--space-2xs) var(--space-md); align-items: baseline; padding: var(--space-xs) 0; border-bottom: var(--rule-hair) solid var(--color-rule); max-width: none; }
+.heroLine:last-child { border-bottom: 0; }
 .heroLine > button { grid-column: 1 / -1; justify-self: start; }
-@media (max-width: 52rem) { .heroLine { grid-template-columns: minmax(0, 1fr); } }
+.heroLine:has(> button) { grid-template-columns: minmax(0, 1fr); padding: var(--space-sm) 0; }
+
+/* Split Studio: the work on the left, the proof on the right */
+.split { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-xl); align-items: start; }
+.splitWork { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+.splitAside { position: sticky; top: var(--space-md); }
+
+@media (max-width: 64rem) {
+  .split { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .splitAside { position: static; }
+}
+@media (max-width: 52rem) {
+  .heroLine { grid-template-columns: minmax(0, 1fr); gap: var(--space-3xs); }
+  .blk { margin-top: var(--space-xl); }
+}

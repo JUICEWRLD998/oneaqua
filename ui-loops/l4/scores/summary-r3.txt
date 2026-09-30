@@ -1,0 +1,16 @@
+Route scores · round 3 · 2026-09-30T10:17:07.138Z
+
+home-empty  73  auto-fail: none  majors: none
+            guarded terms (a later round may not lower these) textContrast 16.73/20 · focusRing 0/8 · disabledStates 0/5 · lcpNotLazy 4/4 
+home-built  73  auto-fail: none  majors: none
+            guarded terms (a later round may not lower these) textContrast 16.73/20 · focusRing 0/8 · disabledStates 0.19/5 · lcpNotLazy 4/4 
+new         74  auto-fail: none  majors: none
+            guarded terms (a later round may not lower these) textContrast 17.68/20 · focusRing 0/8 · disabledStates 0.06/5 · lcpNotLazy 4/4 
+casebook    76  auto-fail: none  majors: none
+            guarded terms (a later round may not lower these) textContrast 16.36/20 · focusRing 0/8 · disabledStates 0.31/5 · lcpNotLazy 4/4 
+export      79  auto-fail: none  majors: none
+            guarded terms (a later round may not lower these) textContrast 17.68/20 · focusRing 0/8 · disabledStates 1.43/5 · lcpNotLazy 4/4 
+method      77  auto-fail: none  majors: none
+            guarded terms (a later round may not lower these) textContrast 17.68/20 · focusRing 0/8 · disabledStates 0/5 · lcpNotLazy 4/4 
+
+worst route score 73; routes with auto-fails/failed controls: 0

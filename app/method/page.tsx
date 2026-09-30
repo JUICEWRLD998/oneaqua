@@ -25,7 +25,7 @@ const VOCAB: { v: string; means: string }[] = [
 export default function Method() {
   const lag = catalogue.params.r7LagDays
   return (
-    <article className={p.page} data-page="method">
+    <article className={`${p.page} ${m.doc}`} data-page="method">
       <header className={p.top}>
         <h1>Method</h1>
         <p className={p.lede}>Every verdict on this site comes from eight rules in the OneAquaHealth D2.4 catalogue, quoted as printed, with the page. Nothing here is a model’s opinion.</p>

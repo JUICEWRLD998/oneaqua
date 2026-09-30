@@ -1,4 +1,4 @@
-Width sweep · 2026-09-30T08:39:36.573Z
+Width sweep · 2026-09-30T10:52:34.845Z
 
 planted control (2000px element at 375): caught
 home-empty  320:ok  375:ok  414:ok  768:ok  1280:ok

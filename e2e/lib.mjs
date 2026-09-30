@@ -99,13 +99,16 @@ export async function typeText(page, s) { await page.cmd('Input.insertText', { t
 // WCAG contrast of an element's text colour against the first opaque background up its ancestors
 export async function contrastOf(page, sel) {
   return page.eval(`(()=>{
-    const parse=(c)=>{const m=c.match(/rgba?\\(([^)]+)\\)/);if(!m)return null;const p=m[1].split(',').map(Number);return {r:p[0],g:p[1],b:p[2],a:p.length>3?p[3]:1}}
+    // Resolve ANY computed colour (rgb, oklch, color()) through a canvas pixel. An rgb-only regex went blind the day
+    // the tokens moved to oklch() and reported null, not a ratio (2026-09-30).
+    const cv=document.createElement('canvas');cv.width=cv.height=1;const cx=cv.getContext('2d',{willReadFrequently:true})
+    const parse=(c)=>{if(!c||c==='transparent')return null;cx.clearRect(0,0,1,1);cx.fillStyle='rgba(0,0,0,0)';cx.fillStyle=c;cx.fillRect(0,0,1,1);const d=cx.getImageData(0,0,1,1).data;return d[3]===0?{r:0,g:0,b:0,a:0}:{r:d[0],g:d[1],b:d[2],a:d[3]/255}}
     const lin=(v)=>{v/=255;return v<=0.03928?v/12.92:Math.pow((v+0.055)/1.055,2.4)}
     const L=(c)=>0.2126*lin(c.r)+0.7152*lin(c.g)+0.0722*lin(c.b)
     let e=document.querySelector(${q(sel)});if(!e)return null
     const fg=parse(getComputedStyle(e).color)
     let bg=null,n=e;while(n&&!bg){const c=parse(getComputedStyle(n).backgroundColor);if(c&&c.a>0.9)bg=c;n=n.parentElement}
-    if(!bg)bg={r:15,g:18,b:21,a:1}
+    if(!bg)bg=parse(getComputedStyle(document.body).backgroundColor)||{r:255,g:255,b:255,a:1}
     const a=L(fg),b=L(bg);return +((Math.max(a,b)+0.05)/(Math.min(a,b)+0.05)).toFixed(2)})()`)
 }
 export async function inViewport(page, sel) {

@@ -82,11 +82,11 @@ export function Cite({ page, quote, who }: { page: number; quote: string; who: s
       onMouseLeave={() => { clearTimeout(timer.current); setHover(false) }}
     >
       <button type="button" className={s.chip} aria-expanded={open} aria-describedby={id} onClick={() => setOpen((o) => !o)} onFocus={() => setHover(true)} onBlur={() => setHover(false)}>
-        D2.4 · p.{page}
+        D2.4 p.{page}
       </button>
       <span id={id} role="tooltip" className={`${s.quote} ${flip ? s.flip : ''}`} hidden={!show}>
         <q>{quote}</q>
-        <span className={s.src}>D2.4 · p.{page} · {who}</span>
+        <span className={s.src}>D2.4, page {page}. {who}</span>
       </span>
     </span>
   )

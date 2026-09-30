@@ -91,8 +91,10 @@ export default function ExportPlan() {
         </div>
       </header>
 
+      <div className={`${p.split} ${p.splitWork}`}>
+      <div>
       <section className={p.blk} aria-labelledby="sum">
-        <h2 id="sum">1 The plan</h2>
+        <h2 id="sum"><span className="num">1</span> The plan</h2>
         <p className={e.line} data-plan-line><strong>{state.plan.name}</strong> <Verdict v={a.verdict} /></p>
         {state.plan.measures.length === 0 && (
           <p className={e.empty} role="status" data-empty-plan>
@@ -112,7 +114,7 @@ export default function ExportPlan() {
 
       {refused.length > 0 && (
         <section className={p.blk} aria-labelledby="ov">
-          <h2 id="ov">2 Override, in writing</h2>
+          <h2 id="ov"><span className="num">2</span> Override, in writing</h2>
           <p className={p.intro}>{refused.length === 1 ? 'One measure is' : `${refused.length} measures are`} refused by R1. To keep {refused.length === 1 ? 'it' : 'them'}, the approver records a reason of at least {MIN_REASON} characters. By signing, the approver accepts that the confirmed first-line stressors <span className="num">{a.uncovered.join(', ') || 'none'}</span> stay open for now. The override is kept on the plan and exported as a flagged issue with its mitigation.</p>
           <label className={f.lbl} htmlFor="approver">Approver name</label>
           <input id="approver" className={f.field} placeholder="Full name and role" value={approver} onChange={(ev) => setApprover(ev.target.value)} autoComplete="off" />
@@ -144,7 +146,7 @@ export default function ExportPlan() {
       )}
 
       <section className={p.blk} aria-labelledby="sg">
-        <h2 id="sg">{refused.length > 0 || overridden.length > 0 ? '3' : '2'} Sign</h2>
+        <h2 id="sg"><span className="num">{refused.length > 0 || overridden.length > 0 ? '3' : '2'}</span> Sign</h2>
         {!sign ? (
           <>
             {refused.length === 0 && (
@@ -164,7 +166,8 @@ export default function ExportPlan() {
         )}
       </section>
 
-      <section className={p.blk} aria-labelledby="fh">
+      </div>
+      <section className={`${p.blk} ${p.splitAside}`} aria-labelledby="fh">
         <h2 id="fh">FHIR R4 bundle {sign ? '' : <span className={f.tagPill}>unsigned draft</span>}</h2>
         {bundle ? (
           <>
@@ -186,6 +189,7 @@ export default function ExportPlan() {
           <p className={f.err} role="alert">The bundle could not be built for this plan.</p>
         )}
       </section>
+      </div>
     </article>
   )
 }

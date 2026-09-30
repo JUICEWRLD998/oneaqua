@@ -1,13 +1,19 @@
-.line { display: flex; flex-wrap: wrap; gap: var(--space-1); align-items: center; margin-top: var(--space-2); font-size: var(--t-md); max-width: none; }
-.empty { margin-top: var(--space-1); padding: var(--space-2); border: 1px dashed var(--line-strong); color: var(--text-secondary); }
-.reasons { margin-top: var(--space-1); display: grid; gap: var(--space-1); color: var(--text-secondary); }
-.measures { margin-top: var(--space-2); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 var(--space-4); max-width: none; }
-@media (max-width: 52rem) { .measures { grid-template-columns: minmax(0, 1fr); } }
-.measures li { display: flex; flex-wrap: wrap; gap: var(--space-1); align-items: center; padding: 0.3rem 0; border-bottom: 1px dotted var(--line-hairline); max-width: none; }
-.ov { margin-top: var(--space-2); padding: var(--space-2); border: 1px solid var(--verdict-refused); background: var(--verdict-refused-wash); display: grid; gap: var(--space-1); max-width: 44rem; }
-.row { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; margin-top: var(--space-2); max-width: none; }
-.count { display: inline-block; margin-right: var(--space-2); }
-.json { margin-top: var(--space-2); border-top: 1px solid var(--line-hairline); border-bottom: 1px solid var(--line-hairline); }
-.json summary { min-height: var(--target-min); display: flex; align-items: center; padding: 0; cursor: pointer; font-weight: 500; color: var(--text-secondary); }
-.json summary:hover { color: var(--text-primary); }
-.json pre { margin: 0; max-height: 28rem; overflow: auto; padding: var(--space-2); background: var(--surface-raised); font-family: var(--font-figure); font-size: 0.8125rem; line-height: 1.45; }
+/* Split Studio: the plan, override and signature on the left; the FHIR bundle (the proof) on the right. */
+.line { display: flex; flex-wrap: wrap; gap: var(--space-2xs) var(--space-sm); align-items: baseline; margin-top: var(--space-sm); font-size: var(--text-md); max-width: none; }
+.empty { margin-top: var(--space-sm); padding: var(--space-sm) 0 var(--space-sm) var(--space-sm); border-left: var(--rule-heavy) solid var(--color-rule-strong); color: var(--color-ink-2); display: grid; gap: var(--space-xs); justify-items: start; }
+.reasons { margin-top: var(--space-xs); display: grid; gap: var(--space-2xs); color: var(--color-ink-2); font-size: var(--text-sm); }
+.measures { margin-top: var(--space-sm); display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; max-width: none; border-top: var(--rule-hair) solid var(--color-ink); }
+.measures:empty { display: none; }
+.measures li { display: flex; flex-wrap: wrap; gap: var(--space-3xs) var(--space-xs); align-items: baseline; padding: var(--space-2xs) 0; border-bottom: var(--rule-hair) solid var(--color-rule); max-width: none; }
+.measures li > :global(.num) { font-weight: 600; min-width: 2.8rem; }
+.measures li > span:last-child { margin-left: auto; }
+.ov { margin-top: var(--space-md); padding: var(--space-md); background: var(--color-contra-wash); border-top: var(--rule-heavy) solid var(--color-mark-contra); display: grid; gap: var(--space-2xs); justify-items: start; max-width: 44rem; }
+.ov > * { justify-self: stretch; }
+.ov > button { justify-self: start; }
+.row { display: flex; flex-wrap: wrap; gap: var(--space-xs) var(--space-sm); align-items: center; margin-top: var(--space-md); max-width: none; }
+.count { display: inline-block; margin-right: var(--space-sm); white-space: nowrap; }
+.count > :global(.num) { font-weight: 600; color: var(--color-ink); }
+.json { margin-top: var(--space-md); border-top: var(--rule-hair) solid var(--color-rule); border-bottom: var(--rule-hair) solid var(--color-rule); }
+.json summary { min-height: var(--target-min); display: flex; align-items: center; padding: 0; cursor: pointer; font-weight: 600; }
+.json summary:hover { color: var(--color-accent); }
+.json pre { margin: 0 0 var(--space-sm); max-height: 28rem; overflow: auto; padding: var(--space-sm); background: var(--color-paper-2); font-size: var(--text-xs); line-height: 1.5; }

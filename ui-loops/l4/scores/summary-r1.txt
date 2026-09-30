@@ -1,0 +1,16 @@
+Route scores · round 1 · 2026-09-30T10:13:20.464Z
+
+home-empty  70  auto-fail: three-equal-columns (1 three-equal-column grid(s)); ai-nav (sticky full-width nav with 6 inline links); sibling-same-colour (48 control(s) are painted the same colour as the surface they sit on — e.g. Re-meander first (as brought) on div (of 78 control/surface pair(s)))  majors: no-macrostructure-stamp
+            guarded terms (a later round may not lower these) textContrast 16.73/20 · focusRing 0/8 · disabledStates 0/5 · lcpNotLazy 4/4 
+home-built  70  auto-fail: three-equal-columns (1 three-equal-column grid(s)); ai-nav (sticky full-width nav with 6 inline links); sibling-same-colour (45 control(s) are painted the same colour as the surface they sit on — e.g. Empty ladder on div (of 90 control/surface pair(s)))  majors: no-macrostructure-stamp
+            guarded terms (a later round may not lower these) textContrast 16.73/20 · focusRing 0/8 · disabledStates 0.19/5 · lcpNotLazy 4/4 
+new         71  auto-fail: three-equal-columns (3 three-equal-column grid(s)); ai-nav (sticky full-width nav with 6 inline links); sibling-same-colour (63 control(s) are painted the same colour as the surface they sit on — e.g. Start again on p (of 157 control/surface pair(s)))  majors: no-macrostructure-stamp
+            guarded terms (a later round may not lower these) textContrast 17.68/20 · focusRing 0/8 · disabledStates 0.06/5 · lcpNotLazy 4/4 
+casebook    74  auto-fail: ai-nav (sticky full-width nav with 6 inline links); sibling-same-colour (1 control(s) are painted the same colour as the surface they sit on — e.g. Show all on p (of 42 control/surface pair(s)))  majors: no-macrostructure-stamp
+            guarded terms (a later round may not lower these) textContrast 16.36/20 · focusRing 0/8 · disabledStates 0.31/5 · lcpNotLazy 4/4 
+export      76  auto-fail: ai-nav (sticky full-width nav with 6 inline links); sibling-same-colour (2 control(s) are painted the same colour as the surface they sit on — e.g. My own stream on div (of 20 control/surface pair(s)))  majors: no-macrostructure-stamp
+            guarded terms (a later round may not lower these) textContrast 17.68/20 · focusRing 0/8 · disabledStates 1.43/5 · lcpNotLazy 4/4 
+method      74  auto-fail: ai-nav (sticky full-width nav with 6 inline links)  majors: no-macrostructure-stamp
+            guarded terms (a later round may not lower these) textContrast 17.68/20 · focusRing 0/8 · disabledStates 0/5 · lcpNotLazy 4/4 
+
+worst route score 70; routes with auto-fails/failed controls: 6

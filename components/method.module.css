@@ -1,18 +1,28 @@
-.rules { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3) var(--space-4); margin-top: var(--space-2); }
-.rules li { padding-top: var(--space-2); border-top: 1px solid var(--line-hairline); max-width: none; }
-.rules h3 { font-size: var(--t-lg); font-weight: 500; display: flex; gap: var(--space-1); align-items: baseline; }
-.verdictLine { margin-top: 0.25rem; color: var(--text-secondary); }
-.quote { margin: var(--space-1) 0 0; padding: var(--space-1) 0; border-top: 1px solid var(--line-hairline); font-style: italic; max-width: 66ch; display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-1); }
-.vocab { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr)); gap: var(--space-2) var(--space-4); margin-top: var(--space-2); }
-.vocab > div { padding: var(--space-1) 0; border-top: 1px solid var(--line-hairline); }
-.vocab dd { margin: 0.25rem 0 0; color: var(--text-secondary); font-size: 0.9375rem; }
-.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: var(--space-4); margin-top: var(--space-2); }
-.two h3 { font-size: var(--t-lg); font-weight: 500; }
-.list { display: grid; gap: var(--space-1); margin-top: var(--space-1); list-style: disc; padding-left: 1.2rem; color: var(--text-secondary); }
-.list li { max-width: 70ch; }
-@media (max-width: 64rem) { .rules { grid-template-columns: minmax(0, 1fr); } }
-@media (max-width: 52rem) { .two { grid-template-columns: minmax(0, 1fr); } }
-.jump { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-top: var(--space-2); }
-.jump a { display: inline-flex; align-items: center; justify-content: center; min-width: var(--target-min); min-height: var(--target-min); padding: 0 var(--space-2); text-decoration: none; background: transparent; border: 1px solid var(--line-strong); }
-.jump a:hover { background: var(--state-hover-bg); border-color: var(--signal-text); }
-.jump a:active { background: var(--state-active-bg); }
+/* Long Document: one reading column, inline section heads. */
+.doc { max-width: 46rem; }
+.rules { display: grid; gap: 0; margin-top: var(--space-md); counter-reset: none; }
+.rules li { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-2xs); padding: var(--space-md) 0; border-top: var(--rule-hair) solid var(--color-rule); max-width: none; scroll-margin-top: var(--space-md); }
+.rules li:first-child { border-top: 0; }
+.rules h3 { font-size: var(--text-lg); display: grid; justify-items: start; gap: var(--space-3xs); }
+.rules h3 :global(.num) { font-family: var(--font-body); font-weight: 600; font-size: var(--text-sm); color: var(--color-ink-3); }
+.rules h3 :global(.num)::before { content: "Rule "; }
+.verdictLine { color: var(--color-ink-2); font-size: var(--text-sm); }
+.quote { margin: 0; padding: var(--space-2xs) 0 0; font-size: var(--text-md); line-height: 1.5; max-width: 62ch; }
+.quote q { font-style: normal; }
+.vocab { display: grid; gap: 0; margin-top: var(--space-md); }
+.vocab > div { display: grid; grid-template-columns: 13rem minmax(0, 1fr); gap: var(--space-2xs) var(--space-md); padding: var(--space-xs) 0; border-top: var(--rule-hair) solid var(--color-rule); align-items: baseline; }
+.vocab dd { margin: 0; color: var(--color-ink-2); }
+.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: var(--space-lg); margin-top: var(--space-md); }
+.two h3 { font-size: var(--text-lg); }
+.list { display: grid; gap: var(--space-xs); margin-top: var(--space-xs); list-style: disc; padding-left: 1.2rem; color: var(--color-ink-2); }
+.list li { max-width: var(--measure); }
+.list li::marker { color: var(--color-rule-strong); }
+.list strong { color: var(--color-ink); }
+.jump { display: flex; flex-wrap: wrap; gap: 0; margin-top: var(--space-sm); border-top: var(--rule-hair) solid var(--color-rule); border-bottom: var(--rule-hair) solid var(--color-rule); }
+.jump a { display: inline-flex; align-items: center; justify-content: center; min-width: var(--target-min); min-height: var(--target-min); padding: 0 var(--space-xs); text-decoration: none; font-weight: 600; color: var(--color-ink-2); }
+.jump a:hover { color: var(--color-accent); background: var(--color-paper-2); }
+.jump a:active { background: var(--color-paper-3); }
+@media (max-width: 52rem) {
+  .two { grid-template-columns: minmax(0, 1fr); }
+  .vocab > div { grid-template-columns: minmax(0, 1fr); }
+}

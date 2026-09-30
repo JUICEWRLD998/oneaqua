@@ -1,33 +1,35 @@
 .verdict { display: inline-flex; align-items: center; gap: 0.4em; font-weight: 600; white-space: nowrap; line-height: 1.2; }
 .vg { flex: none; fill: currentColor; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; }
-.confirmed .vg { color: var(--mark-confirmed); }
-.suspected .vg { color: var(--mark-suspected); }
-.notassessed .vg { color: var(--mark-notassessed); }
-.contra .vg { color: var(--mark-contra); }
-.improved .vg { color: var(--mark-improved); }
-.nyk .vg { color: var(--mark-nyk); }
-.confounded .vg { color: var(--mark-confounded); }
+.confirmed .vg { color: var(--color-mark-confirmed); }
+.suspected .vg { color: var(--color-mark-suspected); }
+.notassessed .vg { color: var(--color-mark-notassessed); }
+.contra { color: var(--color-contra-ink); }
+.contra .vg { color: var(--color-mark-contra); }
+.improved .vg { color: var(--color-mark-improved); }
+.nyk { font-weight: 500; color: var(--color-ink-2); }
+.nyk .vg { color: var(--color-mark-nyk); }
+.confounded .vg { color: var(--color-mark-confounded); }
 
-.cite { position: relative; display: inline-block; vertical-align: middle; }
+/* the citation: a page reference in running text, not a boxed chip */
+.cite { position: relative; display: inline-block; }
 .chip {
-  position: relative; display: inline-flex; align-items: center; min-height: 1.75rem; padding: 0 0.6rem; vertical-align: middle;
-  font-family: var(--font-figure); font-size: 0.8125rem; line-height: 1; white-space: nowrap;
-  background: transparent; color: var(--text-secondary); border: 1px solid var(--line-strong); border-radius: var(--radius); cursor: pointer;
+  position: relative; display: inline; padding: 0; margin: 0; border: 0; background: none; cursor: pointer;
+  font-size: var(--text-xs); font-weight: 500; line-height: inherit; white-space: nowrap; color: var(--color-ink-3);
+  text-decoration: underline dotted; text-decoration-thickness: 1px; text-underline-offset: 0.25em;
 }
-.chip::after { content: ""; position: absolute; inset: -0.5rem -0.25rem; } /* 44px hit area without the 44px box */
-.chip:hover { background: var(--state-hover-bg); border-color: var(--chip-border); }
-.chip:active { background: var(--state-active-bg); }
-.chip[aria-expanded="true"] { background: var(--state-active-bg); color: var(--chip-fg); border-color: var(--chip-border); }
-.chip:focus-visible { color: var(--chip-fg); }
+.chip::after { content: ""; position: absolute; inset: -0.75rem -0.4rem; } /* 44px hit area without a 44px box */
+.chip:hover { color: var(--color-accent); text-decoration-style: solid; }
+.chip:active { color: var(--color-accent-hover); }
+.chip[aria-expanded="true"] { color: var(--color-accent); text-decoration-style: solid; }
 .quote {
-  position: absolute; left: 0; top: calc(100% + 4px); z-index: 20; width: min(44ch, calc(100vw - 2rem)); padding: var(--space-2) var(--space-3);
-  background: var(--surface-raised); color: var(--text-primary); border: 1px solid var(--line-strong);
-  font-size: 0.9375rem; line-height: 1.45; text-align: left; white-space: normal; font-weight: 400;
+  position: absolute; left: 0; top: calc(100% + 6px); z-index: 20; width: min(44ch, calc(100vw - 2rem)); padding: var(--space-sm) var(--space-md);
+  background: var(--color-paper); color: var(--color-ink); border: var(--rule-hair) solid var(--color-rule-strong); border-top: var(--rule-heavy) solid var(--color-ink);
+  font-size: var(--text-sm); line-height: 1.5; text-align: left; white-space: normal; font-weight: 400; font-style: normal;
 }
 .quote[hidden] { display: none; }
 .quote q { display: block; }
 .flip { left: auto; right: 0; }
-.src { display: block; margin-top: var(--space-1); color: var(--text-secondary); font-size: 0.8125rem; font-family: var(--font-figure); }
+.src { display: block; margin-top: var(--space-2xs); color: var(--color-ink-3); font-size: var(--text-xs); }
 @media (max-width: 48rem) {
-  .quote, .flip { position: fixed; left: var(--space-2); right: var(--space-2); top: auto; bottom: var(--space-2); width: auto; }
+  .quote, .flip { position: fixed; left: var(--space-sm); right: var(--space-sm); top: auto; bottom: var(--space-sm); width: auto; }
 }

@@ -1,21 +1,21 @@
 .baci { display: block; width: 100%; height: auto; overflow: visible; }
-.baci text { font-family: var(--font-body); fill: var(--text-secondary); font-size: 12px; }
-.tick, .n, .num, .key { font-family: var(--font-figure); font-variant-numeric: tabular-nums; }
-.baci .cap { fill: var(--text-primary); font-weight: 600; font-size: 13px; }
-.baci .num { fill: var(--text-primary); font-weight: 600; font-size: 13px; }
-.grid { stroke: var(--line-hairline); stroke-width: 1; }
-.axis { stroke: var(--line-strong); stroke-width: 1.5; }
-.zero { stroke: var(--text-primary); stroke-width: 1.5; stroke-dasharray: 3 3; }
-.ctl { stroke: var(--text-secondary); stroke-width: 2; stroke-dasharray: 6 4; fill: none; }
-.imp { stroke: var(--text-primary); stroke-width: 3; fill: none; }
-.cf { stroke: var(--text-tertiary); stroke-width: 1.5; stroke-dasharray: 1.5 4; stroke-linecap: round; }
-.contrast { stroke: var(--text-primary); stroke-width: 1.5; fill: none; }
-.pti { fill: var(--text-primary); }
-.ptc { fill: var(--surface-raised); stroke: var(--text-primary); stroke-width: 2; }
-.band { fill: var(--surface-sunk); stroke: var(--line-hairline); stroke-width: 1; }
-.whisker { stroke: var(--text-primary); stroke-width: 2; }
-.est { fill: var(--mark-improved); stroke: var(--text-primary); stroke-width: 1.5; }
-.baci[data-v="CONFOUNDED"] .est { fill: var(--mark-confounded); }
-.lag { stroke: var(--line-strong); stroke-width: 3; stroke-linecap: round; }
-.lagDone { stroke: var(--mark-nyk); stroke-width: 6; stroke-linecap: butt; }
-.today { stroke: var(--text-primary); stroke-width: 2; }
+.baci text { font-family: var(--font-body); fill: var(--color-ink-2); font-size: 12px; }
+.tick, .n, .num, .key { font-variant-numeric: tabular-nums; }
+.baci .cap { fill: var(--color-ink); font-weight: 600; font-size: 13px; }
+.baci .num { fill: var(--color-ink); font-weight: 700; font-size: 13px; }
+.grid { stroke: var(--color-rule); stroke-width: 1; }
+.axis { stroke: var(--color-ink-2); stroke-width: 1.25; }
+.zero { stroke: var(--color-ink); stroke-width: 1.25; stroke-dasharray: 3 3; }
+.ctl { stroke: var(--color-ink-2); stroke-width: 2; stroke-dasharray: 6 4; fill: none; }
+.imp { stroke: var(--color-ink); stroke-width: 3; fill: none; }
+.cf { stroke: var(--color-ink-3); stroke-width: 1.5; stroke-dasharray: 1.5 4; stroke-linecap: round; }
+.contrast { stroke: var(--color-ink); stroke-width: 1.5; fill: none; }
+.pti { fill: var(--color-ink); }
+.ptc { fill: var(--color-paper); stroke: var(--color-ink); stroke-width: 2; }
+.band { fill: var(--color-paper-2); stroke: var(--color-rule); stroke-width: 1; }
+.whisker { stroke: var(--color-ink); stroke-width: 2; }
+.est { fill: var(--color-mark-improved); stroke: var(--color-ink); stroke-width: 1.5; }
+.baci[data-v="CONFOUNDED"] .est { fill: var(--color-mark-confounded); }
+.lag { stroke: var(--color-rule-strong); stroke-width: 3; stroke-linecap: round; }
+.lagDone { stroke: var(--color-mark-nyk); stroke-width: 6; stroke-linecap: butt; }
+.today { stroke: var(--color-ink); stroke-width: 2; }

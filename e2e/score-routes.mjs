@@ -1,4 +1,4 @@
-// Score every route over HTTP with the anti-slop-ui scorer (file:// silently drops CSS, so always serve).
+// Score every route over HTTP with the ui-studio scorer (file:// silently drops CSS, so always serve).
 // Usage: node e2e/score-routes.mjs <round> <outdir> [port]
 import { spawnSync } from 'node:child_process'
 import { homedir } from 'node:os'
@@ -8,7 +8,7 @@ import { startServer, stopServer, waitUp, staleCheck } from './lib.mjs'
 
 const [round = '1', out = 'ui-loops/l2/scores', portArg = '3160'] = process.argv.slice(2)
 const port = Number(portArg)
-const SCORER = join(homedir(), '.claude/skills/anti-slop-ui/scripts/ui-score.mjs')
+const SCORER = join(homedir(), '.claude/skills/ui-studio/scripts/ui-score.mjs')
 const hash = spawnSync(process.execPath, ['node_modules/tsx/dist/cli.mjs', '-e', "import {encodeState,initialState} from './state/model'; console.log(encodeState(initialState('firstline')))"], { encoding: 'utf8' }).stdout.trim()
 const ROUTES = [['home-empty', '/'], ['home-built', `/#${hash}`], ['new', '/new'], ['casebook', '/casebook'], ['export', '/plan/export'], ['method', '/method']]
 
