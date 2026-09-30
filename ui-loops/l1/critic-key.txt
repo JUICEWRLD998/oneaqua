@@ -1,0 +1,1 @@
+A=d3 B=d1 C=d2 (kept out of the critic folder)

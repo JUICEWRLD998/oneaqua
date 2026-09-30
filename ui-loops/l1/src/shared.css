@@ -86,8 +86,9 @@ q { quotes: "\201C" "\201D"; }
 /* the keyboard path to placing a measure (drag is never the only way) */
 .place { display: flex; flex-wrap: wrap; align-items: end; gap: var(--space-2); }
 .place label { display: block; font-size: 0.875rem; color: var(--ink-2); margin-bottom: 0.25rem; }
+.place > div { min-width: 0; flex: 1 1 18rem; }
 .place select {
-  min-height: 44px; min-width: min(100%, 22rem); max-width: 100%; padding: 0 var(--space-2);
+  min-height: 44px; width: 100%; max-width: 100%; padding: 0 var(--space-2);
   background: var(--sheet); border: 1px solid var(--rule-strong); border-radius: var(--radius); appearance: auto;
 }
 .place select:hover { border-color: var(--ink); }
@@ -100,5 +101,8 @@ q { quotes: "\201C" "\201D"; }
 .btn:active { background: var(--accent-deep); color: var(--sheet); }
 .btn:disabled, .btn[aria-disabled="true"] { opacity: 0.55; cursor: not-allowed; }
 .place output { flex: 1 1 100%; min-height: 1lh; font-size: 0.9375rem; color: var(--ink-2); max-width: 68ch; }
+
+/* disabled: four channels, never opacity alone */
+:is(button, select, input):disabled, [aria-disabled="true"] { opacity: 0.6; cursor: not-allowed; background: var(--sheet-2); color: var(--ink-3); border-style: dashed; text-decoration: line-through; }
 
 @media print { body { background: none; } }

@@ -1,0 +1,406 @@
+{
+  "round": 5,
+  "label": "d1",
+  "url": "http://localhost:8765/d1/",
+  "title": "Stream chart, Vale reach (scenario) · Firstline",
+  "scoredAt": "2026-09-30T07:35:55.698Z",
+  "controlFailed": false,
+  "controls": [
+    {
+      "name": "contrast sampler reads a planted near-identical pair below 1.5:1",
+      "ok": true,
+      "saw": "1.02:1"
+    },
+    {
+      "name": "geometry+clustering finds the planted 64×64 accent block",
+      "ok": true,
+      "saw": "4096px found of 4096px planted across 3 cluster(s)"
+    },
+    {
+      "name": "font resolver answers with a family",
+      "ok": true,
+      "saw": "Probe Sans"
+    }
+  ],
+  "score": {
+    "total": 85,
+    "got": 91.42,
+    "cap": 107,
+    "parts": [
+      {
+        "key": "textContrast",
+        "cap": 20,
+        "got": 16.42,
+        "prov": "measured",
+        "detail": "worst 5.21:1 · 467/467 pairs at AA"
+      },
+      {
+        "key": "focusRing",
+        "cap": 8,
+        "got": 8,
+        "prov": "measured",
+        "detail": "20 control(s) draw a ring ≥2px · 100% of those clear 3:1 · 2 focus rule(s) mirrored to make :focus-visible measurable"
+      },
+      {
+        "key": "disabledStates",
+        "cap": 5,
+        "got": 5,
+        "prov": "measured",
+        "detail": "16/16 disableable control(s) express disabled in 3+ channels"
+      },
+      {
+        "key": "accentBudget",
+        "cap": 10,
+        "got": 10,
+        "prov": "measured",
+        "detail": "0.7% of the viewport carries the accent (target <5%)"
+      },
+      {
+        "key": "accentCount",
+        "cap": 4,
+        "got": 1,
+        "prov": "measured",
+        "detail": "2 chromatic accent surface(s) above the 0.05% area floor"
+      },
+      {
+        "key": "typeFamilies",
+        "cap": 5,
+        "got": 5,
+        "prov": "measured",
+        "detail": "3 families: Source Sans 3, Archivo, IBM Plex Mono"
+      },
+      {
+        "key": "displayFace",
+        "cap": 8,
+        "got": 8,
+        "prov": "measured",
+        "detail": "display face \"Archivo\""
+      },
+      {
+        "key": "eyebrowGeometry",
+        "cap": 4,
+        "got": 4,
+        "prov": "measured",
+        "detail": "no eyebrow beside any heading — passes by absence (gate 54 default is eyebrow-off)"
+      },
+      {
+        "key": "honestMetrics",
+        "cap": 6,
+        "got": 5,
+        "prov": "measured",
+        "detail": "no oversized stat block either way"
+      },
+      {
+        "key": "lcpNotLazy",
+        "cap": 4,
+        "got": 4,
+        "prov": "measured",
+        "detail": "no above-fold image is lazy-loaded"
+      },
+      {
+        "key": "noEmojiIcons",
+        "cap": 3,
+        "got": 3,
+        "prov": "measured",
+        "detail": "no emoji used as an icon"
+      },
+      {
+        "key": "contentVisible",
+        "cap": 5,
+        "got": 5,
+        "prov": "measured",
+        "detail": "nothing sits at opacity<0.05 in the first viewport"
+      },
+      {
+        "key": "horizontalOverflow",
+        "cap": 6,
+        "got": 6,
+        "prov": "measured",
+        "detail": "clean at every viewport"
+      },
+      {
+        "key": "sectionRhythm",
+        "cap": 4,
+        "got": 2,
+        "prov": "measured",
+        "detail": "too few sections to judge rhythm"
+      },
+      {
+        "key": "macrostructureStamp",
+        "cap": 3,
+        "got": 3,
+        "prov": "measured",
+        "detail": "\"14 Narrative Workflow; --nav: N1a; --footer: Ft4; }\nbody { background: var(--paper); }\n.mast { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); padding: var(--space-2) var(--space-4); border-bottom: 2px solid var(--ink); background: var(--sheet); }\n.wm { font-family: var(--font-display); font-weight: 700; font-size: var(--t-lg); text-decoration: none; letter-spacing: -0.01em; }\n.mast nav { display: flex; gap: var(--space-1); }\n.mast nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--space-2); text-decoration: none; border-bottom: 2px solid transparent; }\n.mast nav a:hover { border-bottom-color: var(--ink-2); }\n.mast nav a[aria-current=\"page\"] { border-bottom-color: var(--accent-deep); font-weight: 600; }\n.sheet { display: grid; grid-template-columns: minmax(0px, 1fr) 15rem; gap: var(--space-4); max-width: 82rem; margin: var(--space-4) auto; padding: 0 var(--space-4); }\n.body { background: var(--sheet); border: 1px solid var(--rule-strong); padding: var(--space-4); min-width: 0px; }\n.margin { align-self: start; position: sticky; top: var(--space-3); border-left: 2px solid var(--ink); padding-left: var(--space-3); }\n.m-h { font-family: var(--font-display); font-size: var(--t-md); margin-bottom: var(--space-2); }\n.m-list > div { padding: var(--space-2) 0; border-top: 1px solid var(--rule); }\n.m-list dt { font-size: 0.8125rem; color: var(--ink-2); }\n.m-list dd { margin-top: 0.25rem; }\nh1 { font-family: var(--font-display); font-size: var(--t-3xl); line-height: 1.05; letter-spacing: -0.02em; }\n.lede { margin-top: var(--space-1); color: var(--ink-2); font-size: var(--t-md); }\n.fields dd, .m-list dd { margin-left: 0px; }\n.fields { display: grid; grid-template-columns: repeat(12, minmax(0px, 1fr)); margin-top: var(--space-3); border: 1px solid var(--ink); }\n.f { padding: var(--space-1) var(--space-2) var(--space-2); border-right: 1px solid var(--rule-strong); border-bottom: 1px solid var(--rule-strong); min-width: 0px; }\n.f { grid-column: span 3; }\n.f-wide { grid-column: span 6; }\n.f dt { font-size: 0.8125rem; color: var(--ink-2); }\n.entry { display: block; margin-top: 0.15rem; padding-bottom: 0.15rem; border-bottom: 1px dotted var(--rule-strong); font-weight: 600; }\n.sub { font-size: 0.8125rem; color: var(--ink-2); margin-top: 0.15rem; }\n.intro .chip, .verdict-line .chip { vertical-align: middle; }\n.scenario { margin-top: var(--space-2); padding: var(--space-1) var(--space-2); border: 1px solid var(--rule-strong); background: var(--sheet-2); color: var(--ink); font-size: 0.9375rem; }\n.sec { margin-top: var(--space-5); }\n.sec h2 { display: flex; align-items: center; gap: var(--space-2); font-family: var(--font-display); font-size: var(--t-2xl); padding-bottom: var(--space-1); border-bottom: 2px solid var(--ink); }\n.secno { display: inline-grid; place-items: center; width: 2.4rem; height: 2.4rem; background: var(--ink); color: var(--sheet); font-size: var(--t-lg); }\n.intro { margin-top: var(--space-2); color: var(--ink-2); }\n.intro strong { color: var(--ink); }\n.grid { width: 100%; border-collapse: collapse; margin-top: var(--space-2); font-size: 0.9375rem; }\n.grid th, .grid td { padding: var(--space-1) var(--space-2); border: 1px solid var(--rule); text-align: left; vertical-align: top; }\n.grid thead th { background: var(--sheet-2); border-color: var(--rule-strong); font-size: 0.8125rem; font-weight: 600; }\n.grid tbody th { font-weight: 600; }\n.grid .tk { text-align: center; width: 5.5rem; }\n.tick { stroke: var(--rule-strong); fill: var(--sheet); stroke-width: 1.5; vertical-align: middle; }\n.tick.on { stroke: var(--ink); }\n.tick.on path { fill: none; stroke: var(--ink); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }\n.tick.v-confirmed { fill: var(--wash-contra); }\n.tick.v-improved { fill: var(--accent-wash); }\n.fl { display: inline-block; margin-left: 0.4em; padding: 0px 0.4em; border: 1px solid var(--ink-2); font-size: 0.75rem; color: var(--ink-2); white-space: nowrap; }\n.ask { display: block; font-size: 0.875rem; }\n.ask + .ask { margin-top: 0.4rem; }\n.ans { color: var(--ink-2); }\n.none { color: var(--ink-3); font-size: 0.875rem; }\n.ladder { margin-top: var(--space-3); border: 1px solid var(--ink); }\n.rung { border-bottom: 1px solid var(--rule-strong); }\n.rung:last-child { border-bottom: 0px; }\n.rung-row { display: grid; grid-template-columns: 16rem 9rem minmax(0px, 1fr); gap: var(--space-2); padding: var(--space-2); align-items: start; }\n.rung-h { display: flex; gap: var(--space-2); align-items: baseline; }\n.rung-no { font-size: var(--t-xl); font-weight: 500; color: var(--ink-3); }\n.rung-t strong { display: block; }\n.tag { display: block; color: var(--ink-2); font-size: 0.8125rem; }\n.rung-c { color: var(--ink-2); font-size: 0.875rem; }\n.placed li { display: flex; align-items: center; gap: var(--space-1); padding: 0.2rem 0px; min-height: 2rem; flex-wrap: wrap; }\n.mid { color: var(--ink-2); min-width: 3.2rem; }\n.pv { margin-left: auto; }\n.slip { display: grid; grid-template-columns: 11rem minmax(0px, 1fr); margin: 0 var(--space-2) var(--space-2) var(--space-4); background: var(--wash-contra); border: 1px solid var(--mark-contra); }\n.slip-stamp { display: flex; flex-direction: column; justify-content: center; gap: 0.25rem; padding: var(--space-2); border-right: 1px solid var(--mark-contra); color: var(--mark-contra); transform: rotate(-2deg); text-align: center; }\n.stamp-w { font-family: var(--font-display); font-weight: 700; font-size: var(--t-md); border: 2px solid var(--mark-contra); padding: 0.2rem 0.4rem; }\n.stamp-r { font-size: 0.8125rem; font-weight: 600; }\n.slip-body { padding: var(--space-2) var(--space-3); display: grid; gap: var(--space-1); }\n.slip-body h3 { font-size: var(--t-md); font-family: var(--font-display); }\n.slip-plan { color: var(--ink-2); font-size: 0.9375rem; }\n.bucket { padding: var(--space-1) var(--space-2); border-top: 1px solid var(--mark-contra); border-bottom: 1px solid var(--mark-contra); font-style: italic; }\n.instead-h { font-weight: 600; margin-top: var(--space-1); }\n.instead li { display: flex; align-items: center; gap: var(--space-1); min-height: 2rem; flex-wrap: wrap; }\n.inplan { margin-left: auto; font-size: 0.8125rem; color: var(--accent-deep); font-weight: 600; }\n.xcheck { margin-top: var(--space-3); padding-top: var(--space-2); border-top: 1px solid var(--rule); color: var(--ink-2); }\n.place { margin-top: var(--space-3); padding: var(--space-2); border: 1px dashed var(--rule-strong); }\n.baci-form { margin-top: var(--space-4); padding: var(--space-3); border: 1px solid var(--ink); }\n.baci-form h3 { font-family: var(--font-display); font-size: var(--t-lg); }\n.verdict-line { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); margin-top: var(--space-1); max-width: none; }\n.verdict-line > span { max-width: 62ch; }\n.baci-grid { display: grid; grid-template-columns: minmax(0px, 1.1fr) minmax(0px, 1.5fr) minmax(0px, 1fr); gap: var(--space-3); margin-top: var(--space-3); align-items: start; }\n.cells { width: 100%; border-collapse: collapse; }\n.cells caption { text-align: left; font-size: 0.8125rem; color: var(--ink-2); padding-bottom: var(--space-1); caption-side: top; }\n.cells th, .cells td { border: 1px solid var(--rule-strong); padding: var(--space-1) var(--space-2); text-align: left; }\n.cells thead th, .cells thead td { background: var(--sheet-2); font-size: 0.8125rem; }\n.cells .entry { border: 0px; font-size: var(--t-lg); margin: 0px; }\n.nn { display: block; font-size: 0.8125rem; color: var(--ink-2); }\n.withheld { font-size: 0.875rem; color: var(--ink-2); font-weight: 400; }\n.fig-wide { grid-column: span 2; }\n.margin { border-left: 0px; border-top: 2px solid var(--ink); padding: var(--space-2) 0 0; }\n.fig figcaption { margin-top: var(--space-1); font-size: 0.8125rem; color: var(--ink-2); }\n.also { margin-top: var(--space-3); padding-top: var(--space-2); border-top: 1px dotted var(--rule-strong); display: grid; gap: var(--space-1); }\n.also li { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }\n.sched-h { margin-top: var(--space-4); font-family: var(--font-display); font-size: var(--t-lg); }\n.colophon { max-width: 82rem; margin: var(--space-5) auto var(--space-4); padding: var(--space-3) var(--space-4) 0; border-top: 2px solid var(--ink); display: grid; gap: var(--space-2); color: var(--ink-2); }\n.c-h { font-family: var(--font-display); font-size: var(--t-md); color: var(--ink); }\n.rules { display: grid; grid-template-columns: minmax(0px, 1.2fr) minmax(0px, 1fr); gap: var(--space-1) var(--space-3); margin-top: var(--space-1); }\n.rl { padding: var(--space-1) 0; border-top: 1px solid var(--rule); }\n.rl dt { font-weight: 600; color: var(--ink); }\n@media (max-width: 64rem) { .rules { grid-template-columns: minmax(0px, 1fr); } .sheet { grid-template-columns: minmax(0px, 1fr); padding: 0 var(--space-2); } .margin { position: static; border-left: 0px; border-top: 2px solid var(--ink); padding: var(--space-2) 0 0; } .baci-grid { grid-template-columns: minmax(0px, 1fr) minmax(0px, 1fr); } .rung-row { grid-template-columns: minmax(0px, 1fr); } }\n@media (max-width: 48rem) { .mast { padding: var(--space-1) var(--space-2); } .body { padding: var(--space-2); } h1 { font-size: var(--t-2xl); } .fields { grid-template-columns: minmax(0px, 1fr) minmax(0px, 1fr); } .f, .f-wide { grid-column: span 6; } .baci-grid { grid-template-columns: minmax(0px, 1fr); } .fig-wide { grid-column: auto; } .slip { grid-template-columns: minmax(0px, 1fr); margin-left: var(--space-2); } .slip-stamp { border-right: 0px; border-bottom: 1px solid var(--mark-contra); } .grid { table-layout: fixed; } .grid th, .grid td { padding: 0.4rem 0.35rem; overflow-wrap: anywhere; font-size: 0.875rem; } .stress, .stress tbody, .stress tr, .stress th, .stress td { display: block; width: auto; } .stress thead { display: none; } .stress tr { padding: var(--space-1) 0; border-bottom: 1px solid var(--rule-strong); } .stress th, .stress td { border: 0px; padding: 0.15rem 0px; } .stress td.tk:not(:has(.on)) { display: none; } .stress td.tk { text-align: left; } .stress td.tk:nth-of-type(2)::after { content: \" Confirmed\"; font-weight: 600; } .stress td.tk:nth-of-type(3)::after { content: \" Suspected\"; font-weight: 600; } .stress td.tk:nth-of-type(4)::after { content: \" Not assessed\"; font-weight: 600; } .stress td.tk .tick { margin-right: 0.3rem; } }\n#__uiScoreCtlA { position: fixed; left: 0px; bottom: 0px; width: 88px; height: 56px; font-size: 44px; line-height: 56px; background: rgb(248, 247, 244) !important; color: rgb(246, 245, 242) !important; font-family: \"Probe Sans\" !important; z-index: 2147483647 !important; transition: none !important; outline: none !important; }\n#__uiScoreCtlB { position: fixed; right: 0px; bottom: 0px; width: 64px; height: 64px; background: rgb(245, 158, 11) !important; z-index: 2147483647 !important; transition: none !important; outline: none !important; }\n\n#__uiScoreCtlA{position:fixed;left:0;bottom:0;width:88px;height:56px;background:rgb(248,247,244)!important;color:rgb(246,245,242)!important;font-family:\"Probe Sans\"!important;font-size:44px;line-height:56px;z-index:2147483647!important;transition:none!important;outline:none!important}\n#__uiScoreCtlB{position:fixed;right:0;bottom:0;width:64px;height:64px;background:rgb(245,158,11)!important;z-index:2147483647!important;transition:none!important;outline:none!important}\""
+      },
+      {
+        "key": "tokenDiscipline",
+        "cap": 8,
+        "got": 4,
+        "prov": "unknown",
+        "detail": "no source tree measured"
+      },
+      {
+        "key": "stateCoverage",
+        "cap": 4,
+        "got": 2,
+        "prov": "unknown",
+        "detail": "no source tree measured"
+      }
+    ]
+  },
+  "autoFail": 0,
+  "autoFailTells": [],
+  "verdict": "passes the gate",
+  "tells": [
+    {
+      "id": "svg-sprawl",
+      "sev": "minor",
+      "evidence": "62 inline SVGs"
+    }
+  ],
+  "good": [],
+  "accent": {
+    "color": {
+      "r": 47,
+      "g": 162,
+      "b": 127,
+      "a": 1
+    },
+    "hue": 161.74,
+    "chroma": 0.71,
+    "area": 6859
+  },
+  "accentBudget": 0.01,
+  "accents": [
+    {
+      "color": {
+        "r": 47,
+        "g": 162,
+        "b": 127,
+        "a": 1
+      },
+      "hue": 161.73913043478262,
+      "chroma": 0.7098765432098766,
+      "area": 6859,
+      "ev": [
+        "button.btn"
+      ]
+    },
+    {
+      "color": {
+        "r": 21,
+        "g": 33,
+        "b": 42,
+        "a": 1
+      },
+      "hue": 205.71428571428567,
+      "chroma": 0.5,
+      "area": 4422,
+      "ev": [
+        "span.secno",
+        "span.secno",
+        "span.secno"
+      ]
+    }
+  ],
+  "directionPair": false,
+  "ground": {
+    "r": 233,
+    "g": 242,
+    "b": 244,
+    "a": 1
+  },
+  "groundChroma": 0.05,
+  "fonts": {
+    "families": [
+      "Source Sans 3",
+      "Archivo",
+      "IBM Plex Mono"
+    ],
+    "display": "Archivo",
+    "body": "Source Sans 3",
+    "weights": [
+      "400",
+      "700",
+      "600",
+      "500"
+    ]
+  },
+  "contrasts": {
+    "worst": {
+      "r": 5.2080887903578725,
+      "tag": "button",
+      "cls": "btn",
+      "txt": "Place on ladder",
+      "size": 16,
+      "weight": "600",
+      "dis": false
+    },
+    "failing": [],
+    "failAA": 0,
+    "failAAA": 0,
+    "textPairs": 467,
+    "passAA": 467,
+    "unmeasurableTransparent": [],
+    "exemptInactive": []
+  },
+  "interactive": 20,
+  "focusable": 20,
+  "disableable": 16,
+  "focusRulesMirrored": 2,
+  "focusRings": [
+    {
+      "tag": "a",
+      "w": 3,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 7.781718269786073,
+      "shadow": null
+    },
+    {
+      "tag": "a",
+      "w": 3,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 8.482673371773343,
+      "shadow": null
+    },
+    {
+      "tag": "a",
+      "w": 3,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 8.482673371773343,
+      "shadow": null
+    },
+    {
+      "tag": "a",
+      "w": 3,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 8.482673371773343,
+      "shadow": null
+    },
+    {
+      "tag": "button",
+      "w": 3,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 8.482673371773343,
+      "shadow": null
+    },
+    {
+      "tag": "button",
+      "w": 3,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 7.135167675842902,
+      "shadow": null
+    },
+    {
+      "tag": "select",
+      "w": 3,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 8.482673371773343,
+      "shadow": null
+    },
+    {
+      "tag": "button",
+      "w": 3,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 8.482673371773343,
+      "shadow": null
+    },
+    {
+      "tag": "button",
+      "w": 3,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 8.482673371773343,
+      "shadow": null
+    },
+    {
+      "tag": "button",
+      "w": 3,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 8.482673371773343,
+      "shadow": null
+    },
+    {
+      "tag": "button",
+      "w": 3,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 8.482673371773343,
+      "shadow": null
+    },
+    {
+      "tag": "button",
+      "w": 3,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 7.781718269786073,
+      "shadow": null
+    }
+  ],
+  "overflow": {
+    "desktop": {
+      "scrollW": 1280,
+      "clientW": 1280,
+      "wide": []
+    },
+    "tablet": {
+      "scrollW": 768,
+      "clientW": 768,
+      "wide": []
+    },
+    "mobile": {
+      "scrollW": 375,
+      "clientW": 375,
+      "wide": []
+    }
+  },
+  "overflowOffenders": [],
+  "sections": 2,
+  "elements": 973,
+  "source": null,
+  "fixture": null,
+  "rubric": {
+    "version": 1,
+    "caps": {
+      "textContrast": 20,
+      "focusRing": 8,
+      "disabledStates": 5,
+      "accentBudget": 10,
+      "accentCount": 4,
+      "typeFamilies": 5,
+      "displayFace": 8,
+      "eyebrowGeometry": 4,
+      "honestMetrics": 6,
+      "lcpNotLazy": 4,
+      "noEmojiIcons": 3,
+      "contentVisible": 5,
+      "horizontalOverflow": 6,
+      "sectionRhythm": 4,
+      "macrostructureStamp": 3,
+      "tokenDiscipline": 8,
+      "stateCoverage": 4
+    }
+  },
+  "snapshot": null
+}
