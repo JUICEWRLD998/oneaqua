@@ -10,3 +10,4 @@ next-env.d.ts
 research/*.pdf
 data/d24/_review/
 .claude/
+.tools/
