@@ -16,7 +16,7 @@
 .pFlow { fill: none; stroke: var(--text-secondary); stroke-width: 1.5; }
 .profCap { display: flex; flex-wrap: wrap; gap: var(--space-1); align-items: center; padding: var(--space-1) var(--space-2); border-top: 1px solid var(--line-hairline); font-size: 0.9375rem; max-width: none; }
 .badge { padding: 0.15rem 0.5rem; border: 1px solid var(--line-strong); font-size: 0.8125rem; }
-.badgeConf { border-color: var(--mark-confirmed); color: var(--text-primary); }
+.badgeConf { color: var(--text-primary); font-weight: 600; }
 
 /* tables */
 .log { width: 100%; border-collapse: collapse; font-size: 0.9375rem; }
@@ -25,7 +25,8 @@
 .log tbody th { font-weight: 500; color: var(--text-secondary); }
 .rowConf td, .rowConf th { background: var(--surface-raised); }
 .fl { display: inline-block; margin-left: 0.5em; padding: 0 0.4em; border: 1px solid var(--line-strong); font-size: 0.75rem; color: var(--text-secondary); white-space: nowrap; }
-.cited { margin-left: 0.4rem; }
+.citeCell { white-space: nowrap; width: 1%; }
+.rowDim td, .rowDim th { color: var(--text-secondary); }
 .why { color: var(--text-secondary); font-size: 0.875rem; }
 .why > span { display: block; }
 .ask { margin-top: 0.25rem; }
@@ -75,27 +76,29 @@
 .pitem { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-1); padding: 0.3rem 0; border-bottom: 1px dotted var(--line-hairline); cursor: grab; }
 .pitem[draggable="false"] { cursor: default; }
 .btnSm, .btnGhost, .btn {
+  display: inline-flex; align-items: center; justify-content: center; text-decoration: none;
   min-height: var(--target-min); padding: 0 var(--space-2); border-radius: var(--radius); cursor: pointer; font-weight: 600; white-space: nowrap;
   background: transparent; color: var(--btn-ghost-fg); border: 1px solid var(--btn-ghost-border);
 }
 .btnSm:hover, .btn:hover, .btnGhost:hover { background: var(--state-hover-bg); border-color: var(--signal-text); }
 .btnSm:active, .btn:active { background: var(--state-active-bg); color: var(--text-primary); }
 .btnGhost { background: transparent; color: var(--btn-ghost-fg); border-color: var(--btn-ghost-border); }
+.btnGhost[aria-pressed="true"] { background: var(--state-pressed-bg); box-shadow: inset 0 -3px 0 var(--signal); }
 .btnGhost:hover { background: var(--state-hover-bg); }
-.btnGhost:active, .btnGhost[aria-pressed="true"] { background: var(--state-active-bg); }
+.btnGhost:active { background: var(--state-active-bg); }
 .btnSm:disabled, .btn:disabled, .btnGhost:disabled {
   opacity: var(--state-disabled-opacity); cursor: not-allowed; background: var(--surface-sunk); color: var(--text-tertiary); border-style: dashed; text-decoration: line-through;
 }
 
 /* follow-up */
 .toggleRow { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; margin-top: var(--space-2); max-width: none; }
-.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); gap: var(--space-3); margin-top: var(--space-3); align-items: start; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(19rem, 100%), 1fr)); gap: var(--space-3); margin-top: var(--space-3); align-items: start; }
 .card { border-top: 2px solid var(--text-secondary); padding-top: var(--space-2); display: grid; gap: var(--space-2); min-width: 0; }
 .card h4 { font-size: var(--t-lg); font-weight: 500; }
 .vl { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
 .note { color: var(--text-secondary); font-size: 0.9375rem; }
-.cells { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line-hairline); border: 1px solid var(--line-hairline); }
-.cells > div { background: var(--surface-page); padding: var(--space-1) var(--space-2); }
+.cells { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line-hairline); border-left: 1px solid var(--line-hairline); }
+.cells > div { padding: var(--space-1) var(--space-2); border-right: 1px solid var(--line-hairline); border-bottom: 1px solid var(--line-hairline); }
 .cells dt { font-size: 0.8125rem; color: var(--text-secondary); }
 .cells dd { font-size: var(--t-md); }
 .nn { font-size: 0.8125rem; color: var(--text-secondary); font-family: var(--font-body); }

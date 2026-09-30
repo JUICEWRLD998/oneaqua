@@ -1,0 +1,8 @@
+Pre-submit grep, 2026-09-30
+Command: rg -n -i "mock|fake|dummy|lorem|0x0000|picsum|example\.com|TODO" (excluding node_modules, .next, coverage, research, ui-loops, evidence)
+Hits, each justified:
+- engine/__tests__/fixtures.ts: "fake text/objective/quote/source" are the synthetic catalogue used ONLY by engine unit tests; labelled fake on purpose; nothing in data/ or the app reads it.
+- implementation.md, ideation.md: prose that quotes the grep pattern or the word "mockup" from the hackathon rules.
+- scripts/export-fixture.ts: a comment saying the sketches render real engine output, never lorem.
+Not matched by the pattern but worth stating: FHIR canonical URLs use the reserved placeholder domain https://firstline.example (engine/fhir.ts FHIR_BASE). They are not resolvable; say so in the README known gaps.
+Result: no mock data, no placeholder images, no TODOs in shipped code.

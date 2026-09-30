@@ -3,6 +3,7 @@
 // Every journey runs TWICE: for real (must pass) and PLANTED (one assertion deliberately wrong; must fail).
 // A journey that passes when planted is a decorative check, and the whole run is red.
 import { writeFileSync, mkdirSync } from 'node:fs'
+import { spawnSync } from 'node:child_process'
 import { launch } from './cdp.mjs'
 import {
   attr, click, contrastOf, exists, freshStorage, inViewport, mulberry32, press, recordErrors, setValue, sleep,
@@ -150,6 +151,25 @@ journey(6, 'Keyboard only: journey 1 with no pointer', async ({ page, base, bad,
   await press(page, 'Enter')
   await waitFor(page, `document.querySelector('[data-stamp="CONTRAINDICATED"]')`, 4000, 'stamp via keyboard')
   ok((await text(page, '[data-stamp="CONTRAINDICATED"]')).includes('p.19'), 'stamp cites p.19')
+  ok(errors().length === 0, 'uncaught errors: ' + errors().join(' | '))
+})
+
+journey(7, 'Shared link: a plan link opened in a tab already on the site (same-document hash navigation) and in a fresh load both show the plan', async ({ page, base, bad, errors }) => {
+  const hash = spawnSync(process.execPath, ['node_modules/tsx/dist/cli.mjs', '-e', "import {encodeState,initialState} from './state/model'; console.log(encodeState(initialState('firstline')))"], { encoding: 'utf8' }).stdout.trim()
+  ok(hash.length > 100, 'could not build a share hash')
+  await freshStorage(page, base)
+  ok(!(await exists(page, '[data-placed]')), 'starts empty')
+  await page.eval(`location.hash=${JSON.stringify(hash)}`) // same-document navigation: no reload
+  await waitFor(page, `document.querySelector('[data-placed="4.2.2"]')`, 4000, 'plan from the hash, same tab')
+  ok((await attr(page, '[data-placed="4.3.3"]', 'data-verdict')) === bad('INDICATED', 'CONTRAINDICATED'), 'built plan puts the sewer first, so the re-meander is indicated')
+  await freshStorage(page, base)
+  await page.open(`${base}/#${hash}`, { w: 1280, h: 800, scheme: 'dark' })
+  await waitFor(page, `document.querySelector('[data-placed="4.2.2"]')`, 4000, 'plan from the hash, fresh load')
+  // a garbage hash is ignored, never trusted
+  await freshStorage(page, base)
+  await page.eval("location.hash='not-a-real-plan'")
+  await sleep(400)
+  ok(!(await exists(page, '[data-placed]')), 'a garbage hash must not create a plan')
   ok(errors().length === 0, 'uncaught errors: ' + errors().join(' | '))
 })
 

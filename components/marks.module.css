@@ -10,11 +10,12 @@
 
 .cite { position: relative; display: inline-block; vertical-align: middle; }
 .chip {
-  display: inline-flex; align-items: center; min-height: var(--target-min); min-width: var(--target-min); padding: 0 var(--space-2);
+  position: relative; display: inline-flex; align-items: center; min-height: 1.75rem; padding: 0 0.6rem; vertical-align: middle;
   font-family: var(--font-figure); font-size: 0.8125rem; line-height: 1; white-space: nowrap;
   background: transparent; color: var(--text-secondary); border: 1px solid var(--line-strong); border-radius: var(--radius); cursor: pointer;
 }
-.chip:hover { background: var(--state-hover-bg); color: var(--chip-fg); border-color: var(--chip-border); }
+.chip::after { content: ""; position: absolute; inset: -0.5rem -0.25rem; } /* 44px hit area without the 44px box */
+.chip:hover { background: var(--state-hover-bg); border-color: var(--chip-border); }
 .chip:active { background: var(--state-active-bg); }
 .chip[aria-expanded="true"] { background: var(--state-active-bg); color: var(--chip-fg); border-color: var(--chip-border); }
 .chip:focus-visible { color: var(--chip-fg); }

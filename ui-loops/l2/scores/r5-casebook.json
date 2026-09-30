@@ -1,0 +1,388 @@
+{
+  "round": 5,
+  "label": "casebook",
+  "url": "http://localhost:3160/casebook",
+  "title": "Casebook · Firstline",
+  "scoredAt": "2026-09-30T08:24:44.084Z",
+  "controlFailed": false,
+  "controls": [
+    {
+      "name": "contrast sampler reads a planted near-identical pair below 1.5:1",
+      "ok": true,
+      "saw": "1.02:1"
+    },
+    {
+      "name": "geometry+clustering finds the planted 64×64 accent block",
+      "ok": true,
+      "saw": "4096px found of 4096px planted across 2 cluster(s)"
+    },
+    {
+      "name": "font resolver answers with a family",
+      "ok": true,
+      "saw": "Probe Sans"
+    }
+  ],
+  "score": {
+    "total": 91,
+    "got": 97.86,
+    "cap": 107,
+    "parts": [
+      {
+        "key": "textContrast",
+        "cap": 20,
+        "got": 19.86,
+        "prov": "measured",
+        "detail": "worst 6.93:1 · 70/70 pairs at AA"
+      },
+      {
+        "key": "focusRing",
+        "cap": 8,
+        "got": 8,
+        "prov": "measured",
+        "detail": "22 control(s) draw a ring ≥2px · 100% of those clear 3:1 · 3 focus rule(s) mirrored to make :focus-visible measurable"
+      },
+      {
+        "key": "disabledStates",
+        "cap": 5,
+        "got": 5,
+        "prov": "measured",
+        "detail": "16/16 disableable control(s) express disabled in 3+ channels"
+      },
+      {
+        "key": "accentBudget",
+        "cap": 10,
+        "got": 10,
+        "prov": "measured",
+        "detail": "0.8% of the viewport carries the accent (target <5%)"
+      },
+      {
+        "key": "accentCount",
+        "cap": 4,
+        "got": 4,
+        "prov": "measured",
+        "detail": "1 chromatic accent surface(s) above the 0.05% area floor"
+      },
+      {
+        "key": "typeFamilies",
+        "cap": 5,
+        "got": 5,
+        "prov": "measured",
+        "detail": "3 families: Barlow, Barlow Condensed, Fragment Mono"
+      },
+      {
+        "key": "displayFace",
+        "cap": 8,
+        "got": 8,
+        "prov": "measured",
+        "detail": "display face \"Barlow Condensed\""
+      },
+      {
+        "key": "eyebrowGeometry",
+        "cap": 4,
+        "got": 4,
+        "prov": "measured",
+        "detail": "no eyebrow beside any heading — passes by absence (gate 54 default is eyebrow-off)"
+      },
+      {
+        "key": "honestMetrics",
+        "cap": 6,
+        "got": 5,
+        "prov": "measured",
+        "detail": "no oversized stat block either way"
+      },
+      {
+        "key": "lcpNotLazy",
+        "cap": 4,
+        "got": 4,
+        "prov": "measured",
+        "detail": "no above-fold image is lazy-loaded"
+      },
+      {
+        "key": "noEmojiIcons",
+        "cap": 3,
+        "got": 3,
+        "prov": "measured",
+        "detail": "no emoji used as an icon"
+      },
+      {
+        "key": "contentVisible",
+        "cap": 5,
+        "got": 5,
+        "prov": "measured",
+        "detail": "nothing sits at opacity<0.05 in the first viewport"
+      },
+      {
+        "key": "horizontalOverflow",
+        "cap": 6,
+        "got": 6,
+        "prov": "measured",
+        "detail": "clean at every viewport"
+      },
+      {
+        "key": "sectionRhythm",
+        "cap": 4,
+        "got": 2,
+        "prov": "measured",
+        "detail": "too few sections to judge rhythm"
+      },
+      {
+        "key": "macrostructureStamp",
+        "cap": 3,
+        "got": 3,
+        "prov": "measured",
+        "detail": "\"19 Map/Diagram; --nav: N3 side rail; --footer: Ft2; }\n:is(button, input, select, textarea):disabled, [aria-disabled=\"true\"] { opacity: var(--state-disabled-opacity); cursor: not-allowed; background: var(--surface-sunk); color: var(--text-tertiary); border-style: dashed; text-decoration: line-through; }\nq { quotes: \"“\" \"”\"; }\n.num { font-family: var(--font-figure); font-variant-numeric: tabular-nums lining-nums; }\n.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }\n@media (prefers-reduced-motion: reduce) {\""
+      },
+      {
+        "key": "tokenDiscipline",
+        "cap": 8,
+        "got": 4,
+        "prov": "unknown",
+        "detail": "no source tree measured"
+      },
+      {
+        "key": "stateCoverage",
+        "cap": 4,
+        "got": 2,
+        "prov": "unknown",
+        "detail": "no source tree measured"
+      }
+    ]
+  },
+  "autoFail": 0,
+  "autoFailTells": [],
+  "verdict": "passes the gate",
+  "tells": [],
+  "good": [],
+  "accent": {
+    "color": {
+      "r": 87,
+      "g": 209,
+      "b": 168,
+      "a": 1
+    },
+    "hue": 159.84,
+    "chroma": 0.58,
+    "area": 7864
+  },
+  "accentBudget": 0.01,
+  "accents": [
+    {
+      "color": {
+        "r": 87,
+        "g": 209,
+        "b": 168,
+        "a": 1
+      },
+      "hue": 159.8360655737705,
+      "chroma": 0.583732057416268,
+      "area": 7864,
+      "ev": [
+        "button.forms_btn__ezuzV"
+      ]
+    }
+  ],
+  "directionPair": false,
+  "ground": {
+    "r": 15,
+    "g": 18,
+    "b": 21,
+    "a": 1
+  },
+  "groundChroma": 0.29,
+  "fonts": {
+    "families": [
+      "Barlow",
+      "Barlow Condensed",
+      "Fragment Mono"
+    ],
+    "display": "Barlow Condensed",
+    "body": "Barlow",
+    "weights": [
+      "400",
+      "600",
+      "500"
+    ]
+  },
+  "contrasts": {
+    "worst": {
+      "r": 6.92817285182012,
+      "tag": "p",
+      "cls": "shell_foot__Diko2",
+      "txt": "An independent prototype on OneAquaHealth D2",
+      "size": 13,
+      "weight": "400",
+      "dis": false
+    },
+    "failing": [],
+    "failAA": 0,
+    "failAAA": 0,
+    "textPairs": 70,
+    "passAA": 70,
+    "unmeasurableTransparent": [],
+    "exemptInactive": [
+      {
+        "r": 5.99,
+        "txt": "Restart"
+      }
+    ]
+  },
+  "interactive": 23,
+  "focusable": 22,
+  "disableable": 16,
+  "focusRulesMirrored": 3,
+  "focusRings": [
+    {
+      "tag": "a",
+      "w": 3,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 11.62983033651557,
+      "shadow": null
+    },
+    {
+      "tag": "a",
+      "w": 3,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 10.591586512556797,
+      "shadow": null
+    },
+    {
+      "tag": "a",
+      "w": 3,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 10.591586512556797,
+      "shadow": null
+    },
+    {
+      "tag": "a",
+      "w": 3,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 10.591586512556797,
+      "shadow": null
+    },
+    {
+      "tag": "a",
+      "w": 3,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 10.591586512556797,
+      "shadow": null
+    },
+    {
+      "tag": "a",
+      "w": 3,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 10.591586512556797,
+      "shadow": null
+    },
+    {
+      "tag": "a",
+      "w": 3,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 10.591586512556797,
+      "shadow": null
+    },
+    {
+      "tag": "button",
+      "w": 3,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 11.62983033651557,
+      "shadow": null
+    },
+    {
+      "tag": "button",
+      "w": 3,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 11.62983033651557,
+      "shadow": "rgb(87, 209, 168) 0px -3px 0px 0px inset"
+    },
+    {
+      "tag": "button",
+      "w": 3,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 11.62983033651557,
+      "shadow": null
+    },
+    {
+      "tag": "button",
+      "w": 3,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 11.62983033651557,
+      "shadow": null
+    },
+    {
+      "tag": "button",
+      "w": 3,
+      "style": "solid",
+      "via": ":focus-visible",
+      "offset": 2,
+      "contrast": 11.62983033651557,
+      "shadow": null
+    }
+  ],
+  "overflow": {
+    "desktop": {
+      "scrollW": 1280,
+      "clientW": 1280,
+      "wide": []
+    },
+    "tablet": {
+      "scrollW": 768,
+      "clientW": 768,
+      "wide": []
+    },
+    "mobile": {
+      "scrollW": 375,
+      "clientW": 375,
+      "wide": []
+    }
+  },
+  "overflowOffenders": [],
+  "sections": 0,
+  "elements": 124,
+  "source": null,
+  "fixture": null,
+  "rubric": {
+    "version": 1,
+    "caps": {
+      "textContrast": 20,
+      "focusRing": 8,
+      "disabledStates": 5,
+      "accentBudget": 10,
+      "accentCount": 4,
+      "typeFamilies": 5,
+      "displayFace": 8,
+      "eyebrowGeometry": 4,
+      "honestMetrics": 6,
+      "lcpNotLazy": 4,
+      "noEmojiIcons": 3,
+      "contentVisible": 5,
+      "horizontalOverflow": 6,
+      "sectionRhythm": 4,
+      "macrostructureStamp": 3,
+      "tokenDiscipline": 8,
+      "stateCoverage": 4
+    }
+  },
+  "snapshot": null
+}

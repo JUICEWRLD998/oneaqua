@@ -1,9 +1,9 @@
-.cases { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: var(--space-1); margin-top: var(--space-2); }
-.caseBtn { width: 100%; min-height: var(--target-min); text-align: left; padding: var(--space-1) var(--space-2); background: var(--surface-raised); border: 1px solid var(--line-hairline); border-radius: var(--radius); cursor: pointer; display: grid; gap: 0.2rem; }
+.cases { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px; margin-top: var(--space-2); max-width: 52rem; }
+.caseBtn { width: 100%; min-height: var(--target-min); text-align: left; padding: var(--space-1) var(--space-2); background: var(--surface-raised); border: 1px solid var(--line-hairline); border-radius: var(--radius); cursor: pointer; display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--space-1) var(--space-2); }
 .caseBtn:hover { background: var(--state-hover-bg); border-color: var(--line-strong); }
 .caseBtn:active { background: var(--state-active-bg); }
-.caseBtn[aria-pressed="true"] { border-color: var(--signal); background: var(--state-hover-bg); }
-.meta { color: var(--text-secondary); font-size: 0.8125rem; }
+.caseBtn[aria-pressed="true"] { border-color: var(--signal); background: var(--state-pressed-bg); box-shadow: inset 0 -3px 0 var(--signal); }
+.meta { color: var(--text-secondary); font-size: 0.8125rem; margin-left: auto; white-space: nowrap; }
 .st { display: inline-flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; margin-right: var(--space-2); }
 .controls { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-top: var(--space-2); max-width: none; }
 .tally { margin-top: var(--space-2); font-size: var(--t-md); }

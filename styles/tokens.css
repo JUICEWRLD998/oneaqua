@@ -72,7 +72,7 @@
   --btn-border: var(--signal-text);
   --btn-ghost-fg: var(--text-primary);
   --btn-ghost-border: var(--line-strong);
-  --field-bg: var(--surface-raised);
+  --field-bg: var(--surface-sunk);
   --field-border: var(--line-strong);
   --chip-fg: var(--signal-text);
   --chip-border: var(--signal-text);
@@ -84,6 +84,7 @@
 :root {
   --state-hover-bg: var(--surface-sunk);
   --state-active-bg: var(--signal-wash);
+  --state-pressed-bg: var(--surface-sunk);
   --state-focus-ring: var(--focus);
   --state-disabled-opacity: 0.6;
   --state-error: var(--verdict-refused);

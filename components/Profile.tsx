@@ -29,7 +29,8 @@ export default function Profile({ impactLabel, controlLabel, distanceM, confirme
   }, [])
 
   const W = narrow ? 420 : 1000
-  const H = narrow ? 300 : 250
+  const H = narrow ? 330 : 290
+  const top = 44 // crop the dead band above the labels
   const x0 = narrow ? 34 : 70
   const x1 = W - (narrow ? 34 : 70)
   const cx = x0 + (narrow ? 30 : 50)
@@ -44,19 +45,19 @@ export default function Profile({ impactLabel, controlLabel, distanceM, confirme
   const fs = narrow ? 15 : 14
   return (
     <figure className={s.profile}>
-      <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-labelledby="pf-t pf-d" focusable="false">
+      <svg viewBox={`0 ${top} ${W} ${H - top}`} role="img" aria-labelledby="pf-t pf-d" focusable="false">
         <title id="pf-t">Longitudinal profile of the reach</title>
         <desc id="pf-d">{`Flow runs left to right. The control reach is upstream${outfall ? ', then the outfall' : ''}, then the impact reach, ${distanceM} metres between the two reach points. Confirmed on the impact reach: ${confirmed.join(', ') || 'none yet'}.`}</desc>
         <path className={s.pWater} d={`${bed} L${x1} 96 L${x0} 96 Z`} />
         <path className={s.pBed} d={bed} />
-        <path className={s.pFlow} d={`M${x0} 34 H${x0 + 64} M${x0 + 56} 29 L${x0 + 66} 34 L${x0 + 56} 39`} />
-        <text className={s.pS} x={x0 + 74} y="39" fontSize={fs}>flow</text>
+        <path className={s.pFlow} d={`M${x0} 60 H${x0 + 64} M${x0 + 56} 55 L${x0 + 66} 60 L${x0 + 56} 65`} />
+        <text className={s.pS} x={x0 + 74} y="65" fontSize={fs}>flow</text>
         {[{ x: cx, y: yC, t: 'Control reach', sub: controlLabel }, ...(outfall ? [{ x: ox, y: yO, t: 'Outfall', sub: 'scenario' }] : []), { x: ix, y: yI, t: 'Impact reach', sub: impactLabel }].map((p, i, a) => (
           <g key={p.t}>
             <line className={s.pLead} x1={p.x} y1={p.y} x2={p.x} y2={dimY - 8} />
             <circle className={s.pPt} cx={p.x} cy={p.y} r="6" />
-            <text className={s.pT} x={p.x} y={p.y - 30} textAnchor={narrow && i === a.length - 1 ? 'end' : narrow && i === 0 ? 'start' : 'middle'} fontSize={fs + 2}>{p.t}</text>
-            <text className={s.pS} x={p.x} y={p.y - 12} textAnchor={narrow && i === a.length - 1 ? 'end' : narrow && i === 0 ? 'start' : 'middle'} fontSize={fs - 1}>{p.sub}</text>
+            <text className={s.pT} x={p.x} y={narrow && a.length === 3 && i === 1 ? p.y + 34 : p.y - 30} textAnchor={narrow && i === a.length - 1 ? 'end' : narrow && i === 0 ? 'start' : 'middle'} fontSize={fs + 2}>{p.t}</text>
+            <text className={s.pS} x={p.x} y={narrow && a.length === 3 && i === 1 ? p.y + 52 : p.y - 12} textAnchor={narrow && i === a.length - 1 ? 'end' : narrow && i === 0 ? 'start' : 'middle'} fontSize={fs - 1}>{p.sub}</text>
           </g>
         ))}
         <g>
@@ -69,7 +70,7 @@ export default function Profile({ impactLabel, controlLabel, distanceM, confirme
           ))}
           <line className={s.pDim} x1={ix} y1={dimY - 5} x2={ix} y2={dimY + 5} />
           <text className={s.pS} x={ix} y={dimY + 22} textAnchor="end" fontSize={fs - 2}>{distanceM} m</text>
-          <text className={s.pS} x={(cx + ix) / 2} y={dimY + 42} textAnchor="middle" fontSize={fs - 1}>distance between the two reach points, metres</text>
+          <text className={s.pS} x={(cx + ix) / 2} y={dimY + 50} textAnchor="middle" fontSize={fs - 1}>distance between the two reach points, metres</text>
         </g>
       </svg>
       <figcaption className={s.profCap}>

@@ -33,7 +33,7 @@ export default function Casebook() {
             <li key={x.id}>
               <button type="button" className={c.caseBtn} aria-pressed={x.id === id} onClick={() => { setId(x.id); setK(1) }} data-case={x.id}>
                 <span className="num">{x.id}</span> {x.name}
-                <span className={c.meta}>D2.4 p.{x.page} · <span className="num">{x.measureCount}</span> measures</span>
+                <span className={c.meta}>D2.4 p.{x.page} · <span className="num">{x.measureCount}</span> {x.measureCount === 1 ? 'measure' : 'measures'}</span>
               </button>
             </li>
           ))}
@@ -56,7 +56,7 @@ export default function Casebook() {
           <button type="button" className={f.btnGhost} disabled={k === 1} onClick={() => setK(1)}>Restart</button>
         </p>
         <p className={c.tally} role="status" data-tally data-refusals={refusals} data-shown={shown.length}>
-          <span className="num">{shown.length}</span> of <span className="num">{r.steps.length}</span> measures placed,{' '}
+          <span className="num">{shown.length}</span> of <span className="num">{r.steps.length}</span> {r.steps.length === 1 ? 'measure' : 'measures'} placed,{' '}
           <span className="num">{refusals}</span> {refusals === 1 ? 'refusal' : 'refusals'}.
           {done && refusals === 0 && ' The engine agrees with the case: nothing in it is out of order.'}
         </p>

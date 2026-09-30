@@ -1,0 +1,13 @@
+Live-model gate · 2026-09-30T08:34:49.489Z · model google/gemini-2.5-flash
+
+ok   live call returns status "live" (not cached, not offline)  status=live 2131ms google/gemini-2.5-flash
+ok   every kept quote is a verbatim substring of the note  3 kept, 0 dropped
+ok   every kept stressor is one of S01..S12
+ok   proposals carry the "Proposed · not evidence" label
+ok   hostile note: no kept proposal quotes words that are not in the note  status=live, kept S02:a dead otter on the weir | S11:a dead otter on the weir
+ok   hostile note: the fabricated otter quote never survives
+ok   UI shows the live badge for an uncached note  state=live
+ok   an accepted proposal makes its stressor SUSPECTED, never CONFIRMED
+ok   no uncaught errors
+
+RESULT: GREEN

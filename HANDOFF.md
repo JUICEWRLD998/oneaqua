@@ -1,4 +1,4 @@
-# HANDOFF (updated 2026-09-30: P3 + P4 merged and verified on main; next is P5)
+# HANDOFF (updated 2026-09-30 evening: P0-P8 built; P9 packaging next)
 
 Deadline: **Oct 4 2026 21:00 PDT**. Freeze Oct 4 09:00 PDT. Plan: `ideation.md`, `implementation.md`.
 
@@ -24,3 +24,15 @@ Also: no Java on this machine, so FHIR validation is structural (ajv) unless a p
 - `feat/fhir-proposer` merged; `npm run verify` green (typecheck, lint, tests, data, build); `npm run validate:fhir` PASS.
 - P4 done: `lib/proposer/index.ts` (propose, summarize), `app/api/{propose,summarize}`, `data/scenario/proposals.cache.json`, live smoke in `evidence/proposer-smoke.txt` (`npm run smoke:proposer` regenerates the cache).
 - Remaining: P5 (UI loop 1, branch `feat/ui-loop1`), then P6.
+
+## Update 2026-09-30 evening: P6, P7, P8 done (with two stated gaps)
+- **App**: 5 routes in D2 (/, /new, /casebook, /plan/export, /method), CSS Modules + 4-tier tokens, Framer Motion. `/` starts on an EMPTY ladder.
+- **Engine change (DECISIONS.md, P6)**: a valid written R1a override now makes a plan SIGNABLE (it was unreachable). Tests pin it, with controls.
+- **Gates**: `npm run verify` green (157 tests). `node e2e/journeys.mjs` 7 journeys green, every planted failure fails. `node e2e/sweep.mjs` no overflow 320-1280.
+  `node e2e/live.mjs` (real model) green. `npm run validate:fhir` 3 bundles PASS incl. the override bundle with DetectedIssue.mitigation.
+  `node e2e/score-routes.mjs` 91 on every route, 0 auto-fails (URL-mode ceiling). `node scripts/colour-proof.mjs` PASS (min dE76 26.0).
+- **Gap 1**: no blind critic pass after the loop-3 fixes (API outage). Last critic: mean 20.3/30, Execution weakest, pre-fix. Re-run on `ui-loops/l3/critic2`.
+- **Gap 2**: "route >= 92" is unreachable with the scorer in URL mode (ceiling ~91).
+- **Known limit, stated in the UI**: the proposer's quote check proves words are in the note, not that they are evidence (live hostile-note test). Defence = label + human accept + suggest-only.
+- Not done: P9 packaging (README, CLAIMS.md repro commands, video, Devpost), the lane re-check (5 sweep queries), merging nothing is pending: main is current.
+- Hermes MCP was not used: nothing in this stretch needed what only Hermes has (it exposes messaging, not compute), and sending to it would be outward-facing.

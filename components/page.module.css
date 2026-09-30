@@ -11,3 +11,7 @@
 @media (max-width: 52rem) { .top h1 { font-size: var(--t-2xl); } }
 .presets { display: flex; flex-wrap: wrap; gap: var(--space-1); align-items: center; margin-top: var(--space-2); max-width: none; }
 .presetsL { font-size: 0.8125rem; color: var(--text-secondary); margin-right: var(--space-1); }
+.hero { margin-top: var(--space-3); padding: var(--space-2); border: 1px solid var(--line-strong); background: var(--surface-raised); display: grid; gap: var(--space-1); }
+.heroLine { display: grid; grid-template-columns: max-content minmax(0, 1fr) max-content; gap: var(--space-1) var(--space-2); align-items: center; max-width: none; }
+.heroLine > button { grid-column: 1 / -1; justify-self: start; }
+@media (max-width: 52rem) { .heroLine { grid-template-columns: minmax(0, 1fr); } }

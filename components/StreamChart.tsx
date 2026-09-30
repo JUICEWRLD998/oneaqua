@@ -7,6 +7,8 @@ import { encodeState } from '../state/model'
 import { useStore, type Which } from '../lib/ui/store'
 import type { StressorId } from '../engine/types'
 import Profile from './Profile'
+import { Cite, Verdict } from './marks'
+import { measureName, indicatorName } from '../lib/ui/lookup'
 import StressorLog from './StressorLog'
 import Prescribe from './Prescribe'
 import FollowUp from './FollowUp'
@@ -24,6 +26,32 @@ function distanceM(a: { lat: number; lon: number }, b: { lat: number; lon: numbe
 const impact = scenario.reaches.find((r) => r.role === 'impact')!
 const control = scenario.reaches.find((r) => r.role === 'control')!
 const DIST = distanceM(impact, control)
+
+function Hero({ state, derived, onTry }: { state: ReturnType<typeof useStore>['scenario']; derived: ReturnType<typeof derive>; onTry: () => void }) {
+  const refused = derived.assessment.measures.filter((m) => m.verdict === 'CONTRAINDICATED')
+  const out = derived.outcomes.filter((o) => o.verdict !== 'NO_DETECTABLE_CHANGE').slice(0, 4)
+  const placed43 = state.plan.measures.some((p) => p.measureId === '4.3.3')
+  return (
+    <section className={p.hero} aria-label="What the engine says right now" data-hero>
+      {refused.map((m) => (
+        <p key={m.measureId} className={p.heroLine} data-hero-refusal={m.measureId}>
+          <Verdict v="CONTRAINDICATED" /> <span><span className="num">{m.measureId}</span> {measureName(m.measureId)}: {m.reasons[0].plain}</span> <Cite page={m.reasons[0].page} quote={m.reasons[0].quote} who={m.reasons[0].rule} />
+        </p>
+      ))}
+      {out.map((o) => (
+        <p key={`${o.measureId}-${o.indicator}`} className={p.heroLine} data-hero-outcome={o.verdict}>
+          <Verdict v={o.verdict} /> <span><span className="num">{o.measureId}</span> {indicatorName(o.indicator).toLowerCase()}{o.verdict === 'NOT_YET_KNOWABLE' && o.knowableFrom ? `, not knowable before ${o.knowableFrom}` : ''}</span> <Cite page={o.reasons[0].page} quote={o.reasons[0].quote} who={o.reasons[0].rule} />
+        </p>
+      ))}
+      {refused.length === 0 && out.length === 0 && (
+        <p className={p.heroLine}>
+          <span>This reach has confirmed first-line stressors <span className="num">S01</span> and <span className="num">S07</span>. Put the expensive channel work first and watch the engine answer.</span>
+          <button type="button" className={f.btn} onClick={onTry} disabled={placed43} data-try-refusal>Place 4.3.3 re-meandering first</button>
+        </p>
+      )}
+    </section>
+  )
+}
 
 export default function StreamChart({ which }: { which: Which }) {
   const store = useStore()
@@ -62,6 +90,7 @@ export default function StreamChart({ which }: { which: Which }) {
         {!mineMode && (
           <Profile impactLabel={impact.id} controlLabel={control.id} distanceM={DIST} confirmed={confirmed} suspected={suspected} outfall />
         )}
+        {!mineMode && <Hero state={state} derived={d} onTry={() => store.update(which, (s) => placeMeasure(s, '4.3.3'))} />}
         {!mineMode && (
           <div className={p.presets} role="group" aria-label="Plans to try on this reach">
             <span className={p.presetsL}>Try a plan</span>
@@ -84,7 +113,7 @@ export default function StreamChart({ which }: { which: Which }) {
 
       {mineMode && (
         <section className={p.blk} aria-labelledby="h0">
-          <h2 id="h0"><span className="num">0</span> Evidence</h2>
+          <h2 id="h0">Evidence</h2>
           <EvidenceSheet state={state} onAnswer={(o, item, a) => store.update(which, (s) => setAnswer(s, o, item, a))} />
           <Proposer accepted={state.acceptedProposals} onAccept={(ap) => store.update(which, (s) => acceptProposal(s, ap))} />
         </section>

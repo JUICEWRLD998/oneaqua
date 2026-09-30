@@ -1,4 +1,5 @@
 'use client'
+import Link from 'next/link'
 import { useMemo, useState } from 'react'
 import { catalogue } from '../engine/catalogue'
 import { scenario } from '../engine/scenario'
@@ -93,7 +94,12 @@ export default function ExportPlan() {
       <section className={p.blk} aria-labelledby="sum">
         <h2 id="sum">1 The plan</h2>
         <p className={e.line} data-plan-line><strong>{state.plan.name}</strong> <Verdict v={a.verdict} /></p>
-        {state.plan.measures.length === 0 && <p className={e.empty} role="status">There are no measures in this plan. Place some on the stream chart first.</p>}
+        {state.plan.measures.length === 0 && (
+          <p className={e.empty} role="status" data-empty-plan>
+            There are no measures in this plan, so there is nothing to sign yet.{' '}
+            <Link className={f.btn} href={which === 'mine' ? '/new' : '/'}>{which === 'mine' ? 'Go to Build your own' : 'Open the stream chart'}</Link>
+          </p>
+        )}
         <ul className={e.reasons}>
           {a.reasons.map((r, i) => <li key={i}>{r.plain} <Cite page={r.page} quote={r.quote} who={`${r.rule} ${ruleById.get(r.rule)?.name ?? ''}`} /></li>)}
         </ul>
@@ -109,7 +115,7 @@ export default function ExportPlan() {
           <h2 id="ov">2 Override, in writing</h2>
           <p className={p.intro}>{refused.length === 1 ? 'One measure is' : `${refused.length} measures are`} refused by R1. To keep {refused.length === 1 ? 'it' : 'them'}, the approver records a reason of at least {MIN_REASON} characters. By signing, the approver accepts that the confirmed first-line stressors <span className="num">{a.uncovered.join(', ') || 'none'}</span> stay open for now. The override is kept on the plan and exported as a flagged issue with its mitigation.</p>
           <label className={f.lbl} htmlFor="approver">Approver name</label>
-          <input id="approver" className={f.field} value={approver} onChange={(ev) => setApprover(ev.target.value)} autoComplete="off" />
+          <input id="approver" className={f.field} placeholder="Full name and role" value={approver} onChange={(ev) => setApprover(ev.target.value)} autoComplete="off" />
           {refused.map((m) => {
             const v = reasons[m.measureId] ?? ''
             const err = errors[m.measureId]
@@ -144,7 +150,7 @@ export default function ExportPlan() {
             {refused.length === 0 && (
               <>
                 <label className={f.lbl} htmlFor="approver2">Approver name</label>
-                <input id="approver2" className={f.field} value={approver} onChange={(ev) => setApprover(ev.target.value)} autoComplete="off" />
+                <input id="approver2" className={f.field} placeholder="Full name and role" value={approver} onChange={(ev) => setApprover(ev.target.value)} autoComplete="off" />
               </>
             )}
             <p className={e.row}>
@@ -171,7 +177,7 @@ export default function ExportPlan() {
               {!sign && <span className={f.fine}>Sign the plan to enable the download.</span>}
             </p>
             <details className={e.json} open={false}>
-              <summary>View the JSON</summary>
+              <summary>View the bundle JSON ({Math.round(json.length / 1024)} KB)</summary>
               <pre tabIndex={0} aria-label="FHIR bundle JSON" data-bundle>{json.length > 40000 ? json.slice(0, 40000) + '\n… (truncated here; the download is complete)' : json}</pre>
             </details>
             <p className={f.fine}>Structural validation of bundles built by this same code runs in <code>npm run validate:fhir</code> (R4 JSON schema, reference integrity). It does not check terminology or profiles.</p>

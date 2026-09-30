@@ -96,6 +96,19 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     setReady(true)
   }, [])
 
+  // A shared link opened in a tab that is already on the site is a same-document navigation: no remount, so listen for it.
+  useEffect(() => {
+    const on = () => {
+      if (location.hash.length <= 1) return
+      const dec = decodeState(location.hash)
+      if (!dec) return
+      setSigned((g) => ({ ...g, scenario: undefined }))
+      setScenario(dec)
+    }
+    window.addEventListener('hashchange', on)
+    return () => window.removeEventListener('hashchange', on)
+  }, [])
+
   useEffect(() => {
     if (!ready) return // the hydrating commit still holds the defaults; never write them over the saved blob
     try {

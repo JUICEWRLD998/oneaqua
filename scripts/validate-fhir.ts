@@ -89,9 +89,11 @@ export async function validateBundle(bundle: unknown): Promise<string[]> {
 }
 
 // ── scenario bundles ───────────────────────────────────────────────────────────────────
-export function scenarioBundle(kind: 'firstline' | 'naive'): FhirBundle {
+/** 'override' = the naive plan (re-meander first) with a written R1a override: the path the sign-and-export screen offers. */
+export const OVERRIDE = { measureId: '4.3.3', rule: 'R1' as const, reason: 'Sewer works are funded for 2028; the channel works cannot wait a further season.', approver: 'Head of Water' }
+export function scenarioBundle(kind: 'firstline' | 'naive' | 'override'): FhirBundle {
   const dx = diagnose(catalogue, scenario.checkups.filter((c) => c.date < scenario.diagnosisCutoff), checkupItems, readingRuleSet, [])
-  const plan = scenario.plans[kind]
+  const plan = kind === 'override' ? { ...scenario.plans.naive, overrides: [OVERRIDE] } : scenario.plans[kind]
   const outcomes =
     kind === 'firstline'
       ? [['4.2.2', 'odour'], ['4.2.2', 'clarity'], ['4.2.2', 'algae'], ['4.1.1', 'riparian-cover']].map(([m, i]) =>
@@ -127,7 +129,7 @@ async function main(): Promise<void> {
   log('NOT checked: terminology, profile conformance (meta.profile), FHIRPath invariants.')
   log('Command: npm run validate:fhir')
   log('')
-  for (const kind of ['firstline', 'naive'] as const) {
+  for (const kind of ['firstline', 'naive', 'override'] as const) {
     const b = scenarioBundle(kind)
     const errs = await validateBundle(b)
     const counts: Record<string, number> = {}
@@ -135,6 +137,11 @@ async function main(): Promise<void> {
     log(`${kind}: ${b.entry.length} resources ${JSON.stringify(counts)} -> ${errs.length === 0 ? 'PASS, 0 errors' : 'FAIL'}`)
     for (const e of errs) log(`  ERROR ${e}`)
     if (errs.length > 0) failed = true
+    if (kind === 'override') {
+      const di = b.entry.filter((e) => e.resource.resourceType === 'DetectedIssue' && Array.isArray((e.resource as { mitigation?: unknown }).mitigation))
+      log(`  override bundle carries ${di.length} DetectedIssue with mitigation -> ${di.length > 0 ? 'ok' : 'MISSING'}`)
+      if (di.length === 0) failed = true
+    }
   }
   const bad = scenarioBundle('firstline')
   const cp = bad.entry.find((e) => e.resource.resourceType === 'CarePlan')!.resource as unknown as { subject: { reference: string } }

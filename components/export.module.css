@@ -1,11 +1,13 @@
 .line { display: flex; flex-wrap: wrap; gap: var(--space-1); align-items: center; margin-top: var(--space-2); font-size: var(--t-md); max-width: none; }
 .empty { margin-top: var(--space-1); padding: var(--space-2); border: 1px dashed var(--line-strong); color: var(--text-secondary); }
 .reasons { margin-top: var(--space-1); display: grid; gap: var(--space-1); color: var(--text-secondary); }
-.measures { margin-top: var(--space-2); display: grid; gap: 0.35rem; max-width: none; }
+.measures { margin-top: var(--space-2); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 var(--space-4); max-width: none; }
+@media (max-width: 52rem) { .measures { grid-template-columns: minmax(0, 1fr); } }
 .measures li { display: flex; flex-wrap: wrap; gap: var(--space-1); align-items: center; padding: 0.3rem 0; border-bottom: 1px dotted var(--line-hairline); max-width: none; }
 .ov { margin-top: var(--space-2); padding: var(--space-2); border: 1px solid var(--verdict-refused); background: var(--verdict-refused-wash); display: grid; gap: var(--space-1); max-width: 44rem; }
 .row { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; margin-top: var(--space-2); max-width: none; }
-.count { margin-right: var(--space-2); white-space: nowrap; }
-.json { margin-top: var(--space-2); border: 1px solid var(--line-hairline); }
-.json summary { min-height: var(--target-min); display: flex; align-items: center; padding: 0 var(--space-2); cursor: pointer; font-weight: 600; }
+.count { display: inline-block; margin-right: var(--space-2); }
+.json { margin-top: var(--space-2); border-top: 1px solid var(--line-hairline); border-bottom: 1px solid var(--line-hairline); }
+.json summary { min-height: var(--target-min); display: flex; align-items: center; padding: 0; cursor: pointer; font-weight: 500; color: var(--text-secondary); }
+.json summary:hover { color: var(--text-primary); }
 .json pre { margin: 0; max-height: 28rem; overflow: auto; padding: var(--space-2); background: var(--surface-raised); font-family: var(--font-figure); font-size: 0.8125rem; line-height: 1.45; }

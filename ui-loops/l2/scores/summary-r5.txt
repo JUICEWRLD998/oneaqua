@@ -1,0 +1,16 @@
+Route scores · round 5 · 2026-09-30T08:24:23.491Z
+
+home-empty  91  auto-fail: none  majors: none
+            guarded terms (a later round may not lower these) textContrast 19.86/20 · focusRing 8/8 · disabledStates 5/5 · lcpNotLazy 4/4 
+home-built  91  auto-fail: none  majors: none
+            guarded terms (a later round may not lower these) textContrast 19.86/20 · focusRing 8/8 · disabledStates 5/5 · lcpNotLazy 4/4 
+new         91  auto-fail: none  majors: none
+            guarded terms (a later round may not lower these) textContrast 19.86/20 · focusRing 8/8 · disabledStates 5/5 · lcpNotLazy 4/4 
+casebook    91  auto-fail: none  majors: none
+            guarded terms (a later round may not lower these) textContrast 19.86/20 · focusRing 8/8 · disabledStates 5/5 · lcpNotLazy 4/4 
+export      91  auto-fail: none  majors: none
+            guarded terms (a later round may not lower these) textContrast 19.86/20 · focusRing 8/8 · disabledStates 5/5 · lcpNotLazy 4/4 
+method      91  auto-fail: none  majors: none
+            guarded terms (a later round may not lower these) textContrast 19.86/20 · focusRing 8/8 · disabledStates 5/5 · lcpNotLazy 4/4 
+
+worst route score 91; routes with auto-fails/failed controls: 0

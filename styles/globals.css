@@ -13,6 +13,12 @@ body {
 a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
 button, select, input, textarea { font: inherit; color: inherit; }
 :focus-visible { outline: 3px solid var(--state-focus-ring); outline-offset: 2px; }
+code, pre, kbd { font-family: var(--font-figure); }
+:root { --macrostructure: 19 Map / Diagram; --nav: N3 side rail; --footer: Ft2; }
+/* disabled, everywhere: opacity, cursor, surface, ink, border style and strike, never opacity alone */
+:is(button, input, select, textarea):disabled, [aria-disabled="true"] {
+  opacity: var(--state-disabled-opacity); cursor: not-allowed; background: var(--surface-sunk); color: var(--text-tertiary); border-style: dashed; text-decoration: line-through;
+}
 q { quotes: "\201C" "\201D"; }
 .num { font-family: var(--font-figure); font-variant-numeric: tabular-nums lining-nums; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }

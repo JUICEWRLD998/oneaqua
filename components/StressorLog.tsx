@@ -18,7 +18,7 @@ export default function StressorLog({ diagnosis }: { diagnosis: Diagnosis }) {
         <table className={`${s.log} ${s.stack}`}>
           <caption className="sr">Stressor log: the twelve D2.4 stressors and their state</caption>
           <thead>
-            <tr><th scope="col">No.</th><th scope="col">Stressor</th><th scope="col">State</th><th scope="col">Evidence, or what would settle it</th></tr>
+            <tr><th scope="col">No.</th><th scope="col">Stressor</th><th scope="col">State</th><th scope="col">Evidence, or what would settle it</th><th scope="col">Source</th></tr>
           </thead>
           <tbody>
             {catalogue.stressors.map((x) => {
@@ -27,12 +27,11 @@ export default function StressorLog({ diagnosis }: { diagnosis: Diagnosis }) {
               const proposals = d.evidence.filter((e) => e.source === 'accepted-proposal')
               const items = d.evidence.filter((e) => e.source !== 'accepted-proposal')
               return (
-                <tr key={x.id} data-stressor={x.id} data-status={d.status} className={d.status === 'CONFIRMED' ? s.rowConf : undefined}>
+                <tr key={x.id} data-stressor={x.id} data-status={d.status} className={d.status === 'CONFIRMED' ? s.rowConf : d.status === 'NOT_ASSESSED' ? s.rowDim : undefined}>
                   <th scope="row" className="num">{x.id}</th>
                   <td>
                     {x.name}
                     {x.firstLine && <span className={s.fl}>first line</span>}
-                    <span className={s.cited}><Cite page={x.page} quote={x.d24Text} who={`${x.id}, the stressor catalogue`} /></span>
                   </td>
                   <td><Verdict v={d.status} /></td>
                   <td className={s.why}>
@@ -50,6 +49,7 @@ export default function StressorLog({ diagnosis }: { diagnosis: Diagnosis }) {
                     )}
                     {d.status !== 'CONFIRMED' && settle.length === 0 && <span className={s.mute}>No field-form item maps to this stressor yet.</span>}
                   </td>
+                  <td className={s.citeCell}><Cite page={x.page} quote={x.d24Text} who={`${x.id}, the stressor catalogue`} /></td>
                 </tr>
               )
             })}
